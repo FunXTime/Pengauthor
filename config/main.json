@@ -1,0 +1,72 @@
+{
+  "reporterPositions": [
+    "Editor-in-Chief",
+    "Managing Editor",
+    "Associate Editor",
+    "Senior Reporter",
+    "Reporter",
+    "Reporter-in-Training"
+  ],
+  "postTypes": {
+    "News": {
+      "Army Opening": "News Report",
+      "Army Shutdown": "News Report",
+      "Promotion": "News Report",
+      "Resignation": "News Report",
+      "War": "News Report",
+      "Alliance": "News Report"
+    },
+    "Column": {
+      "A Leader in Action": "A Leader in Action",
+      "Behind the Scenes": "Behind the Scenes",
+      "Satire": "Satire",
+      "Picture Perfect": "Picture Perfect",
+      "HCOM Life Stories": "HCOM Life Stories",
+      "Leaving A Legacy": "Leaving A Legacy",
+      "What If": "What If",
+      "This Day in History": "This Day in History"
+    },
+    "Opinion": {
+      "Op-Ed": "Opinion",
+      "My Controversial Opinion": "My Controversial Opinion",
+      "Flag Frenzy": "Flag Frenzy"
+    }
+  },
+  "palettes": [
+    {
+      "name": "DEFAULT",
+      "label": "Default",
+      "activeColor": "#2a5d7a",
+      "inactiveColor": "#003454"
+    },
+    {
+      "name": "MM",
+      "label": "March Madness",
+      "activeColor": "#169c19",
+      "inactiveColor": "#062f07"
+    },
+    {
+      "name": "LC",
+      "label": "Legends Cup",
+      "activeColor": "#505769",
+      "inactiveColor": "#2c3345"
+    },
+    {
+      "name": "CC",
+      "label": "Christmas Chaos",
+      "activeColor": "#d33943",
+      "inactiveColor": "#451316"
+    }
+  ],
+  "currentPalette": "DEFAULT",
+  "defaultGeneratorData": {
+    "reporterName": "",
+    "reporterPosition": "Reporter",
+    "postCategory": "News",
+    "postType": "News Report",
+    "signOffColor": "#003366",
+    "isBreakingNews": false,
+    "hasInterview": true,
+    "interviewQuestions": []
+  }
+}

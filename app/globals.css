@@ -1,26 +1,141 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-syne);
+
+  --color-base: #090909;
+  --color-panel: #121212;
+  --color-panel-raised: #181818;
+  --color-edge: #242424;
+  --color-edge-strong: #343434;
+
+  --color-ink: #f5f5f5;
+  --color-faint: #9a9a9a;
+
+  --color-accent: #5bbcff;
+  --color-accent-soft: #132535;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.font-akira {
+  font-family: var(--font-akira-expanded);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-edge-strong) transparent;
+}
+
+html,
+body {
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-size: 1rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-edge-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-syne);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+
+section {
+  border: 1px solid #ffffff15;
+  border-radius: 1.25rem;
+  background-color: var(--color-panel);
+  padding: 1.75rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+img,
+svg,
+label,
+br,
+.tooltip,
+.monacoEditorWrapper .margin-view-overlays {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+label {
+  font-weight: bold;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.tooltipText {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.5rem);
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--color-edge);
+  border-radius: 0.75rem;
+  background-color: rgba(15, 15, 16, 0.95);
+  color: var(--color-ink);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.tooltip:hover .tooltipText {
+  opacity: 1;
+}
+
+.monacoEditorWrapper section {
+  border-radius: 0;
+  padding: 0;
+}
+
+.monacoEditorWrapper {
+  height: 100%;
 }

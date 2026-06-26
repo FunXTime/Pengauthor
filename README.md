@@ -1,2 +1,2 @@
 # Pengauthor
-CPA Media Department's premier writing tool
+**Pengauthor is the premier reporting utility at Club Penguin Armies, designed for making the work of Media Department members easier!** Pengauthor is a suite of various tools that simplify journalism and make it more uniform. Developed in the summer of 2026, Pengauthor is actively curated by Editor-in-Chief Fun X Time. Through this powerful utility, CPA aims to make posts more structured and well-formatted.

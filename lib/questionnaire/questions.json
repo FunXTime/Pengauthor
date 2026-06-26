@@ -1,0 +1,88 @@
+{
+  "Army Opening": [
+    "What motivated you to open your army?",
+    "Why did you leave your previous army to open your own army?",
+    "Where do you see your army a [month/year] from now?",
+    "Are you expecting any diplomatic changes concerning your army soon?",
+    "If your army were at war soon after its opening, how would you react?",
+    "Can the community expect your army to be participating in a tournament in the near future?",
+    "What efforts have you put into your army so far?",
+    "Is there anything else that you would like to add?"
+  ],
+  "Army Shutdown": [
+    "What circumstances led to the closure of [army name]?",
+    "Could the circumstances that led to your army's closure have been avoided?",
+    "Do you believe that your army can reopen in the future? If yes, under what conditions?",
+    "How do you feel this development will shape the army's history?",
+    "What are you planning for your personal future in the army community?",
+    "Where do you see your army's members going? How do your troops feel following the closure?",
+    "Is there anything else that you would like to add?"
+  ],
+  "Promotion:": [
+    "Do you believe that you deserve this position more than anyone else in the army's staff team?",
+    "What are your plans for the army's future with you at the helm?",
+    "How long do you expect yourself to be at the apex position of the army?",
+    "Would you say that there is nobody else who could have occupied your new position?",
+    "How would your leadership differ from that of other [past and/or present] leaders?",
+    "Is there anything else that you would like to add?"
+  ],
+  "Resignation:": [
+    "How do you justify your resignation from the apex position of [army name]?",
+    "Do you foresee yourself in another army in a few weeks from now? If yes, what kind of army could it be?",
+    "What message would you want to pass on to your followers when it comes to leadership skills in the army community?",
+    "Will you continue your civic service roles in [Club Penguin Armies/Club Penguin Army Judges/CPA Battleground/(another organization)]?",
+    "Is there anything else that you would like to add?"
+  ],
+  "War": [
+    "Why do you feel that declaring war against [army name] was the right move?",
+    "How do you see your army benefiting from a new conflict?",
+    "How does being at war against [army name] make you feel?",
+    "What was your initial reaction to the war declaration?",
+    "Is there anything else that you would like to add?"
+  ],
+  "Alliance": [
+    "What led to the formation of the alliance in the first place?",
+    "How is this alliance special and different from other alliances?",
+    "Do you believe that this alliance could reduce competitiveness in the army community?",
+    "Is there anything else that you would like to add?"
+  ],
+  "A Leader in Action": [
+    "How is everyday work in your army like?",
+    "Is your work innovative and creative? Is there anything that differs from other armies?",
+    "Do you take breaks from the army? How frequently do you do so?",
+    "How did you become what you are today?",
+    "What do you believe is the hardest challenge a leader can face? What has been yours?",
+    "Who impacted you the most throughout your journey?",
+    "Are there any other upcoming plans in your army? Can your troops expect anything new?",
+    "Is there anything else you would like to add?"
+  ],
+  "Behind the Scenes": [
+    "Outside of Club Penguin Armies, what are you interested in?",
+    "What sort of entertainment are you into? Do you have any recommendations?",
+    "Do you play any games other than Club Penguin?",
+    "What motivated you to work as a [civic service role name]",
+    "Are you able to balance your work while being a member of [army]?",
+    "Would you like to share your personal and army objectives?",
+    "How would you describe your time in the army community so far?",
+    "How did you get the penguin name you call yourself today?",
+    "Can the army community expect you to stick around in a few years from now?",
+    "Is there anything else you would like to add?"
+  ],
+  "Satire": [
+    "Would you be part of such a [subject]?",
+    "Did you laugh? Be honest!",
+    "Are you happy now?",
+    "Is there anything else you would like to add?"
+  ],
+  "Flag Frenzy": [
+    "What motivated you to design a flag in the place?",
+    "Are there any symbolic meanings included in this flag?",
+    "How do you justify the importance of an army's flag?",
+    "Did you enjoy making the flag?"
+  ],
+  "default": [
+    "What are your thoughts on [subject]?",
+    "Do you believe that [subject] is justified?",
+    "Is there anything else that you would like to add?"
+  ]
+}

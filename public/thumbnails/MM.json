@@ -1,0 +1,37 @@
+[
+  {
+    "for": "News Report",
+    "filename": "news.png",
+    "src": "https://cparmies.org/wp-content/uploads/2025/03/news.png",
+    "attachment_id": 55052,
+    "designer": "Dino"
+  },
+  {
+    "for": "Behind the Scenes",
+    "filename": "bts_mm.png",
+    "src": "https://cparmies.org/wp-content/uploads/2024/03/bts_mm.png",
+    "attachment_id": 37139,
+    "designer": "Gabgeirl"
+  },
+  {
+    "for": "Picture Perfect",
+    "filename": "cassie-1.png",
+    "src": "https://cparmies.org/wp-content/uploads/2025/03/cassie-1.png",
+    "attachment_id": 54993,
+    "designer": "Cassie"
+  },
+  {
+    "for": "Opinion",
+    "filename": "opinionMM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2025/03/opinionMM.png",
+    "attachment_id": 55901,
+    "designer": "Master DS"
+  },
+  {
+    "for": "My Controversial Opinion",
+    "filename": "mco.png",
+    "src": "https://cparmies.org/wp-content/uploads/2023/04/mco.png",
+    "attachment_id": 25645,
+    "designer": "Wynn"
+  }
+]

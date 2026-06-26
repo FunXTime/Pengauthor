@@ -1,0 +1,56 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Catchphrase hinting at the topic]</b> [In this article, …]"
+  },
+  {
+    "type": "image",
+    "src": "thumbnail"
+  },
+  {
+    "type": "readMore"
+  },
+  {
+    "type": "paragraph",
+    "content": "[Paragraph]"
+  },
+  {
+    "type": "image",
+    "helperText": "An event picture"
+  },
+  {
+    "type": "paragraph",
+    "content": "[Paragraph]"
+  },
+  {
+    "type": "image",
+    "helperText": "An announcement picture"
+  },
+  {
+    "type": "paragraph",
+    "content": "[Paragraph]"
+  },
+  {
+    "type": "paragraph",
+    "settings": {
+      "type": "PRE-INTERVIEW"
+    }
+  },
+  {
+    "type": "interview",
+    "questions": "generatedQuestions"
+  },
+  {
+    "type": "horizontalRule"
+  },
+  {
+    "type": "paragraph",
+    "content": "[Conclusion] <em>[Italicized questions]</em>"
+  },
+  {
+    "type": "paragraph",
+    "settings": {
+      "type": "SIGNOFF"
+    }
+  }
+]
