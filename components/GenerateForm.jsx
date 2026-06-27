@@ -6,7 +6,7 @@ import Tooltip from "@/components/Tooltip";
 import Icon from "@/components/Icon";
 import reporters from "@/config/reporterList.json";
 import { getQuestion, getNextQuestion } from "@/lib/questionnaire";
-
+import getSuggestedTags from "@/lib/suggestedTags";
 import {
   REPORTER_POSITIONS,
   POST_TYPES,
@@ -24,6 +24,12 @@ export default function GenerateForm({
 }) {
   const [palette, setPalette] = useState(DEFAULT_PALETTE);
   const [thumbnailButtonText, setThumbnailButtonText] = useState("CLICK TO COPY FILENAME…");
+  const [completedTags, setCompletedTags] = useState([]);
+  const suggestedTags =
+    getSuggestedTags(
+      formData.postType,
+      formData.hasInterview
+    );
 
   useEffect(() => {
     const { interviewQuestions, ...persistedData } = formData;
@@ -73,28 +79,6 @@ export default function GenerateForm({
     const { name, checked } = event.target;
     setFormData((current) => ({ ...current, [name]: checked }));
   }
-
-  const breakingNewsCheckbox = (
-    <label
-      className={`flex items-center gap-3 text-faint ${
-        formData.postCategory !== "News"
-          ? "cursor-not-allowed opacity-50"
-          : "cursor-pointer"
-      }`}
-    >
-      <input
-        type="checkbox"
-        name="isBreakingNews"
-        checked={formData.isBreakingNews}
-        disabled={formData.postCategory !== "News"}
-        onChange={handleCheckbox}
-        className="h-4 w-4 accent-accent cursor-pointer"
-      />
-      <span className="text-sm text-faint">
-        Mark post as breaking news
-      </span>
-    </label>
-  );
 
   useEffect(() => {
     if (
@@ -210,11 +194,30 @@ export default function GenerateForm({
             />
           </div>
           <div className="mt-4">
-            {formData.postCategory === "News" ? (breakingNewsCheckbox) : (
-              <Tooltip text="Only News posts can be Breaking News posts!">
-                {breakingNewsCheckbox}
-              </Tooltip>
-            )}
+            <Tooltip
+              text="Only News posts can be Breaking News posts!"
+              disabled={formData.postCategory === "News"}
+            >
+              <label
+                className={`flex items-center gap-3 text-faint ${
+                  formData.postCategory !== "News"
+                    ? "cursor-not-allowed opacity-50"
+                    : "cursor-pointer"
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  name="isBreakingNews"
+                  checked={formData.isBreakingNews}
+                  disabled={formData.postCategory !== "News"}
+                  onChange={handleCheckbox}
+                  className="h-4 w-4 accent-accent cursor-pointer"
+                />
+                <span className="text-sm text-faint">
+                  Mark post as breaking news
+                </span>
+              </label>
+            </Tooltip>
           </div>
         </div>
 
@@ -313,8 +316,7 @@ export default function GenerateForm({
                   </label>
                   <Tooltip
                     text={
-                      (formData.interviewQuestions ?? [])
-                        .length >= 10
+                      (formData.interviewQuestions ?? []).length >= 10
                         ? "You can add up to only 10 questions"
                         : "Add a question"
                     }
@@ -437,6 +439,53 @@ export default function GenerateForm({
                 )}
               </div>
             </fieldset>
+          </div>
+
+          <br />
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium">
+              Suggested Tags
+            </label>
+
+            <div className="mt-2 flex flex-wrap gap-2">
+              {suggestedTags.map((tag) => {
+                const isCompleted = completedTags.includes(tag.name);
+                return (
+                  <Tooltip
+                    key={tag.name}
+                    text={tag.tip ?? "This is a universal tag"}
+                    disabled={!tag.tip && !tag.isGlobal}
+                  >
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setCompletedTags(
+                          (current) =>
+                            current.includes(tag.name)
+                              ? current.filter(
+                                  (item) => item !== tag.name
+                                )
+                              : [
+                                  ...current,
+                                  tag.name
+                                ]
+                        )
+                      }
+                      className={`rounded-full border bg-panel-raised px-3 py-1 text-xs text-faint select-none transition-transform duration-150 cursor-pointer ${
+                        tag.isItalic ? "italic" : ""
+                      } ${
+                        isCompleted
+                          ? "border-[#8080A0] scale-95"
+                          : "border-edge hover:scale-105"
+                      }`}
+                    >
+                      {tag.name}
+                    </button>
+                  </Tooltip>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

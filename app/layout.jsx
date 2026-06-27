@@ -52,7 +52,7 @@ export const metadata = {
       },
     ],
     shortcut: "/icons/favicon.ico"
-  },
+  }
 };
 
 const LISTED_PAGES = [

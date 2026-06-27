@@ -93,7 +93,6 @@ img,
 svg,
 label,
 br,
-.tooltip,
 .monacoEditorWrapper .margin-view-overlays {
   -webkit-user-select: none;
   user-select: none;
@@ -104,17 +103,9 @@ label {
   font-weight: bold;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-flex;
-}
-
 .tooltipText {
   position: absolute;
-  left: 50%;
-  bottom: calc(100% + 0.5rem);
-  transform: translateX(-50%);
-  z-index: 100;
+  z-index: 99999;
   padding: 0.4rem 0.7rem;
   border: 1px solid var(--color-edge);
   border-radius: 0.75rem;
@@ -122,13 +113,7 @@ label {
   color: var(--color-ink);
   font-size: 0.75rem;
   white-space: nowrap;
-  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.15s;
-}
-
-.tooltip:hover .tooltipText {
-  opacity: 1;
 }
 
 .monacoEditorWrapper section {

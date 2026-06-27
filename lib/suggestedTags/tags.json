@@ -1,0 +1,47 @@
+{
+  "Army Opening": [
+    { "name": "Army Opening" },
+    { "name": "Opening Event", "tip": "Use if a commemorative event was held" },
+    { "name": "[Army Name]", "tip": "Use the name of the opening army" },
+    { "name": "[Army Short Name]", "tip": "Use the short name of the opening army" },
+    { "name": "[Army Leader…]", "tip": "Use the leader name(s)" }
+  ],
+  "Army Shutdown": [
+    { "name": "Army Closure" },
+    { "name": "Army Shutdown" },
+    { "name": "[Army Name]", "tip": "Use the name of the closing army" },
+    { "name": "[Army Short Name]", "tip": "Use the short name of the closing army" },
+    { "name": "[Army Leader…]", "tip": "Use the leader name(s)" }
+  ],
+  "Promotion": [
+    { "name": "Leadership Changes" },
+    { "name": "Promotion" },
+    { "name": "[Army Name]", "tip": "Use the name of the person's army" },
+    { "name": "[Army Short Name]", "tip": "Use the short name of the closing army" },
+    { "name": "[Army Leader]", "tip": "Use the leader name" }
+  ],
+  "Resignation": [
+    { "name": "Leadership Changes" },
+    { "name": "Resignation" },
+    { "name": "Retirement" },
+    { "name": "[Army Name]", "tip": "Use the name of the person's army" },
+    { "name": "[Army Short Name]", "tip": "Use the short name of the person's army" },
+    { "name": "[Army Leader]", "tip": "Use the leader name" }
+  ],
+  "War": [
+    { "name": "War Declaration" },
+    { "name": "[Declaring Army Name]", "tip": "Use the name of the declaring army" },
+    { "name": "[Declaring Army Short Name]", "tip": "Use the short name of the declaring army" },
+    { "name": "[Receiving Army Name]", "tip": "Use the name of the receiving army" },
+    { "name": "[Receiving Army Short Name]", "tip": "Use the short name of the receiving army" }
+  ],
+  "Alliance": [
+    { "name": "Alliance" },
+    { "name": "[Army Name]", "tip": "Use the name of one of the armies" },
+    { "name": "[Army Name]", "tip": "Use the name of the other army" }
+  ],
+  "default": [],
+  "interviewee": [
+    { "name": "[Interviewee…]", "tip": "Use the name of the person(s) you interviewed" }
+  ]
+}
