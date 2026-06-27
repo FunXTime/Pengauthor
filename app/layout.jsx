@@ -2,40 +2,69 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const syne = localFont({
   src: "../fonts/Syne.ttf",
   variable: "--font-syne",
-  display: "swap",
+  display: "swap"
 });
 
 const inter = localFont({
   src: "../fonts/Inter.ttf",
   variable: "--font-inter",
-  display: "swap",
+  display: "swap"
 });
 
 const akira = localFont({
   src: "../fonts/AkiraExpanded-SuperBold.ttf",
   variable: "--font-akira-expanded",
-  display: "swap",
+  display: "swap"
 });
 
 export const metadata = {
   title: "Pengauthor",
-  description: "Internal writing tools for the CPA Reporting Team",
+  description: "CPA Media Department's premier writing tool",
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      {
+        url: "/icons/favicon.ico",
+        sizes: "48x48",
+        type: "image/x-icon"
+      },
+      {
+        url: "/icons/favicon.png",
+        sizes: "96x96",
+        type: "image/png"
+      },
+      {
+        url: "/icons/favicon.svg",
+        type: "image/svg+xml"
+      },
+    ],
+    apple: [
+      {
+        url: "/icons/apple-icon.png",
+        sizes: "180x180",
+        type: "image/png"
+      },
+    ],
+    shortcut: "/icons/favicon.ico"
+  },
 };
 
 const LISTED_PAGES = [
   {
     label: "Overview",
     href: "/overview",
-    icon: "overview",
+    icon: "overview"
   },
   {
     label: "Generate",
     href: "/generate",
-    icon: "generate",
+    icon: "generate"
   },
 ];
 
@@ -80,6 +109,9 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         </div>
+
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
