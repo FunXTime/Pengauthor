@@ -14,7 +14,7 @@ import {
   PALETTES,
   DEFAULT_PALETTE,
   THUMBNAIL_MAPPINGS
-} from "@/app/config";
+} from "@/config";
 
 export default function GenerateForm({
   formData,
