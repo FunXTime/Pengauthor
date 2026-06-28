@@ -29,43 +29,27 @@ export const metadata = {
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
-      {
-        url: "/icons/favicon.ico",
-        sizes: "48x48",
-        type: "image/x-icon"
-      },
-      {
-        url: "/icons/favicon.png",
-        sizes: "96x96",
-        type: "image/png"
-      },
-      {
-        url: "/icons/favicon.svg",
-        type: "image/svg+xml"
-      },
+      { url: "/icons/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/icons/favicon.png", sizes: "96x96", type: "image/png" },
+      { url: "/icons/favicon.svg", type: "image/svg+xml" }
     ],
     apple: [
-      {
-        url: "/icons/apple-icon.png",
-        sizes: "180x180",
-        type: "image/png"
-      },
+      { url: "/icons/apple-icon.png", sizes: "180x180", type: "image/png" }
     ],
     shortcut: "/icons/favicon.ico"
   }
 };
 
 const LISTED_PAGES = [
-  {
-    label: "Overview",
-    href: "/overview",
-    icon: "overview"
-  },
-  {
-    label: "Generate",
-    href: "/generate",
-    icon: "generate"
-  },
+  { label: "Overview", href: "/overview", icon: "overview" },
+  { label: "Generate", href: "/generate", icon: "generate" },
+  { label: "Colorizer", href: "/colorizer", icon: "colorizer" },
+  { label: "Checkup", href: "/checkup", icon: "checkup" },
+];
+
+const EXTERNAL_PAGES = [
+  { label: "Reporting Guide", href: "https://cparmies.org/reporting-guide" },
+  { label: "References", href: "https://docs.google.com/spreadsheets/d/1SlH7i96flqBZwUM7CM1hj5MjzTLiTeuAtyTEfyJX_fA/edit?usp=sharing" }
 ];
 
 export default function RootLayout({ children }) {
@@ -93,6 +77,24 @@ export default function RootLayout({ children }) {
                       <Icon name={item.icon} />
                       <span>{item.label}</span>
                     </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <hr className="my-4 border-edge" />
+
+              <ul className="space-y-1">
+                {EXTERNAL_PAGES.map((item) => (
+                  <li key={item.href + item.label}>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 rounded-xl px-3 py-1.5 text-sm text-faint transition-all hover:bg-panel-raised hover:text-ink"
+                    >
+                      <Icon name="arrowUpRight" />
+                      <span>{item.label}</span>
+                    </a>
                   </li>
                 ))}
               </ul>
