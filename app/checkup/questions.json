@@ -1,0 +1,100 @@
+[
+  {
+    "question": "Did you use the boilerplate generator?",
+    "note": "If you did, we'll skip 7 questions since those won't be necessary!",
+    "answers": [
+      { "label": "Yep, I did", "score": 6, "shortcut": 7 },
+      { "label": "Nope, I didn't", "score": 0 }
+    ]
+  },
+  {
+    "question": "Is the thumbnail, its palette, and its caption correct?",
+    "note": "For the current occasion, use the {{CURRENT_PALETTE}} palette!",
+    "answers": [
+      { "label": "Yep, it is", "score": 1 },
+      { "label": "Nope, I'll correct it", "score": 0 }
+    ]
+  },
+  {
+    "question": "Have you added the Read More tag?",
+    "note": "The Read More tag goes right after your post's thumbnail.",
+    "answers": [
+      { "label": "Yep, I have", "score": 1 },
+      { "label": "Nope, I'll add it", "score": 0 }
+    ]
+  },
+  {
+    "question": "Have you conducted an interview if it was expected?",
+    "note": "We'll skip the next question if it wasn't needed.",
+    "answers": [
+      { "label": "Yep, I have", "score": 1 },
+      { "label": "Nope, it was not needed", "score": 1, "shortcut": 6 },
+      { "label": "Nope, I'll add it", "score": 0 }
+    ]
+  },
+  {
+    "question": "Is the interview well-formatted?",
+    "note": "Questions should be bolded in Heading 3 while answers should be blockquoted and center-aligned!",
+    "answers": [
+      { "label": "Yep, it is", "score": 1 },
+      { "label": "Nope, I'll fix it", "score": 0 }
+    ]
+  },
+  {
+    "question": "Is the sign-off in place and in correct format?",
+    "note": "Make sure the sign-off is a two-line single paragraph at the end of the post!",
+    "answers": [
+      { "label": "Yep, it is", "score": 1 },
+      { "label": "Nope, I'll fix it", "score": 0 }
+    ]
+  },
+  {
+    "question": "Have you used the post title requested?",
+    "note": "Punctuation matters in the post title. Check if it's what was expected.",
+    "answers": [
+      { "label": "Yep, I have", "score": 1 },
+      { "label": "Nope, I'll fix it", "score": 0 }
+    ]
+  },
+  {
+    "question": "Did you review the paragraphs you have written?",
+    "note": "Always skim through what you write. Is there anything that can be added, changed, or removed?",
+    "answers": [
+      { "label": "Yep, I have", "score": 1 },
+      { "label": "Nope, I'll review it", "score": 0 }
+    ]
+  },
+  {
+    "question": "Have you added hyperlinks that link to credible sources?",
+    "note": "Hyperlinks boost SEO, make your post factually accurate, and builds trust.",
+    "answers": [
+      { "label": "Yep, I have", "score": 1 },
+      { "label": "Nope, I'll add some", "score": 0 }
+    ]
+  },
+  {
+    "question": "Did you remember to add tags and categories?",
+    "note": "Did you know that your tagging and categorization can be better with the boilerplate generator?",
+    "answers": [
+      { "label": "Yep, I have", "score": 1 },
+      { "label": "Nope, I'll add them", "score": 0 }
+    ]
+  },
+  {
+    "question": "Does your post have at least 2 main body paragraphs and some imagery?",
+    "note": "Two main body paragraphs is a minimum. However, we would recommend you to add more than that! In addition, visuals make your post more engaging.",
+    "answers": [
+      { "label": "Yep, it does", "score": 1 },
+      { "label": "Nope, I'll add them", "score": 0 }
+    ]
+  },
+  {
+    "question": "Lastly, what's your readability score?",
+    "note": "Your readability score speaks a lot about your writing!",
+    "answers": [
+      { "label": "It's green!", "score": 1 },
+      { "label": "It's yellow!", "score": 0 },
+      { "label": "It's red!", "score": 0 }
+    ]
+  }
+]

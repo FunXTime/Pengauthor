@@ -17,6 +17,6 @@ export const THUMBNAIL_MAPPINGS =
       .flatMap((types) => Object.entries(types))
   );
 export const PALETTES = main.palettes;
-export const DEFAULT_PALETTE = main.currentPalette;
+export const CURRENT_PALETTE = main.currentPalette;
 export const DEFAULT_GENERATOR_DATA = structuredClone(main.defaultGeneratorData);
 export const GLOBAL_TAGS = main.globalTags;

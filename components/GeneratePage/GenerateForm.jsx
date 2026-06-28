@@ -12,7 +12,7 @@ import {
   POST_TYPES,
   POST_CATEGORIES,
   PALETTES,
-  DEFAULT_PALETTE,
+  CURRENT_PALETTE,
   THUMBNAIL_MAPPINGS
 } from "@/config";
 
@@ -22,7 +22,7 @@ export default function GenerateForm({
   thumbnail,
   setThumbnail
 }) {
-  const [palette, setPalette] = useState(DEFAULT_PALETTE);
+  const [palette, setPalette] = useState(CURRENT_PALETTE);
   const [thumbnailButtonText, setThumbnailButtonText] = useState("CLICK TO COPY FILENAME…");
   const [completedTags, setCompletedTags] = useState([]);
   const suggestedTags =

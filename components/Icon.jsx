@@ -134,6 +134,41 @@ export default function Icon({
         </svg>
       );
 
+    case "checkupHero":
+      return (
+        <svg
+          className={className || "h-4 w-4"}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v7" />
+          <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+          <path d="M3.62 18.8A2.25 2.25 0 1 1 7 15.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a1 1 0 0 1-1.507 0z" />
+        </svg>
+      );
+
+    case "notFound":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <circle
+            cx="11"
+            cy="11"
+            r="8"
+          />
+          <path d="m21 21-4.3-4.3" />
+          <path d="M11 7v4" />
+          <path d="M11 15h.01" />
+        </svg>
+      );
+
     default:
       return null;
   }
