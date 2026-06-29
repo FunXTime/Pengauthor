@@ -55,22 +55,21 @@ export default function Question({
   }
 
   async function handleAnswer(answer) {
-    const scores = JSON.parse(sessionStorage.getItem("checkupScores") ?? "{}");
-    scores[pathname] = answer.score;
-    sessionStorage.setItem("checkupScores", JSON.stringify(scores));
-    if (questionNumber) {
-      const questionsAnswered = JSON.parse(sessionStorage.getItem("checkupQuestionsAnswered") ?? "[]");
-      if (!questionsAnswered.includes(questionNumber)) {
-        questionsAnswered.push(questionNumber);
-        sessionStorage.setItem("checkupQuestionsAnswered", JSON.stringify(questionsAnswered));
-      }
-    }
+    const checkup = JSON.parse(sessionStorage.getItem("checkup") ?? '{"answers":{}}');
+    checkup.answers ??= {};
+    checkup.answers[questionSlug] = {
+      label: answer.label,
+      score: answer.score
+    };
+    sessionStorage.setItem("checkup", JSON.stringify(checkup));
     if (answer.onClick) {
       answer.onClick();
       return;
     }
     await navigateToNext(
-      answer.href ?? (answer.shortcut ? `/checkup/question-${answer.shortcut}` : null)
+      answer.href ?? (
+        answer.shortcut ? `/checkup/question-${answer.shortcut}` : null
+      )
     );
   }
 

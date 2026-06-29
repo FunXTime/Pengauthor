@@ -9,6 +9,7 @@ export default function CheckupPage() {
   const router = useRouter();
 
   async function handleStart() {
+    sessionStorage.removeItem("checkup");
     const screenshots = questions.map((_, index) => `/checkup_shots/question-${index + 1}.png`);
     preloadMany(screenshots).catch(() => {});
     router.push("/checkup/question-1");

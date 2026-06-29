@@ -4,8 +4,9 @@
     "note": "If you did, we'll skip 7 questions since those won't be necessary!",
     "answers": [
       { "label": "Yep, I did", "score": 6, "shortcut": 7 },
-      { "label": "Nope, I didn't", "score": 0 }
-    ]
+      { "label": "Nope, I didn't", "score": 1 }
+    ],
+    "feedback": "Next time, you can use the boilerplate generator to speed up your writing!"
   },
   {
     "question": "Is the thumbnail, its palette, and its caption correct?",
@@ -13,7 +14,8 @@
     "answers": [
       { "label": "Yep, it is", "score": 1 },
       { "label": "Nope, I'll correct it", "score": 0 }
-    ]
+    ],
+    "feedback": "Fix the thumbnail and ensure the caption attributes the correct designer"
   },
   {
     "question": "Have you added the Read More tag?",
@@ -21,7 +23,8 @@
     "answers": [
       { "label": "Yep, I have", "score": 1 },
       { "label": "Nope, I'll add it", "score": 0 }
-    ]
+    ],
+    "feedback": "Add the Read More tag immediately after the thumbnail"
   },
   {
     "question": "Have you conducted an interview if it was expected?",
@@ -30,7 +33,8 @@
       { "label": "Yep, I have", "score": 1 },
       { "label": "Nope, it was not needed", "score": 1, "shortcut": 6 },
       { "label": "Nope, I'll add it", "score": 0 }
-    ]
+    ],
+    "feedback": "Add the interview after interviewing somebody"
   },
   {
     "question": "Is the interview well-formatted?",
@@ -38,7 +42,8 @@
     "answers": [
       { "label": "Yep, it is", "score": 1 },
       { "label": "Nope, I'll fix it", "score": 0 }
-    ]
+    ],
+    "feedback": "Format the interview headings and blockquotes"
   },
   {
     "question": "Is the sign-off in place and in correct format?",
@@ -46,7 +51,8 @@
     "answers": [
       { "label": "Yep, it is", "score": 1 },
       { "label": "Nope, I'll fix it", "score": 0 }
-    ]
+    ],
+    "feedback": "Insert your sign-off properly"
   },
   {
     "question": "Have you used the post title requested?",
@@ -54,7 +60,8 @@
     "answers": [
       { "label": "Yep, I have", "score": 1 },
       { "label": "Nope, I'll fix it", "score": 0 }
-    ]
+    ],
+    "feedback": "Use the post title requested with the correct punctuation"
   },
   {
     "question": "Did you review the paragraphs you have written?",
@@ -62,7 +69,8 @@
     "answers": [
       { "label": "Yep, I have", "score": 1 },
       { "label": "Nope, I'll review it", "score": 0 }
-    ]
+    ],
+    "feedback": "Review what you have written to check for any enhancements"
   },
   {
     "question": "Have you added hyperlinks that link to credible sources?",
@@ -70,15 +78,17 @@
     "answers": [
       { "label": "Yep, I have", "score": 1 },
       { "label": "Nope, I'll add some", "score": 0 }
-    ]
+    ],
+    "feedback": "Transform some words in your text to hyperlinks"
   },
   {
-    "question": "Did you remember to add tags and categories?",
+    "question": "Did you correctly add tags and categories?",
     "note": "Did you know that your tagging and categorization can be better with the boilerplate generator?",
     "answers": [
       { "label": "Yep, I have", "score": 1 },
-      { "label": "Nope, I'll add them", "score": 0 }
-    ]
+      { "label": "Nope, I'll fix them", "score": 0 }
+    ],
+    "feedback": "Add tags and set categories in accordance to the post's theme and interview"
   },
   {
     "question": "Does your post have at least 2 main body paragraphs and some imagery?",
@@ -86,7 +96,8 @@
     "answers": [
       { "label": "Yep, it does", "score": 1 },
       { "label": "Nope, I'll add them", "score": 0 }
-    ]
+    ],
+    "feedback": "Ensure at least 2 paragraphs and at least 1 image are present in your post"
   },
   {
     "question": "Lastly, what's your readability score?",
@@ -95,6 +106,7 @@
       { "label": "It's green!", "score": 1 },
       { "label": "It's yellow!", "score": 0 },
       { "label": "It's red!", "score": 0 }
-    ]
+    ],
+    "feedback": "Try to raise your readability score to green by following the auto-generated readability feedback in your post's editor"
   }
 ]
