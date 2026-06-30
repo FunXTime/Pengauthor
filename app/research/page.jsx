@@ -18,6 +18,7 @@ export default function ResearchPage() {
   const [organizations, setOrganizations] = useState(RESEARCH_ORGANIZATIONS
     .map((organization) => organization.value)
   );
+  const [filterTopTen, setFilterTopTen] = useState(true);
   const [status, setStatus] = useState("idle");
 
   useEffect(() => {
@@ -32,9 +33,15 @@ export default function ResearchPage() {
       query,
       year,
       organizations,
+      filterTopTen,
       results: getResearchState().results ?? []
     });
-  }, [query, year, organizations]);
+  }, [
+    query,
+    year,
+    organizations,
+    filterTopTen
+  ]);
 
   useEffect(() => {
     const saved = getResearchState();
@@ -52,10 +59,12 @@ export default function ResearchPage() {
       try {
         let posts;
         if (organization == "cpa") posts = await searchPosts(organization, query, {
-          per_page: 100
+          per_page: 100,
+          filterTopTen
         });
         else posts = await searchPosts(organization, query, {
-          per_page: 50
+          per_page: 50,
+          filterTopTen
         });
         console.log(organization, posts);
         results.push(...posts.map((post) => ({
@@ -141,6 +150,14 @@ export default function ResearchPage() {
             </button>
           </Tooltip>
         </div>
+        <label className="mt-3 flex items-center gap-2 text-sm text-faint">
+          <input
+            type="checkbox"
+            checked={filterTopTen}
+            onChange={(event) => setFilterTopTen(event.target.checked)}
+          />
+          Filter out Top Ten posts
+        </label>
       </section>
 
       <section
@@ -165,7 +182,7 @@ export default function ResearchPage() {
           <>
             <Icon
               name="researchLoading"
-              className="h-24 w-24 text-faint opacity-40"
+              className="h-24 w-24 text-faint opacity-40 animate-pulse [animation-duration:500ms]"
             />
             <p className="mt-6 text-faint">
               Going through {organizations.length} website{organizations.length !== 1 ? "s" : ""} to find relevant posts…
