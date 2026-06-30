@@ -1,9 +1,10 @@
 import localFont from "next/font/local";
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import "./globals.css";
+import ShareButton from "@/components/ShareButton";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import "./globals.css";
 
 const syne = localFont({
   src: "../fonts/Syne.ttf",
@@ -71,6 +72,8 @@ const LISTED_PAGES = [
 ];
 
 const EXTERNAL_PAGES = [
+  { label: "Posts dashboard", href: "https://cparmies.org/wp-admin/edit.php" },
+  { label: "Add new post", href: "https://cparmies.org/wp-admin/post-new.php?post_title=Untitled+Post&content=Replace+this+paragraph+with+real+content.+Try+using+Pengauthor%27s+boilerplate+generator%21" },
   { label: "Reporting Guide", href: "https://cparmies.org/reporting-guide" },
   { label: "References", href: "https://docs.google.com/spreadsheets/d/1SlH7i96flqBZwUM7CM1hj5MjzTLiTeuAtyTEfyJX_fA/edit?usp=sharing" }
 ];
@@ -104,7 +107,7 @@ export default function RootLayout({ children }) {
                 ))}
               </ul>
 
-              <hr className="my-4 border-edge" />
+              <hr className="my-3 border-edge" />
 
               <ul className="space-y-1">
                 {EXTERNAL_PAGES.map((item) => (
@@ -121,6 +124,15 @@ export default function RootLayout({ children }) {
                   </li>
                 ))}
               </ul>
+
+              <hr className="my-3 border-edge" />
+
+              <ul className="space-y-1">
+                <li>
+                  <ShareButton />
+                </li>
+              </ul>
+
             </nav>
 
             <div className="border-t border-edge px-5 py-4">

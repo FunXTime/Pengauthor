@@ -20,11 +20,9 @@ export default function Icon({
         <svg
           className={svgClassName}
           viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
+          {...svgProps}
         >
-          <path d="M12 3.5c.5 0 1 .2 1.4.6l6.5 6.5c.8.8.8 2 0 2.8l-6.5 6.5c-.4.4-.9.6-1.4.6s-1-.2-1.4-.6l-6.5-6.5c-.8-.8-.8-2 0-2.8l6.5-6.5c.4-.4.9-.6 1.4-.6Z" />
+          <path d="M12.983 21.186a1 1 0 0 1-1.966 0 10 10 0 0 0-8.203-8.203 1 1 0 0 1 0-1.966 10 10 0 0 0 8.203-8.203 1 1 0 0 1 1.966 0 10 10 0 0 0 8.203 8.203 1 1 0 0 1 0 1.966 10 10 0 0 0-8.203 8.203" />
         </svg>
       );
 
@@ -79,6 +77,18 @@ export default function Icon({
         >
           <path d="M7 17 17 7" />
           <path d="M7 7h10v10" />
+        </svg>
+      );
+
+    case "share":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="m15 17 5-5-5-5" />
+          <path d="M4 18v-2a4 4 0 0 1 4-4h12" />
         </svg>
       );
 

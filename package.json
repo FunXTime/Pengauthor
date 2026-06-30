@@ -3,7 +3,7 @@
   "description": "CPA Media Department's premier writing tool",
   "author": "Fun X Time",
   "license": "MIT",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "private": true,
   "scripts": {
     "dev": "next dev",
