@@ -23,6 +23,8 @@ const akira = localFont({
   display: "swap"
 });
 
+const siteURL = "https://cpa-pengauthor.vercel.app";
+
 export const metadata = {
   title: "Pengauthor",
   description: "CPA Media Department's premier writing tool",
@@ -41,7 +43,7 @@ export const metadata = {
   openGraph: {
     title: "Pengauthor",
     description: "CPA Media Department's premier writing tool! Built for Reporters at Club Penguin Armies, you can create, research, and refine using Pengauthor.",
-    url: "https://cpa-pengauthor.vercel.app",
+    url: siteURL,
     siteName: "CPA Media Department",
     images: [
       {
@@ -57,10 +59,7 @@ export const metadata = {
   twitter: {
     card: "summary"
   },
-  metadataBase: new URL(process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000"
-  )
+  metadataBase: new URL(siteURL)
 };
 
 const LISTED_PAGES = [
