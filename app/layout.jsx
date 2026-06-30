@@ -37,7 +37,30 @@ export const metadata = {
       { url: "/icons/apple-icon.png", sizes: "180x180", type: "image/png" }
     ],
     shortcut: "/icons/favicon.ico"
-  }
+  },
+  openGraph: {
+    title: "Pengauthor",
+    description: "CPA Media Department's premier writing tool! Built for Reporters at Club Penguin Armies, you can create, research, and refine using Pengauthor.",
+    url: "https://cpa-pengauthor.vercel.app",
+    siteName: "CPA Media Department",
+    images: [
+      {
+        url: "/icons/apple-icon.png",
+        width: 180,
+        height: 180,
+        alt: "Pengauthor logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary"
+  },
+  metadataBase: new URL(process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000"
+  )
 };
 
 const LISTED_PAGES = [
