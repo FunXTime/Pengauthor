@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { DEFAULT_GENERATOR_DATA as DEFAULT_FORM_DATA } from "@/config";
-import GenerateForm from "@/components/GeneratePage/GenerateForm";
-import GenerateEditor from "@/components/GeneratePage/GenerateEditor";
 import getTemplate from "@/lib/boilerplate/getTemplate";
 import compile from "@/lib/boilerplate/compile";
+import GenerateForm from "@/components/GeneratePage/GenerateForm";
+import GenerateEditor from "@/components/GeneratePage/GenerateEditor";
 
 export default function GeneratePage() {
   const [formData, setFormData] = useState(() => {
@@ -18,7 +18,6 @@ export default function GeneratePage() {
       return DEFAULT_FORM_DATA;
     }
   });
-
   const [thumbnail, setThumbnail] = useState(null);
   const [boilerplate, setBoilerplate] = useState("");
 
@@ -34,6 +33,7 @@ export default function GeneratePage() {
   return (
     <div className="space-y-6 p-8">
       <h1>Generate a Boilerplate</h1>
+
       <p className="text-faint">
         Generate a basic structure for your post so you can easily get to writing. Tailor the boilerplate as per the details you provide.
       </p>

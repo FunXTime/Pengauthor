@@ -17,11 +17,9 @@ export default async function CheckupQuestionPage({
   let data = questions[questionNumber - 1];
   if (!data) notFound();
 
-  const currentPaletteName =
-    PALETTES.find((palette) =>
-      palette.name === CURRENT_PALETTE
-    )?.label ?? CURRENT_PALETTE;
-
+  const currentPaletteName = PALETTES.find((palette) =>
+    palette.name === CURRENT_PALETTE
+  )?.label ?? CURRENT_PALETTE;
   data = {
     ...data,
     note: data.note?.replaceAll("{{CURRENT_PALETTE}}", currentPaletteName)

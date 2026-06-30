@@ -85,7 +85,7 @@ export default function Icon({
     case "chevronDown":
       return (
         <svg
-          className={className}
+          className={svgClassName}
           viewBox="0 0 16 16"
           fill="currentColor"
         >
@@ -138,13 +138,9 @@ export default function Icon({
     case "checkupHero":
       return (
         <svg
-          className={className || "h-4 w-4"}
+          className={svgClassName}
           viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          {...svgProps}
         >
           <path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v7" />
           <path d="M14 2v5a1 1 0 0 0 1 1h5" />
@@ -155,7 +151,7 @@ export default function Icon({
     case "numberedCircle":
       return (
         <svg
-          className={className || "h-6 w-6"}
+          className={svgClassName}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -184,13 +180,9 @@ export default function Icon({
     case "checkedCircle":
       return (
         <svg
-          className={className || "h-6 w-6"}
+          className={svgClassName}
           viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          {...svgProps}
         >
           <circle
             cx="12"
@@ -198,6 +190,32 @@ export default function Icon({
             r="10"
           />
           <path d="m8.5 12 2.5 2.5 4.5-5" />
+        </svg>
+      );
+
+    case "research":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="M11 22H5.5a1 1 0 0 1 0-5h4.501" />
+          <path d="m21 22-1.879-1.878" />
+          <path d="M3 19.5v-15A2.5 2.5 0 0 1 5.5 2H18a1 1 0 0 1 1 1v8" />
+          <circle cx="17" cy="18" r="3" />
+        </svg>
+      );
+
+    case "search":
+      return (
+        <svg
+          className={className || "h-4 w-4"}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="m21 21-4.34-4.34" />
+          <circle cx="11" cy="11" r="8" />
         </svg>
       );
 

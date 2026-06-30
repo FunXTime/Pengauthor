@@ -11,9 +11,6 @@ export default function FinishPage() {
   const [improvements, setImprovements] = useState([]);
   const [completedImprovements, setCompletedImprovements] = useState([]);
 
-  console.log(questions);
-  console.log(questions.length);
-
   useEffect(() => {
     const checkup = JSON.parse(sessionStorage.getItem("checkup") ?? '{"answers":{}}');
     const improvements = Object.entries(checkup.answers ?? {})
@@ -23,9 +20,8 @@ export default function FinishPage() {
         return questions[questionNumber]?.feedback;
       })
       .filter(Boolean);
-    setScore(
-      Object.values(checkup.answers ?? {})
-        .reduce((sum, answer) => sum + answer.score, 0)
+    setScore(Object.values(checkup.answers ?? {})
+      .reduce((sum, answer) => sum + answer.score, 0)
     );
     setQuestionsAnswered(Object.keys(checkup.answers ?? {}).length);
     setImprovements(improvements);
@@ -45,27 +41,21 @@ export default function FinishPage() {
             name="checkupHero"
             className="mb-6 h-24 w-24"
           />
-
           <h1 className="text-3xl font-bold text-ink">
             Checkup complete!
           </h1>
-
           <p className="mt-4 text-faint">
             You've reached the end of the manual post checkup.
           </p>
-
           <p className="mt-8 text-sm text-faint">
             Your checkup score
           </p>
-
           <p className="mt-1 text-6xl font-bold text-ink">
             {score} / {questions.length}
           </p>
-
           <p className="mt-4 max-w-xl text-faint">
             A higher score generally means that your post is less likely to contain common mistakes. Give your work one final review before publishing.
           </p>
-
           <Link
             href="/checkup/question-1"
             onClick={() => sessionStorage.removeItem("checkup")}

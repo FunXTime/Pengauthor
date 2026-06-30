@@ -1,0 +1,50 @@
+{
+  "sites": {
+    "cpa": {
+      "label": "CP Armies (2022–Present)",
+      "url": "cparmies.org",
+      "api": "rest"
+    },
+    "cpun": {
+      "label": "CP United Nations (2008–2020)",
+      "url": "clubpenguinunitednations.wordpress.com",
+      "api": "wpcom"
+    },
+    "cpac": {
+      "label": "CPA Central (2009–2017)",
+      "url": "cpacentral.wordpress.com",
+      "api": "wpcom"
+    },
+    "smac": {
+      "label": "S/M Army Central (2011–2016)",
+      "url": "clubpenguinsmac.wordpress.com",
+      "api": "wpcom"
+    },
+    "smap": {
+      "label": "S/M Army Press (2014–2016)",
+      "url": "thesmap.wordpress.com",
+      "api": "wpcom"
+    },
+    "cpoal": {
+      "label": "CPO Army League (2018–2021)",
+      "url": "cpoarmyleague.wordpress.com",
+      "api": "wpcom"
+    },
+    "cpah": {
+      "label": "CP Army Hub (2018–2021)",
+      "url": "cparmyhubcp.wordpress.com",
+      "api": "wpcom"
+    },
+    "cpann": {
+      "label": "CPA News Network (2019–2020)",
+      "url": "cparmynewsnet2.wordpress.com",
+      "api": "wpcom"
+    },
+    "cpal": {
+      "label": "CPA League (2025–2026)",
+      "url": "cparmyleague.com",
+      "api": "rest"
+    }
+  },
+  "defaultSite": "cpa"
+}

@@ -16,17 +16,14 @@ export default function Question({
   const imageRef = useRef(null);
   const [visible, setVisible] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false);
-
-  const questionSlug =
-    useMemo(() => {
-      const match = pathname.match(/question-\d+$/);
-      return match?.[0] ?? null;
-    }, [pathname]);
-  const questionNumber =
-    useMemo(() => {
-      const match = questionSlug?.match(/\d+$/);
-      return match ? Number(match[0]) : null;
-    }, [questionSlug]);
+  const questionSlug = useMemo(() => {
+    const match = pathname.match(/question-\d+$/);
+    return match?.[0] ?? null;
+  }, [pathname]);
+  const questionNumber = useMemo(() => {
+    const match = questionSlug?.match(/\d+$/);
+    return match ? Number(match[0]) : null;
+  }, [questionSlug]);
   const screenshotSrc = questionSlug ? `/checkup_shots/${questionSlug}.png` : "";
 
   useEffect(() => {
@@ -97,17 +94,14 @@ export default function Question({
             />
           )}
         </div>
-
         <h1 className="text-3xl font-bold text-ink">
           {question}
         </h1>
-
         {note && (
           <p className="mt-3 text-faint">
             {note}
           </p>
         )}
-
         <div className="mt-10 flex flex-col items-center gap-3">
           {answers.map(
             (answer) => (

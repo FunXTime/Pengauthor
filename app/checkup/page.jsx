@@ -1,9 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Icon from "@/components/Icon";
 import questions from "./questions.json";
 import { preloadMany } from "@/lib/preloader";
+import Icon from "@/components/Icon";
 
 export default function CheckupPage() {
   const router = useRouter();

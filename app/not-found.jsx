@@ -8,11 +8,9 @@ export default function NotFound() {
           name="notFound"
           className="mb-6 h-24 w-24"
         />
-
         <h1 className="font-akira text-3xl text-ink">
           404 NOT FOUND
         </h1>
-
         <p className="mt-4 max-w-xl text-faint">
           <strong>The page you are looking for does not exist!</strong> Use the sidebar on the left to navigate through Pengauthor instead. If you are unable to search for something, contact a Reporting Head.
         </p>
