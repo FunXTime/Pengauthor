@@ -18,7 +18,7 @@ export default function ResearchPage() {
   const [organizations, setOrganizations] = useState(RESEARCH_ORGANIZATIONS
     .map((organization) => organization.value)
   );
-  const [filterTopTen, setFilterTopTen] = useState(true);
+  const [filterTopTen, setFilterTopTen] = useState(false);
   const [status, setStatus] = useState("idle");
 
   useEffect(() => {
@@ -26,6 +26,7 @@ export default function ResearchPage() {
     setQuery(saved.query ?? "");
     setYear(saved.year ?? "2006");
     if (saved.organizations?.length) setOrganizations(saved.organizations);
+    setFilterTopTen(saved.filterTopTen ?? false)
   }, []);
 
   useEffect(() => {
@@ -150,13 +151,16 @@ export default function ResearchPage() {
             </button>
           </Tooltip>
         </div>
-        <label className="mt-3 flex items-center gap-2 text-sm text-faint">
+        <label className="mt-3 flex items-center gap-2 text-sm text-faint cursor-pointer">
           <input
             type="checkbox"
-            checked={filterTopTen}
-            onChange={(event) => setFilterTopTen(event.target.checked)}
+            checked={!filterTopTen}
+            onChange={(event) => setFilterTopTen(!event.target.checked)}
+            className="h-4 w-4 accent-accent cursor-pointer"
           />
-          Filter out Top Ten posts
+          <span className="text-sm text-faint">
+            Search among Top Ten posts
+          </span>
         </label>
       </section>
 
