@@ -72,8 +72,9 @@ const LISTED_PAGES = [
 ];
 
 const EXTERNAL_PAGES = [
-  { label: "Posts dashboard", href: "https://cparmies.org/wp-admin/edit.php" },
-  { label: "Add new post", href: "https://cparmies.org/wp-admin/post-new.php?post_title=Untitled+Post&content=Replace+this+paragraph+with+real+content.+Try+using+Pengauthor%27s+boilerplate+generator%21" },
+  { label: "Website", href: "https://cparmies.org/" },
+  { label: "Posts Dashboard", href: "https://cparmies.org/wp-admin/edit.php" },
+  { label: "Add New Post", href: "https://cparmies.org/wp-admin/post-new.php?post_title=Untitled+Post&content=Replace+this+paragraph+with+real+content.+Try+using+Pengauthor%27s+boilerplate+generator%21" },
   { label: "Reporting Guide", href: "https://cparmies.org/reporting-guide" },
   { label: "References", href: "https://docs.google.com/spreadsheets/d/1SlH7i96flqBZwUM7CM1hj5MjzTLiTeuAtyTEfyJX_fA/edit?usp=sharing" }
 ];

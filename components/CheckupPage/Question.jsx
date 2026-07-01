@@ -73,7 +73,7 @@ export default function Question({
   return (
     <div className="flex min-h-full items-center justify-center p-8">
       <section
-        className={`w-full max-w-3xl text-center transition-opacity duration-500 ${
+        className={`w-full max-w-3xl text-center transition-opacity duration-500 unboxed ${
           visible ? "opacity-100" : "opacity-0"
         }`}
       >

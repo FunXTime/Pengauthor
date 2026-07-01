@@ -168,7 +168,7 @@ export default function ResearchPage() {
         className={
           status === "done"
             ? ""
-            : "flex min-h-[24rem] flex-col items-center justify-center text-center"
+            : "flex min-h-[calc(100vh-16rem)] flex-col items-center justify-center text-center unboxed"
         }
       >
         {status === "idle" && (

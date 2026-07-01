@@ -17,10 +17,10 @@ export default function CheckupPage() {
 
   return (
     <div className="flex min-h-full items-center justify-center p-8">
-      <section className="flex w-full max-w-3xl flex-col items-center text-center">
+      <section className="flex w-full max-w-3xl flex-col items-center text-center unboxed">
         <Icon
           name="checkupHero"
-          className="mb-6 h-24 w-24"
+          className="mb-6 h-24 w-24 text-faint"
         />
         <h1 className="font-akira text-3xl text-ink">
           Post Checkup
