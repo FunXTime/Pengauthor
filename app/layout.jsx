@@ -68,7 +68,8 @@ const LISTED_PAGES = [
   { label: "Generate", href: "/generate", icon: "generate" },
   { label: "Research", href: "/research", icon: "research" },
   { label: "Colorize", href: "/colorize", icon: "colorize" },
-  { label: "Checkup", href: "/checkup", icon: "checkup" }
+  { label: "Post Checkup", href: "/checkup", icon: "checkup" },
+  { label: "Score Calculator", href: "/calculate-score", icon: "calculateScore" }
 ];
 
 const EXTERNAL_PAGES = [
