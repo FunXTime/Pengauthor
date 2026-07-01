@@ -28,7 +28,7 @@ export default function ResultCard({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex gap-4 rounded-xl border border-edge bg-panel-raised p-4 transition-all hover:bg-panel"
+      className="flex gap-4 rounded-xl border border-edge bg-panel-raised p-4 transition-all hover:bg-panel select-none"
     >
       <div className="h-[72px] w-[72px] shrink-0 overflow-hidden rounded-lg border border-edge bg-panel">
         {thumbnail && (

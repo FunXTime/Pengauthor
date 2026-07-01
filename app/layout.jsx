@@ -67,7 +67,7 @@ const LISTED_PAGES = [
   { label: "Overview", href: "/overview", icon: "overview" },
   { label: "Generate", href: "/generate", icon: "generate" },
   { label: "Research", href: "/research", icon: "research" },
-  { label: "Colorizer", href: "/colorizer", icon: "colorizer" },
+  { label: "Colorize", href: "/colorize", icon: "colorize" },
   { label: "Checkup", href: "/checkup", icon: "checkup" }
 ];
 

@@ -40,7 +40,7 @@ export default function Icon({
         </svg>
       );
 
-    case "colorizer":
+    case "colorize":
       return (
         <svg
           className={svgClassName}
