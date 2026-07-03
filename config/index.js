@@ -30,5 +30,5 @@ export const THUMBNAILS = {
   MM: MM
 }
 
-import sites from "./sites.json";
+import sites from "./organizations.json";
 export const siteData = sites;
