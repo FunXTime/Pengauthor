@@ -24,7 +24,7 @@ export default function Question({
     const match = questionSlug?.match(/\d+$/);
     return match ? Number(match[0]) : null;
   }, [questionSlug]);
-  const screenshotSrc = questionSlug ? `/checkup_shots/${questionSlug}.png` : "";
+  const screenshotSrc = questionSlug ? `/checkup/${questionSlug}.png` : "";
 
   useEffect(() => {
     const id = requestAnimationFrame(() => setVisible(true));
