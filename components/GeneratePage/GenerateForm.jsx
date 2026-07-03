@@ -43,6 +43,7 @@ export default function GenerateForm({
         .find((thumbnail) => thumbnail.for === thumbnailName) ?? {
           filename: "fallback.png",
           src: `/thumbnails/fallback/${palette}.png`,
+          height: 280,
           designer: "Unknown",
           fallback: true
         };
