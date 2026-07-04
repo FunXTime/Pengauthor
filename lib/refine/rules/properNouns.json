@@ -1,0 +1,44 @@
+[
+  {
+    "type": "regex",
+    "pattern": "\\bCPArmies\\b",
+    "flags": "i",
+    "replacement": "CP Armies"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bCPABattleground\\b",
+    "flags": "i",
+    "replacement": "CPA Battleground"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bCPAJudges\\b",
+    "flags": "i",
+    "replacement": "CPA Judges"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bReporter Team\\b",
+    "flags": "i",
+    "replacement": "Reporting Team"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bCommunity Committee\\b",
+    "flags": "i",
+    "replacement": "Community Committee"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bTop Ten Committee\\b",
+    "flags": "i",
+    "replacement": "Top Ten Committee"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bSocial Media Department\\b",
+    "flags": "i",
+    "replacement": "Social Media Department"
+  }
+]

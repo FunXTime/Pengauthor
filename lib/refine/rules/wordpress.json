@@ -1,0 +1,12 @@
+[
+  {
+    "type": "replace",
+    "from": "[/caption]\n\n",
+    "to": "[/caption]\n"
+  },
+  {
+    "type": "replace",
+    "from": "\n\n\n",
+    "to": "\n\n"
+  }
+]

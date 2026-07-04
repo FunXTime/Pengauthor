@@ -67,6 +67,7 @@ const LISTED_PAGES = [
   { label: "Overview", href: "/overview", icon: "overview" },
   { label: "Generate", href: "/generate", icon: "generate" },
   { label: "Research", href: "/research", icon: "research" },
+  { label: "Refine", href: "/refine", icon: "refine" },
   { label: "Colorize", href: "/colorize", icon: "colorize" },
   { label: "Post Checkup", href: "/checkup", icon: "checkup" },
   { label: "Score Calculator", href: "/calculate-score", icon: "calculateScore" }

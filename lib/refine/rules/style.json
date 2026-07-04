@@ -1,0 +1,27 @@
+[
+  {
+    "type": "regex",
+    "pattern": "\\s{2,}",
+    "replacement": " "
+  },
+  {
+    "type": "regex",
+    "pattern": "(\\d)\\s*-\\s*(\\d)",
+    "replacement": "$1–$2"
+  },
+  {
+    "type": "regex",
+    "pattern": "(?<!\\w)-{1,3}(?!\\w)",
+    "replacement": "—"
+  },
+  {
+    "type": "replace",
+    "from": "...",
+    "to": "…"
+  },
+  {
+    "type": "replace",
+    "from": "....",
+    "to": "…"
+  }
+]

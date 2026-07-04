@@ -1,0 +1,36 @@
+[
+  {
+    "type": "regex",
+    "pattern": "(?<!\\d)\\.([^\\s])|(\\d)\\.(?!\\d)([^\\s])",
+    "replacement": ". $1"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bi\\b",
+    "replacement": "I"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bi'?m\\b",
+    "flags": "i",
+    "replacement": "I'm"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bdont\\b",
+    "flags": "i",
+    "replacement": "don't"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bcant\\b",
+    "flags": "i",
+    "replacement": "can't"
+  },
+  {
+    "type": "regex",
+    "pattern": "\\bwont\\b",
+    "flags": "i",
+    "replacement": "won't"
+  }
+]

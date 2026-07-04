@@ -40,6 +40,33 @@ export default function Icon({
         </svg>
       );
 
+    case "research":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="M11 22H5.5a1 1 0 0 1 0-5h4.501" />
+          <path d="m21 22-1.879-1.878" />
+          <path d="M3 19.5v-15A2.5 2.5 0 0 1 5.5 2H18a1 1 0 0 1 1 1v8" />
+          <circle cx="17" cy="18" r="3" />
+        </svg>
+      );
+
+    case "refine":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="m6 16 6-12 6 12" />
+          <path d="M8 12h8" />
+          <path d="m16 20 2 2 4-4" />
+        </svg>
+      );
+
     case "colorize":
       return (
         <svg
@@ -216,20 +243,6 @@ export default function Icon({
         </svg>
       );
 
-    case "research":
-      return (
-        <svg
-          className={svgClassName}
-          viewBox="0 0 24 24"
-          {...svgProps}
-        >
-          <path d="M11 22H5.5a1 1 0 0 1 0-5h4.501" />
-          <path d="m21 22-1.879-1.878" />
-          <path d="M3 19.5v-15A2.5 2.5 0 0 1 5.5 2H18a1 1 0 0 1 1 1v8" />
-          <circle cx="17" cy="18" r="3" />
-        </svg>
-      );
-
     case "search":
       return (
         <svg
@@ -271,6 +284,23 @@ export default function Icon({
           <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
           <circle cx="12" cy="12" r="3" />
           <path d="m16 16-1.9-1.9" />
+        </svg>
+      );
+
+    case "disconnected":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="M10.114 4.462A14.5 14.5 0 0 1 12 2a10 10 0 0 1 9.313 13.643" />
+          <path d="M15.557 15.556A14.5 14.5 0 0 1 12 22 10 10 0 0 1 4.929 4.929" />
+          <path d="M15.892 10.234A14.5 14.5 0 0 0 12 2a10 10 0 0 0-3.643.687" />
+          <path d="M17.656 12H22" />
+          <path d="M19.071 19.071A10 10 0 0 1 12 22 14.5 14.5 0 0 1 8.44 8.45" />
+          <path d="M2 12h10" />
+          <path d="m2 2 20 20" />
         </svg>
       );
 
