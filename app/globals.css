@@ -103,6 +103,15 @@ label {
   font-weight: bold;
 }
 
+main a {
+  color: var(--color-accent);
+  transition: opacity 100ms;
+}
+
+main a:hover {
+  opacity: 0.8;
+}
+
 .tooltipText {
   position: absolute;
   z-index: 99999;

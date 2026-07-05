@@ -22,7 +22,7 @@ export default function MonacoEditor({
     });
     monaco.editor.setTheme("pengauthor");
     editor.updateOptions({
-      automaticLayout: false,
+      automaticLayout: true,
       autoIndent: "full",
       bracketPairColorization: {
         enabled: true
