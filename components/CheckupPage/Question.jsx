@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
-import questions from "@/app/checkup/questions.json";
+import { questions } from "@/config";
 
 export default function Question({
   question,

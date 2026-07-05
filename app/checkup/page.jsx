@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import questions from "./questions.json";
+import { questions } from "@/config";
 import { preloadMany } from "@/lib/preloader";
 import Icon from "@/components/Icon";
 

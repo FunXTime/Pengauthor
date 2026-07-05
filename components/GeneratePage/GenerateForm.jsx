@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { REPORTERS, THUMBNAILS } from "@/config/";
+import { REPORTERS, THUMBNAILS } from "@/config";
 import { getQuestion, getNextQuestion } from "@/lib/questionnaire";
 import getSuggestedTags from "@/lib/suggestedTags";
 import {

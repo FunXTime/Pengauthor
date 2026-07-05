@@ -1,10 +1,7 @@
 import { notFound } from "next/navigation";
-import questions from "../questions.json";
+import { questions } from "@/config";
 import Question from "@/components/CheckupPage/Question";
-import {
-  PALETTES,
-  CURRENT_PALETTE
-} from "@/config";
+import { PALETTES, CURRENT_PALETTE } from "@/config";
 
 export default async function CheckupQuestionPage({
   params

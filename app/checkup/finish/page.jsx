@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import questions from "../questions.json";
+import { questions } from "@/config";
 
 export default function FinishPage() {
   const [score, setScore] = useState(0);

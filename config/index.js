@@ -16,6 +16,12 @@ export const CURRENT_PALETTE = main.currentPalette;
 export const DEFAULT_GENERATOR_DATA = structuredClone(main.defaultGeneratorData);
 export const GLOBAL_TAGS = main.globalTags;
 
+import checkup from "./checkup.json";
+export const questions = checkup;
+
+import sites from "./organizations.json";
+export const siteData = sites;
+
 import reporterList from "./reporterList.json";
 export const REPORTERS = reporterList;
 
@@ -29,6 +35,3 @@ export const THUMBNAILS = {
   LC: LC,
   MM: MM
 }
-
-import sites from "./organizations.json";
-export const siteData = sites;
