@@ -3,7 +3,7 @@
     "for": "News Report",
     "filename": "newsreport.png",
     "src": "https://cparmies.org/wp-content/uploads/2026/06/newsreport.png",
-    "height": 280,
+    "height": 328,
     "attachmentId": 74767,
     "designer": "Dino"
   },
@@ -11,7 +11,7 @@
     "for": "Breaking News",
     "filename": "breakingnews.png",
     "src": "https://cparmies.org/wp-content/uploads/2026/04/breakingnews.png",
-    "height": 280,
+    "height": 673,
     "attachmentId": 72544,
     "designer": "Koloway"
   },
@@ -19,23 +19,23 @@
     "for": "A Leader in Action",
     "filename": "A-Leader-in-Action.png",
     "src": "https://cparmies.org/wp-content/uploads/2026/06/A-Leader-in-Action.png",
-    "height": 280,
-    "attachmentId": 75317,
+    "height": 281,
+    "attachmentId": 75370,
     "designer": "Master DS"
   },
   {
     "for": "Satire",
     "filename": "Satire.png",
     "src": "https://cparmies.org/wp-content/uploads/2026/06/Satire.png",
-    "height": 280,
-    "attachmentId": 0,
+    "height": 281,
+    "attachmentId": 75412,
     "designer": "PingoBoii"
   },
   {
     "for": "Behind the Scenes",
     "filename": "CPA-Behind-the-Scenes.png",
     "src": "https://cparmies.org/wp-content/uploads/2026/06/CPA-Behind-the-Scenes.png",
-    "height": 280,
+    "height": 281,
     "attachmentId": 75240,
     "designer": "Gabgeirl"
   },
@@ -43,7 +43,7 @@
     "for": "Picture Perfect",
     "filename": "CPA-Picture-Perfect.png",
     "src": "https://cparmies.org/wp-content/uploads/2026/06/CPA-Picture-Perfect.png",
-    "height": 280,
+    "height": 281,
     "attachmentId": 75242,
     "designer": "Cassie"
   },
@@ -51,7 +51,7 @@
     "for": "Opinion",
     "filename": "opinion.png",
     "src": "https://cparmies.org/wp-content/uploads/2022/07/opinion.png",
-    "height": 280,
+    "height": 673,
     "attachmentId": 20741,
     "designer": "Master DS"
   },
@@ -59,7 +59,7 @@
     "for": "My Controversial Opinion",
     "filename": "mco1.png",
     "src": "https://cparmies.org/wp-content/uploads/2025/09/mco1.png",
-    "height": 280,
+    "height": 329,
     "attachmentId": 63550,
     "designer": "Wynn"
   },
@@ -67,7 +67,7 @@
     "for": "Flag Frenzy",
     "filename": "FLAG.png",
     "src": "https://cparmies.org/wp-content/uploads/2024/08/FLAG.png",
-    "height": 280,
+    "height": 281,
     "attachmentId": 43911,
     "designer": "Dino"
   }
