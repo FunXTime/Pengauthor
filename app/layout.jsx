@@ -132,9 +132,6 @@ export default function RootLayout({ children }) {
 
               <ul className="space-y-1">
                 <li>
-                  <ShareButton />
-                </li>
-                <li>
                   <Link
                     type="button"
                     href="/note/H4sIANIwSmoCAw3FwQmAMAwF0FW-1yLu4cGz50oDCUIiaaR0DhfoWm6jp_eM8a4p7S5ByFD7YXKaEUyKytkJEmgSjKz9sNKnlLBlP4s1hVTU-7rMg8ryAfNjCnxOAAAA"
@@ -143,6 +140,9 @@ export default function RootLayout({ children }) {
                     <Icon name="share" />
                     <span>Share a note</span>
                   </Link>
+                </li>
+                <li>
+                  <ShareButton />
                 </li>
               </ul>
 

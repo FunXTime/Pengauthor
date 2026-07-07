@@ -1,19 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { notes } from "@/lib/supabase";
 import { encodeNote } from "@/lib/notes";
 import MonacoEditor from "@/components/MonacoEditor";
 
 export default function Form({
-  initialNote
+  initialNote,
+  initialIdentifier,
+  initialShortCode
 }) {
-  const router = useRouter();
-  const [note, setNote] = useState({
-    ...initialNote,
-    date: initialNote.date || new Date().toISOString()
-  });
+  const [note, setNote] = useState(initialNote);
   const [copied, setCopied] = useState(false);
+  const [shortCode, setShortCode] = useState(
+    initialShortCode
+      ? initialIdentifier
+      : null
+  );
+  const [hash, setHash] = useState(() => encodeNote(initialNote));
+  const displayedUrl = shortCode
+    ? `https://cpa-pengauthor.vercel.app/note/${shortCode}`
+    : `cpa-pengauthor…/note/${hash}`;
 
   function updateNote(changes) {
     const updated = {
@@ -21,9 +28,11 @@ export default function Form({
       ...changes,
       date: new Date().toISOString()
     };
+    const nextHash = encodeNote(updated);
     setNote(updated);
-    const hash = encodeNote(updated);
-    window.history.replaceState(null, "", `/note/${hash}`);
+    setHash(nextHash);
+    setShortCode(null);
+    window.history.replaceState(null, "", `/note/${nextHash}`);
   }
 
   return (
@@ -41,7 +50,6 @@ export default function Form({
             className="w-full rounded-xl border border-edge bg-panel px-4 py-2 text-ink outline-none"
           />
         </div>
-
         <div className="flex-1 space-y-2">
           <label className="block text-sm font-medium text-faint">
             Author
@@ -78,18 +86,55 @@ export default function Form({
         />
       </div>
 
-      <div className="flex justify-center pt-4">
+      <div className="flex w-full items-center gap-4 pt-4">
+        <code
+          className={`truncate rounded-lg border border-edge bg-panel px-3 py-2 text-sm text-faint ${
+            shortCode ? "flex-[2]" : "flex-[4]"
+          }`}
+        >
+          {displayedUrl}
+        </code>
+
         <button
           type="button"
-          className="w-1/2 rounded-xl border border-edge bg-panel px-4 py-2 text-sm font-medium text-ink transition hover:bg-panel-raised cursor-pointer"
+          className={`rounded-xl border border-edge bg-panel px-4 py-2 text-sm font-medium text-ink transition hover:bg-panel-raised cursor-pointer ${
+            shortCode ? "flex-1" : "flex-[2]"
+          }`}
           onClick={async () => {
-            await navigator.clipboard.writeText(window.location.href);
+            await navigator.clipboard.writeText(
+              displayedUrl.replace(
+                "cpa-pengauthor…",
+                "https://cpa-pengauthor.vercel.app"
+              )
+            );
             setCopied(true);
-            setTimeout(() => { setCopied(false); }, 1000);
+            setTimeout(() => {
+              setCopied(false);
+            }, 1000);
           }}
         >
           {copied ? "Copied!" : "Copy note link"}
         </button>
+
+        {!shortCode && (
+          <button
+            type="button"
+            className="flex-1 rounded-xl border border-edge bg-panel px-4 py-2 text-sm font-medium text-ink transition hover:bg-panel-raised cursor-pointer"
+            onClick={async () => {
+              const expiresAt = new Date(
+                Date.now() + 1000 * 60 * 60 * 24 * 30
+              ).toISOString();
+              const code = await notes.createShortLink(
+                encodeNote(note),
+                expiresAt
+              );
+              setShortCode(code);
+              window.history.replaceState(null, "", `/note/${code}`);
+            }}
+          >
+            Shorten URL
+          </button>
+        )}
       </div>
     </main>
   );
