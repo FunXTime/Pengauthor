@@ -22,7 +22,7 @@ export default function CheckupPage() {
           name="checkupHero"
           className="mb-6 h-24 w-24 text-faint"
         />
-        <h1 className="font-akira text-3xl text-ink">
+        <h1 className="font-akira text-3xl">
           Post Checkup
         </h1>
         <p className="mt-4 max-w-2xl text-faint">
