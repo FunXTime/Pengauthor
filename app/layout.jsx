@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${syne.variable} ${inter.variable} ${akira.variable} antialiased`}>
         <div className="flex h-screen overflow-hidden bg-base">
-          <aside className="flex w-56 flex-col border-r border-edge bg-[#0d0d0d] select-none">
+          <aside className="flex h-screen w-56 shrink-0 flex-col overflow-y-auto border-r border-edge bg-[#0d0d0d] select-none">
 
             <div className="border-b border-edge px-5 py-5">
               <p className="font-akira text-lg tracking-wide text-ink">
@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
               <p className="mt-1 text-xs text-faint">Built for CPA's Reporting Team</p>
             </div>
 
-            <nav className="flex-1 px-3 py-4">
+            <nav className="flex-1 overflow-y-auto px-3 py-4">
               <ul className="space-y-1">
                 {LISTED_PAGES.map((item) => (
                   <li key={item.href}>
