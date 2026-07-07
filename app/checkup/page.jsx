@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { questions } from "@/config";
+import { QUESTIONS } from "@/config";
 import { preloadMany } from "@/lib/preloader";
 import Icon from "@/components/Icon";
 
@@ -10,7 +10,7 @@ export default function CheckupPage() {
 
   async function handleStart() {
     sessionStorage.removeItem("checkup");
-    const screenshots = questions.map((_, index) => `/checkup/question-${index + 1}.png`);
+    const screenshots = QUESTIONS.map((_, index) => `/checkup/question-${index + 1}.png`);
     preloadMany(screenshots).catch(() => {});
     router.push("/checkup/question-1");
   }

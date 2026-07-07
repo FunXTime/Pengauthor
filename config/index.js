@@ -17,13 +17,19 @@ export const DEFAULT_GENERATOR_DATA = structuredClone(main.defaultGeneratorData)
 export const GLOBAL_TAGS = main.globalTags;
 
 import checkup from "./checkup.json";
-export const questions = checkup;
+export const QUESTIONS = checkup;
 
 import sites from "./organizations.json";
-export const siteData = sites;
+export const SITEDATA = sites;
+
+import questionnaire from "./questionnaire.json";
+export const QUESTIONNAIRE = questionnaire;
 
 import reporterList from "./reporterList.json";
 export const REPORTERS = reporterList;
+
+import suggestedTags from "./suggestedTags.json";
+export const SUGGESTED_TAGS = suggestedTags;
 
 import DEFAULT from "./thumbnails/DEFAULT.json";
 import CC from "./thumbnails/CC.json";
@@ -31,7 +37,7 @@ import LC from "./thumbnails/LC.json";
 import MM from "./thumbnails/MM.json";
 export const THUMBNAILS = {
   DEFAULT: DEFAULT,
-  CC: CC,
+  MM: MM,
   LC: LC,
-  MM: MM
+  CC: CC
 }
