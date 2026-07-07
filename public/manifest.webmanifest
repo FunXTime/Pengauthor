@@ -1,7 +1,9 @@
 {
+  "id": "https://cpa-pengauthor.vercel.app",
   "name": "Pengauthor",
-  "description": "CPA Media Department's premier writing tool",
+  "description": "CPA Media Department's premier writing tool. Install this app if you want to bring your reporter life to your device's drawers.",
   "short_name": "Pengauthor",
+  "categories": ["productivity", "utilities"],
   "icons": [
     {
       "src": "/icons/web-app-manifest-192x192.png",
@@ -16,8 +18,74 @@
       "purpose": "any maskable"
     }
   ],
+  "screenshots": [
+    {
+      "src": "/screenshots/post-generation.png",
+      "sizes": "671x380",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "A glimpse of the boilerplate generator tool"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Overview",
+      "short_name": "Overview",
+      "description": "Explore Pengauthor",
+      "url": "/overview"
+    },
+    {
+      "name": "Generate",
+      "short_name": "Generate",
+      "description": "Generate a post",
+      "url": "/generate"
+    },
+    {
+      "name": "Research",
+      "short_name": "Research",
+      "description": "Research through history",
+      "url": "/research"
+    },
+    {
+      "name": "Refine",
+      "short_name": "Refine",
+      "description": "Refine your post",
+      "url": "/refine"
+    },
+    {
+      "name": "Colorize",
+      "short_name": "Colorize",
+      "description": "Colorize your post",
+      "url": "/colorize"
+    },
+    {
+      "name": "Post Checkup",
+      "short_name": "Checkup",
+      "description": "Check your post",
+      "url": "/checkup"
+    },
+    {
+      "name": "Score Calculator",
+      "short_name": "Calculate Score",
+      "description": "Calculate post score",
+      "url": "/calculate-score"
+    },
+    {
+      "name": "Create a note",
+      "short_name": "New note",
+      "description": "Create a note",
+      "url": "/note"
+    }
+  ],
   "theme_color": "#331500",
   "background_color": "#ffe1cc",
   "display": "standalone",
-  "start_url": "/"
+  "display_override": ["standalone", "minimal-ui", "fullscreen", "browser"],
+  "start_url": "/",
+  "launch_handler": {
+    "client-mode": ["navigate-existing", "focus-existing", "navigate-new", "auto"]
+  },
+  "note_taking": {
+    "new_note_url": "/note"
+  }
 }
