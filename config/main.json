@@ -15,8 +15,13 @@
       "Resignation": "News Report",
       "War": "News Report",
       "Alliance": "News Report",
+      "Special Report": "Special Report",
+      "Battle Report": "Battle Report",
+      "War Battle Review": "War Battle Review",
       "Monthly Map Updates": "Monthly Map Updates",
-      "Media Member of the Month": null
+      "Top Five Moments": "Top Five Moments",
+      "Media Member of the Month": null,
+      "New Columns": "New Columns"
     },
     "Column": {
       "A Leader in Action": "A Leader in Action",
@@ -30,8 +35,14 @@
     },
     "Opinion": {
       "Op-Ed": "Opinion",
+      "Editorial": "Editorial",
       "My Controversial Opinion": "My Controversial Opinion",
+      "Philosophy": "Philosophy",
+      "Comic": "Comic",
       "Flag Frenzy": "Flag Frenzy"
+    },
+    "Tournament": {
+      "Community Reacts": "Community Reacts"
     }
   },
   "palettes": [
