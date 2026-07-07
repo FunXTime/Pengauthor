@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { questions } from "@/config";
-import Question from "@/components/CheckupPage/Question";
+import Question from "./Question";
 import { PALETTES, CURRENT_PALETTE } from "@/config";
 
 export default async function CheckupQuestionPage({

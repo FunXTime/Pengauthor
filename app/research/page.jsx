@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { searchPosts } from "@/lib/wordpress";
-import SearchResults from "@/components/ResearchPage/SearchResults";
+import SearchResults from "./SearchResults";
 import {
   RESEARCH_ORGANIZATIONS,
   getResearchState,

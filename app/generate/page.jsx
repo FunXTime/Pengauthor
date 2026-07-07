@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { DEFAULT_GENERATOR_DATA as DEFAULT_FORM_DATA } from "@/config";
 import getTemplate from "@/lib/boilerplate/getTemplate";
 import compile from "@/lib/boilerplate/compile";
-import GenerateForm from "@/components/GeneratePage/GenerateForm";
-import GenerateEditor from "@/components/GeneratePage/GenerateEditor";
+import GenerateForm from "./Form";
+import GenerateEditor from "./Editor";
 
 export default function GeneratePage() {
   const [formData, setFormData] = useState(() => {
