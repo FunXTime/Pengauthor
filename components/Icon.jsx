@@ -31,9 +31,7 @@ export default function Icon({
         <svg
           className={svgClassName}
           viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
+          {...svgProps}
         >
           <path d="M12 3v18" />
           <path d="M3 12h18" />
@@ -203,15 +201,9 @@ export default function Icon({
         <svg
           className={svgClassName}
           viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
+          {...svgProps}
         >
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-          />
+          <circle cx="12" cy="12" r="10" />
           <text
             x="12"
             y="12"
@@ -234,11 +226,7 @@ export default function Icon({
           viewBox="0 0 24 24"
           {...svgProps}
         >
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-          />
+          <circle cx="12" cy="12" r="10" />
           <path d="m8.5 12 2.5 2.5 4.5-5" />
         </svg>
       );
@@ -287,6 +275,20 @@ export default function Icon({
         </svg>
       );
 
+    case "invalidNote":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="M15 3v5a1 1 0 0 0 1 1h5" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+          <path d="m16 16 5 5" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+          <path d="M21 12V9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+          <path d="m21 16-5 5" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+        </svg>
+      );
+
     case "disconnected":
       return (
         <svg
@@ -311,11 +313,7 @@ export default function Icon({
           viewBox="0 0 24 24"
           {...svgProps}
         >
-          <circle
-            cx="11"
-            cy="11"
-            r="8"
-          />
+          <circle cx="11" cy="11" r="8" />
           <path d="m21 21-4.3-4.3" />
           <path d="M11 7v4" />
           <path d="M11 15h.01" />

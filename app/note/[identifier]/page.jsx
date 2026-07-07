@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Form from "../Form";
+import Icon from "@/components/Icon";
 import { decodeNote } from "@/lib/notes";
 import { notes } from "@/lib/supabase";
 
@@ -27,17 +28,25 @@ export default async function NotePage({
     }
     if (note === null) {
       return (
-        <div className="mx-auto max-w-5xl p-8">
-          <h1 className="text-2xl font-semibold text-ink">
-            Oh no!
-          </h1>
-          <p className="mt-2 text-faint">
-            You've been linked to an invalid note! The note hash or code mentioned in the URL does not map to a valid note. <Link href="/note" className="blue">Create a new note</Link>, or contact the person who tried sharing this faulty note.
-          </p>
-          <p className="mt-2 text-faint">
-            By the way, a note expires 30 days after its creation!
-          </p>
-        </div>
+        <main className="flex min-h-[calc(100vh-4rem)] items-center justify-center p-8">
+          <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+            <Icon
+              name="invalidNote"
+              className="mb-6 h-24 w-24 text-faint"
+            />
+            <h1 className="text-3xl font-akira text-ink">
+              Oh no!
+            </h1>
+            <p className="mt-4 text-faint">
+              You've been linked to an invalid note! The note hash or code in the
+              URL does not map to a valid note. <Link href="/note" className="blue">Create a new note</Link>, or contact the person who shared this faulty note.
+            </p>
+            <p className="mt-4 text-faint">
+              By the way, shortened note links automatically expire 30 days after
+              they're created.
+            </p>
+          </div>
+        </main>
       );
     }
     note = { ...defaults, ...note };

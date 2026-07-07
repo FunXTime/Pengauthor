@@ -74,7 +74,6 @@ h6 {
   font-family: var(--font-syne);
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -0.03em;
   color: var(--color-ink);
 }
 

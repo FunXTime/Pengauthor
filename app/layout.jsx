@@ -89,7 +89,7 @@ export default function RootLayout({ children }) {
           <aside className="flex w-56 flex-col border-r border-edge bg-[#0d0d0d] select-none">
 
             <div className="border-b border-edge px-5 py-5">
-              <p className="font-akira text-lg font-semibold tracking-wide text-ink">
+              <p className="font-akira text-lg tracking-wide text-ink">
                 Pengauthor
               </p>
               <p className="mt-1 text-xs text-faint">Built for CPA's Reporting Team</p>

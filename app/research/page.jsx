@@ -67,13 +67,13 @@ export default function ResearchPage() {
           per_page: 50,
           filterTopTen
         });
-        console.log(organization, posts);
+        console.log(`Posts fetched for ${organization}:`, posts);
         results.push(...posts.map((post) => ({
           ...post,
           organization
         })));
       } catch (error) {
-        console.error(`Failed to search ${organization}`, error);
+        console.error(`Unable to search ${organization}:`, error);
       }
     }
     const filtered = results.filter((result) =>
