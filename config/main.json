@@ -49,26 +49,26 @@
     {
       "name": "DEFAULT",
       "label": "Default",
-      "activeColor": "#2a5d7a",
+      "activeColor": "#0071b8",
       "inactiveColor": "#003454"
     },
     {
       "name": "MM",
       "label": "March Madness",
       "activeColor": "#169c19",
-      "inactiveColor": "#062f07"
+      "inactiveColor": "#107312"
     },
     {
       "name": "LC",
-      "label": "Legends Cup",
-      "activeColor": "#505769",
-      "inactiveColor": "#2c3345"
+      "label": "Legends Cup XVI",
+      "activeColor": "#b49155",
+      "inactiveColor": "#8c6726"
     },
     {
       "name": "CC",
       "label": "Christmas Chaos",
       "activeColor": "#d33943",
-      "inactiveColor": "#451316"
+      "inactiveColor": "#8c262d"
     }
   ],
   "currentPalette": "DEFAULT",
