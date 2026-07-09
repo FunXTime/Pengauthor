@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { questions } from "@/config";
+import { QUESTIONS } from "@/config";
 
 export default function FinishPage() {
   const [score, setScore] = useState(0);
@@ -17,7 +17,7 @@ export default function FinishPage() {
       .filter(([, answer]) => answer.score == 0)
       .map(([slug]) => {
         const questionNumber = Number(slug.match(/\d+$/)?.[0]) - 1;
-        return questions[questionNumber]?.feedback;
+        return QUESTIONS[questionNumber]?.feedback;
       })
       .filter(Boolean);
     setScore(Object.values(checkup.answers ?? {})
@@ -51,7 +51,7 @@ export default function FinishPage() {
             Your checkup score
           </p>
           <p className="mt-1 text-6xl font-bold text-ink">
-            {score} / {questions.length}
+            {score} / {QUESTIONS.length}
           </p>
           <p className="mt-4 max-w-xl text-faint">
             A higher score generally means that your post is less likely to contain common mistakes. Give your work one final review before publishing.
