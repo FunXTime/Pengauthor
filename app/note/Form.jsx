@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { notes } from "@/lib/supabase";
 import { encodeNote } from "@/lib/notes";
+import PiP from "./pip";
+import { openPiP, updatePiP, isPiPOpen } from "@/lib/pip";
 import MonacoEditor from "@/components/MonacoEditor";
 
 export default function Form({
@@ -33,6 +35,9 @@ export default function Form({
     setHash(nextHash);
     setShortCode(null);
     window.history.replaceState(null, "", `/note/${nextHash}`);
+    if (isPiPOpen()) updatePiP(PiP, {
+      note: updated
+    });
   }
 
   return (
@@ -136,6 +141,20 @@ export default function Form({
           </button>
         )}
       </div>
+
+      <button
+        type="button"
+        className="w-full rounded-xl border border-edge bg-panel px-4 py-2 text-sm font-medium text-ink transition hover:bg-panel-raised cursor-pointer"
+        onClick={() =>
+          openPiP(PiP, {
+            width: 300,
+            height: 200,
+            props: { note }
+          })
+        }
+      >
+        Overlay this note
+      </button>
     </main>
   );
 }

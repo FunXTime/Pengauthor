@@ -8,6 +8,10 @@
     "Reporter-in-Training"
   ],
   "postTypes": {
+    "Announcements": {
+      "Media Member of the Month": null,
+      "New Columns": "New Columns"
+    },
     "News": {
       "Army Opening": "News Report",
       "Army Shutdown": "News Report",
@@ -19,9 +23,7 @@
       "Battle Report": "Battle Report",
       "War Battle Review": "War Battle Review",
       "Monthly Map Updates": "Monthly Map Updates",
-      "Top Five Moments": "Top Five Moments",
-      "Media Member of the Month": null,
-      "New Columns": "New Columns"
+      "Top Five Moments": "Top Five Moments"
     },
     "Column": {
       "A Leader in Action": "A Leader in Action",

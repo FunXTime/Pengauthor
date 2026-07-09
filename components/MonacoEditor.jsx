@@ -45,6 +45,10 @@ export default function MonacoEditor({
       padding: {
         top: 8
       },
+      readOnlyMessage: {
+        value: "Edit this note in Pengauthor, not here!",
+        isTrusted: true
+      },
       renderLineHighlight: "all",
       renderWhitespace: "boundary",
       roundedSelection: true,
