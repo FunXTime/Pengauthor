@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { REPORTERS } from "@/config";
 import { notes } from "@/lib/supabase";
 import { encodeNote } from "@/lib/notes";
 import PiP from "./pip";
@@ -60,12 +61,18 @@ export default function Form({
             Author
           </label>
           <input
+            list="reporterName"
             type="text"
             placeholder="Author"
             value={note.author}
             onChange={(event) => updateNote({ author: event.target.value })}
             className="w-full rounded-xl border border-edge bg-panel px-4 py-2 text-ink outline-none"
           />
+          <datalist id="reporterName">
+            {REPORTERS.map((reporter) => (
+              <option key={reporter} value={reporter} />
+            ))}
+          </datalist>
         </div>
       </div>
 
