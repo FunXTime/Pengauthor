@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import ShareButton from "@/components/ShareButton";
+import GlobalShortcuts from "@/components/GlobalShortcuts";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -160,6 +161,7 @@ export default function RootLayout({ children }) {
           </main>
         </div>
 
+        <GlobalShortcuts />
         <Analytics />
         <SpeedInsights />
       </body>
