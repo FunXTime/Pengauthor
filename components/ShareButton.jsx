@@ -24,7 +24,7 @@ export default function ShareButton() {
       className="flex w-full items-center gap-3 rounded-xl px-3 py-1.5 text-sm text-faint transition-all hover:bg-panel-raised hover:text-ink cursor-pointer"
     >
       <Icon name="share" />
-      <span>Share this site</span>
+      <span>Share this page</span>
     </a>
   );
 }

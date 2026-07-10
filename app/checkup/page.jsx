@@ -26,7 +26,7 @@ export default function CheckupPage() {
           Post Checkup
         </h1>
         <p className="mt-4 max-w-2xl text-faint">
-          Before publishing your article, run through an interactive checkup to ensure that your post includes all the important details and avoids common mistakes that could lead to silly score loss!
+          Before finishing your article, run through an interactive checkup to ensure that your post includes all the important details and avoids common mistakes that could lead to silly score loss!
         </p>
         <button
           type="button"

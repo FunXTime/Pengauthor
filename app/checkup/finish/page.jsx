@@ -54,7 +54,7 @@ export default function FinishPage() {
             {score} / {QUESTIONS.length}
           </p>
           <p className="mt-4 max-w-xl text-faint">
-            A higher score generally means that your post is less likely to contain common mistakes. Give your work one final review before publishing.
+            A higher score generally means that your post is less likely to contain common mistakes. Give your work one final review before finishing.
           </p>
           <Link
             href="/checkup/question-1"
