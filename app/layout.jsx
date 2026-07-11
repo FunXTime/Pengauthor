@@ -27,6 +27,10 @@ const akira = localFont({
 
 const siteURL = "https://cpa-pengauthor.vercel.app";
 
+export const viewport = {
+  themeColor: "#ff6900"
+};
+
 export const metadata = {
   title: "Pengauthor",
   description: "CPA Media Department's premier writing tool",
