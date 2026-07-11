@@ -1,0 +1,42 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Hook with a very short gist of this post]</b> [In this post, …]"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Dive straight into the army's opening; state the date of the opening event and the army's size at the event; mention present leaders; add a very short description of the leaders' recent history if any; include any recent diplomatic updates with respect to this army]"
+  },
+
+  { "type": "image", "helperText": "Featured picture from the opening event if any; otherwise, the opening announcement" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Talk about the opening event; highlight any recent announcements in the Discord server; add information on the army's Discord server and its preparation; add details of the army's uniform]"
+  },
+
+  { "type": "image", "helperText": "Relevant announcement screenshot and/or army uniform picture" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Add some extra details to the topic; you may focus on the army's history if it is a revival; dive deeper into the history of the army's leaders]"
+  },
+
+  { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
+
+  { "type": "interview", "questions": "generatedQuestions" },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+  },
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
+]

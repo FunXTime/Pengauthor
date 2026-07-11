@@ -1,0 +1,125 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Hook with a very short gist of the month and this post]</b> [In this post, …]"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Talk about the month; name any tournaments with winners and special events that occured during the month if any; name any wars that occurred during the month]"
+  },
+
+  { "type": "image", "helperText": "Relevant picture based on the paragraph above" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Dive deeper into what happened during the month; summarize breaking and important news that may have occured; provide a sentence or two containing your input of how the map transformed]"
+  },
+
+  { "type": "image", "helperText": "Relevant picture based on the paragraph above" },
+
+  {
+    "type": "paragraph",
+    "content": "Finally, let us explore what happened throughout [Month] [Year] on the army map. In a nutshell, we will go through each event concisely."
+  },
+
+  {
+    "type": "heading",
+    "content": "What Happened in [Month] [Year]?",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "heading",
+    "content": "[Date]",
+    "settings": { "level": 4 }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Event 1 details]",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Event 2 details]",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "heading",
+    "content": "[Date]",
+    "settings": { "level": 4 }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Event 1 details]",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Event 2 details]",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "heading",
+    "content": "[Date]",
+    "settings": { "level": 4 }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Event 1 details]",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Event 2 details]",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[…]",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "heading",
+    "content": "Map's Current State",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  { "type": "image", "helperText": "Screenshot of the map taken at the very end of the month" },
+
+  {
+    "type": "list",
+    "items": [
+      "Currently, armies control [territories controlled] territories across the map.",
+      "[Army] holds the most number of territories — 17 servers each.",
+      "In addition, [army] holds the second-highest number of territories — 10 servers in total."
+    ]
+  },
+
+  { "type": "image", "helperText": "Screenshot of the /leaderboard command (Page 1) taken at the very end of the month" },
+
+  { "type": "image", "helperText": "Screenshot of the /leaderboard command (Page 2) taken at the very end of the month" },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+  },
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
+]

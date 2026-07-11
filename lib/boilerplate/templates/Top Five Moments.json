@@ -1,0 +1,124 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Hook with a very short gist of the month and this post]</b> [In this post, …]"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Very short description about the month; name any tournaments and special events that occured during the month if any; highlight how the Club Penguin Armies came together to vote for their most memorable moments; count the number of moments that were put up for voting]"
+  },
+
+  {
+    "type": "heading",
+    "content": "#5 - [Moment Post Title]",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "Written by [Writer Position]: <strong>[Writer Name]</strong>",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Paste, edit, and format the writer's paragraph]",
+    "settings": { "align": "center" }
+  },
+
+  { "type": "image", "helperText": "Relevant picture based on the moment highlighted above" },
+
+  {
+    "type": "heading",
+    "content": "#4 - [Moment Post Title]",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "Written by [Writer Position]: <strong>[Writer Name]</strong>",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Paste, edit, and format the writer's paragraph]",
+    "settings": { "align": "center" }
+  },
+
+  { "type": "image", "helperText": "Relevant picture based on the moment highlighted above" },
+
+  {
+    "type": "heading",
+    "content": "#3 - [Moment Post Title]",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "Written by [Writer Position]: <strong>[Writer Name]</strong>",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Paste, edit, and format the writer's paragraph]",
+    "settings": { "align": "center" }
+  },
+
+  { "type": "image", "helperText": "Relevant picture based on the moment highlighted above" },
+
+  {
+    "type": "heading",
+    "content": "#2 - [Moment Post Title]",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "Written by [Writer Position]: <strong>[Writer Name]</strong>",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Paste, edit, and format the writer's paragraph]",
+    "settings": { "align": "center" }
+  },
+
+  { "type": "image", "helperText": "Relevant picture based on the moment highlighted above" },
+
+  {
+    "type": "heading",
+    "content": "#1 - [Moment Post Title]",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "Written by [Writer Position]: <strong>[Writer Name]</strong>",
+    "settings": { "align": "center" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Paste, edit, and format the writer's paragraph]",
+    "settings": { "align": "center" }
+  },
+
+  { "type": "image", "helperText": "Relevant picture based on the moment highlighted above" },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+  },
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
+]

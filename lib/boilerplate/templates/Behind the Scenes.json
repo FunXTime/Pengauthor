@@ -1,0 +1,59 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Introduce and describe the column]</b> [In this edition, …]"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Talk about the person; state their affiliation and civic service roles across all organizations; list two or three character traits of the leader; add a very short description of the person's recent history if any]"
+  },
+
+  { "type": "image", "helperText": "A screenshot of the person working for a department" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Talk about their work routine within their department(s); highlight any internal feats of this individual if any; mention any key contributions by the individual]"
+  },
+
+  { "type": "image", "helperText": "A screenshot showing the person in action; an internal screenshot can be requested from the person themself or from the respective Department Heads" },
+
+  {
+    "type": "heading",
+    "content": "Biggest Hits",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Add this section to provide details of key posts written (if a reporter), complex calculations done (if a Top Ten Committee member), activities completed (if a Community Committee member), graphics designed (if a Graphics Designer), and media edited (if a Social Media Department member).]"
+  },
+
+  {
+    "type": "heading",
+    "content": "Background",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Focus on the person's history in their department(s), their army, and the army community; mention when they joined their department(s); talk less about their army's history]"
+  },
+
+  { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
+
+  { "type": "interview", "questions": "generatedQuestions" },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+  },
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Hook with a very short gist of this post]</b> [In this post, …]"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Dive straight into the army's shutdown; state the date of the announcement; mention when the army held its last event if any; mention present leaders and who announced the shutdown; quote why the army was shut; include any recent diplomatic updates with respect to this army]"
+  },
+
+  { "type": "image", "helperText": "Relevant announcement screenshot" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Dig deeper into the army's recent past; highlight any other recent announcements in the Discord server; add a short description about the lifespan of the army's current generation; add insights to the army's recent performances by using sources like the Top Ten]"
+  },
+
+  { "type": "image", "helperText": "Featured picture from the last event and/or from a recent event" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Add some extra details to the topic; add the army's history in detail; dive deeper into the history of the army's leaders]"
+  },
+
+  { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
+
+  { "type": "interview", "questions": "generatedQuestions" },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+  },
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
+]

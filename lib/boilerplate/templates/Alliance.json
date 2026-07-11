@@ -1,0 +1,42 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Hook with a very short gist of this post]</b> [In this post, …]"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Talk about the alliance; state the date of the declaration; list the armies involved; if there was a causing event or post, mention its date and size; talk about the nature of the alliance and quote a few words from the declaration post; include any recent diplomatic updates with respect to the armies]"
+  },
+
+  { "type": "image", "helperText": "Alliance declaration screenshot" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Dive deeper about the alliance; list any previous conflicts, practice battles, or tournament battles between any of the involved armies; highlight any relevant announcements in the armies' Discord servers if any; list the incumbent leaders of the armies involved if there are there are fewer armies involved]"
+  },
+
+  { "type": "image", "helperText": "Featured picture of recent events from the armies involved" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Add some extra details to the topic; you may focus on the armies' histories if possible; place Top Ten statistics; add other meaningful insights if you find any]"
+  },
+
+  { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
+
+  { "type": "interview", "questions": "generatedQuestions" },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+  },
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
+]

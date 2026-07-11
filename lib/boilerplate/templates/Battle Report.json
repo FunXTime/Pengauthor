@@ -1,0 +1,42 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Hook with a very short gist of this post]</b> [In this post, …]"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Talk about the battle; state its date; name the armies involved; if there was a causing event or post, mention its date and size; talk about the nature of the battle and whether allied support was sent; state army sizes; include any recent diplomatic updates with respect to the armies]"
+  },
+
+  { "type": "image", "helperText": "Featured picture from the battle; preferably one that favors both armies if any" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Dive deeper about the battle; use the judges' summary to tailor your own summary of the battle; list any previous conflicts or battles between any of the involved armies; highlight any relevant announcements in the armies' Discord servers if any; list the incumbent leaders of the armies involved if there are there are fewer armies involved]"
+  },
+
+  { "type": "image", "helperText": "Relevant announcement screenshot if any; otherwise, another picture from the battle" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Add some extra details to the topic; you may focus on the armies' histories if relevant; talk about the armies' Top Ten performances; add meaningful statistics or insights if you find any]"
+  },
+
+  { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
+
+  { "type": "interview", "questions": "generatedQuestions" },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+  },
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
+]

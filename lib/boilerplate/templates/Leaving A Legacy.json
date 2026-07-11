@@ -1,0 +1,48 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Introduce and describe the column]</b> [In this edition, …]"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Talk about the person; add a very short description of the person's recent history; mention the date when they first joined the army community; list some key armies the person has spent time in; name the tournaments and special events the person has led through; list two or three character traits of the person]"
+  },
+
+  { "type": "image", "helperText": "Featured picture from an event about the person if any; otherwise, a recent event picture, preferably one from an event that the person participated in" },
+
+  {
+    "type": "heading",
+    "content": "Their Story",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Dive deeper about the person's history over time; detail their time in each army and name their last attained rank; highlight any relevant wars or announcements with regards to this this person; mention any key contributions by the individual; list the most important civic service roles of the person if any]"
+  },
+
+  { "type": "image", "helperText": "Another featured picture from a relevant event if possible; otherwise, a relevant screenshot of an announcement or message" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Focus on important Top Ten trends created by this individual; highlight any accolades of the person that you have not included so far]"
+  },
+
+  { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
+
+  { "type": "interview", "questions": "generatedQuestions" },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+  },
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<b>[Introduce and describe the column]</b> [In this edition, …]"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "heading",
+    "content": "[Person Name]'s Journey",
+    "settings": { "level": 3, "useAkira": true }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Talk about the person and their current army position; mention their join date and how they joined; talk about their rank history within the army]"
+  },
+
+  { "type": "image", "helperText": "A screenshot of their promotion announcement if possible; otherwise, a recent event picture that they attended" },
+
+  {
+    "type": "paragraph",
+    "content": "[Paragraph — Name the other armies the person has been in from the past if any; mention the feats achieved by them within their present army]"
+  },
+
+  { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
+
+  { "type": "interview", "questions": "generatedQuestions" },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+  },
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
+]
