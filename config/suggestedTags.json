@@ -158,8 +158,7 @@
   ],
 
   "Community Reacts": [
-    { "name": "Community Reacts" },
-    { "name": "[Interviewee…]", "tip": "Use the name of the person(s) you interviewed" }
+    { "name": "Community Reacts" }
   ],
 
   "default": [],
