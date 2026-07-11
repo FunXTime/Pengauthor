@@ -104,10 +104,31 @@ Multi-question interview instead uses an array of question objects, and it can a
 
 **Note:** Providing the `answer` field is optional. Not providing the `answer` field will automatically result in `"Answer"` being set as the value of `answer`.
 
+### List
+
+A list can be one of two types…
+
+1. BULLETED (default)
+2. NUMBERED
+
+```json
+{
+  "type": "list",              // Defines a list
+  "items": [                   // Sets the textual items in order
+    "[Item 1]",                // An example item
+    "[Item 2]",                // An example item
+    "[Item 3]"                 // An example item
+  ],
+  "settings": {
+    "type": "BULLETED"         // Sets the list type: "BULLETED" or "NUMBERED"
+  }
+}
+```
+
 ### Paragraph
 A paragraph can be one of two formats…
 
-1. PLAIN
+1. PLAIN (default)
 2. SIGNOFF
 3. PRE-INTERVIEW
 

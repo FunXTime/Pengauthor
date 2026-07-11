@@ -1,56 +1,42 @@
 [
   {
     "type": "paragraph",
-    "content": "<b>[Catchphrase hinting at the topic]</b> [In this article, …]"
+    "content": "<b>[Hook with a very short gist of this post]</b> [In this post, …]"
   },
-  {
-    "type": "image",
-    "src": "thumbnail"
-  },
-  {
-    "type": "readMore"
-  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
   {
     "type": "paragraph",
-    "content": "[Paragraph]"
+    "content": "[Paragraph — Dive straight into the topic of this post; try to focus more on the present context in this paragraph]"
   },
-  {
-    "type": "image",
-    "helperText": "An event picture"
-  },
-  {
-    "type": "paragraph",
-    "content": "[Paragraph]"
-  },
-  {
-    "type": "image",
-    "helperText": "An announcement picture"
-  },
+
+  { "type": "image", "helperText": "A relevant picture" },
+
   {
     "type": "paragraph",
-    "content": "[Paragraph]"
+    "content": "[Paragraph — Add more details to this topic; you may focus on the lesser important details of the present in this paragraph]"
   },
+
+  { "type": "image", "helperText": "Another relevant picture" },
+
   {
     "type": "paragraph",
-    "settings": {
-      "type": "PRE-INTERVIEW"
-    }
+    "content": "[Paragraph — Another paragraph adding some extra details to the topic; you may focus on history in this paragraph]"
   },
-  {
-    "type": "interview",
-    "questions": "generatedQuestions"
-  },
-  {
-    "type": "horizontalRule"
-  },
+
+  { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
+
+  { "type": "interview", "questions": "generatedQuestions" },
+
+  { "type": "horizontalRule" },
+
   {
     "type": "paragraph",
-    "content": "[Conclusion] <em>[Italicized questions]</em>"
+    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
   },
-  {
-    "type": "paragraph",
-    "settings": {
-      "type": "SIGNOFF"
-    }
-  }
+
+  { "type": "paragraph", "settings": { "type": "SIGNOFF" } }
 ]
