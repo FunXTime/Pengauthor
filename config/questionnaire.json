@@ -88,6 +88,23 @@
     "Is there anything else you would like to add?"
   ],
 
+  "Picture Perfect": [
+    "What was your role during this event?",
+    "Did you realize this moment would become so memorable?",
+    "Do you recall what was going through your mind at the time?",
+    "Where were you when this moment happened?",
+    "Has your perspective on this moment changed over time?",
+    "What do you hope newer generations take away from this picture?",
+    "How did the community react afterwards?",
+    "What details in the image bring back the strongest memories?",
+    "Would you like to explain the story that these images tell that most people today may not realize?",
+    "Is there a story from this [day/moment] that has never really been told?",
+    "Who else was involved in this moment that deserves recognition?",
+    "What was the atmosphere like before, during, and after this moment?",
+    "What was happening right before this picture was taken?",
+    "What happened immediately after this picture was taken?"
+  ],
+
   "HCOM Life Stories": [
     "How did you first become involved with [army]?",
     "What made you want to take on an HCOM position?",
@@ -101,7 +118,7 @@
     "Is there any advice you would give to someone trying to join your army's HCOM team?",
     "How do you hope to continue contributing to your army moving forward?",
     "From your perspective, what is the biggest difference between being and not being an HCOM member?",
-    "What qualities do you believe makes someone a successful HCOM member?",
+    "What qualities do you believe make someone a successful HCOM member?",
     "Where do you see yourself and your army in the future?",
     "Is there anything else you would like to add?"
   ],
@@ -115,13 +132,27 @@
     "What was the biggest challenge you faced during your time as a leader?",
     "What was your favorite memory from your time in [army]?",
     "Who were the people that had the biggest impact on your journey?",
-    "Do you think your journey in armies is truly over, or could we expect you return someday?",
+    "Do you think your journey in CPA is truly over, or could we expect you return someday?",
     "What lessons did leadership teach you?",
-    "To what extent do you believe that the the army community has changed since you joined?",
+    "To what extent do you believe that the army community has changed since you joined?",
     "Is there anything that newer generations of troops can learn from your experiences?",
-    "What do you hope people remember about your time in armies?",
+    "What do you hope people remember about your time in CPA?",
     "Do you have some advice for future leaders?",
     "Is there anything else you would like to add?"
+  ],
+
+  "This Day in History": [
+    "What was your role during this event?",
+    "What do you remember most vividly from that day?",
+    "Did you expect this event to become an important part of army history?",
+    "How did you first hear about it?",
+    "How do you feel when you look back on this event today?",
+    "Looking back, what made this event significant?",
+    "How did this event affect your army or the wider community?",
+    "Is there any clarification that you would like to provide on this event?",
+    "Who do you think deserves more credit for what happened that day?",
+    "What lessons can current generations learn from this moment in history?",
+    "What was the atmosphere like before, during, and after the event?"
   ],
 
   "Flag Frenzy": [
