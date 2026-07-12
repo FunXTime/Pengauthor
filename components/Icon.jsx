@@ -1,4 +1,4 @@
-const defaultClassName = "h-4 w-4";
+const defaultClassName = "h-4 w-4 inline-block align-middle";
 const svgProps = {
   fill: "none",
   stroke: "currentColor",
@@ -7,12 +7,8 @@ const svgProps = {
   strokeLinejoin: "round"
 };
 
-export default function Icon({
-  name,
-  className = "",
-  variable
-}) {
-  const svgClassName = className || defaultClassName;
+function IconSVG({ name, className = "", variable }) {
+  const svgClassName = `${defaultClassName} ${className}`.trim();
 
   switch (name) {
     case "overview":
@@ -23,6 +19,22 @@ export default function Icon({
           {...svgProps}
         >
           <path d="M12.983 21.186a1 1 0 0 1-1.966 0 10 10 0 0 0-8.203-8.203 1 1 0 0 1 0-1.966 10 10 0 0 0 8.203-8.203 1 1 0 0 1 1.966 0 10 10 0 0 0 8.203 8.203 1 1 0 0 1 0 1.966 10 10 0 0 0-8.203 8.203" />
+        </svg>
+      );
+
+    case "guide":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="M12 7v14" />
+          <path d="M16 12h2" />
+          <path d="M16 8h2" />
+          <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+          <path d="M6 12h2" />
+          <path d="M6 8h2" />
         </svg>
       );
 
@@ -135,9 +147,59 @@ export default function Icon({
         <svg
           className={svgClassName}
           viewBox="0 0 16 16"
-          fill="currentColor"
+          {...svgProps}
         >
           <path d="M4.47 6.47a.75.75 0 0 1 1.06 0L8 8.94l2.47-2.47a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06Z" />
+        </svg>
+      );
+
+    case "info":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 16v-4" />
+          <path d="M12 8h.01" />
+        </svg>
+      );
+
+    case "warning":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+          <path d="M12 9v4" />
+          <path d="M12 17h.01" />
+        </svg>
+      );
+
+    case "danger":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="m15 9-6 6" />
+          <path d="M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z" />
+          <path d="m9 9 6 6" />
+        </svg>
+      );
+
+    case "success":
+      return (
+        <svg
+          className={svgClassName}
+          viewBox="0 0 24 24"
+          {...svgProps}
+        >
+          <path d="M20 6 9 17l-5-5" />
         </svg>
       );
 
@@ -323,4 +385,15 @@ export default function Icon({
     default:
       return null;
   }
+}
+
+export default function Icon(props) {
+  if (props.inline == true) return (
+    <span className="inline-flex items-center leading-none">
+      <IconSVG {...props} className="inline-block align-middle translate-y-[3px]" />
+    </span>
+  );
+  else return (
+    <IconSVG {...props} />
+  );
 }

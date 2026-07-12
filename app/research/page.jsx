@@ -118,6 +118,7 @@ export default function ResearchPage() {
               value={year}
               min="2006"
               max={new Date().getFullYear()}
+              placeholder="Lookback"
               onChange={(event) => setYear(event.target.value)}
               className="w-40 rounded-xl border border-edge bg-panel px-4 py-2 text-ink outline-none"
             />

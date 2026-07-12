@@ -70,6 +70,7 @@ export const metadata = {
 
 const LISTED_PAGES = [
   { label: "Overview", href: "/overview", icon: "overview" },
+  { label: "Guide", href: "/guide", icon: "guide" },
   { label: "Generate", href: "/generate", icon: "generate" },
   { label: "Research", href: "/research", icon: "research" },
   { label: "Refine", href: "/refine", icon: "refine" },
