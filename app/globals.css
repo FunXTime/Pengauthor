@@ -117,6 +117,10 @@ label {
   font-weight: bold;
 }
 
+input {
+  color: var(--color-ink);
+}
+
 main a {
   color: var(--color-accent);
   transition: opacity 100ms;

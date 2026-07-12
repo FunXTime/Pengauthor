@@ -15,7 +15,7 @@ export default function OverviewPage() {
       </Accordion>
 
       <Accordion title="Am I required to use Pengauthor for a post?">
-        Nope! There is no compulsion to use Pengauthor regardless of what your position in the Media Department is. If you are confident with the traditional way of writing posts, you are free to do so! However, it is encouraged to use Pengauthor to minimize errors.
+        Nope! There is no compulsion to use Pengauthor regardless of what your position in the Media Department is. If you are confident with the traditional way of writing posts, you are free to do so! However, it is encouraged to use Pengauthor to minimize errors and follow consistency.
       </Accordion>
 
       <hr className="my-6 border-edge" />
