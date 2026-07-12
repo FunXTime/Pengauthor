@@ -3,6 +3,7 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 import ShareButton from "@/components/ShareButton";
 import GlobalShortcuts from "@/components/GlobalShortcuts";
+import packageData from "../package.json";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -26,6 +27,7 @@ const akira = localFont({
 });
 
 const siteURL = "https://cpa-pengauthor.vercel.app";
+const version = packageData.version;
 
 export const viewport = {
   themeColor: "#ff6900"
@@ -157,6 +159,7 @@ export default function RootLayout({ children }) {
             <div className="border-t border-edge px-5 py-4">
               <b className="text-xs text-faint">Dashboard curated by</b>
               <p className="text-xs text-faint">Editor-in-Chief Fun X Time</p>
+              <p className="text-xs text-faint"><a href="https://github.com/FunXTime/Pengauthor/commits/main/">Version {version}</a></p>
             </div>
 
           </aside>
