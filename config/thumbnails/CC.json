@@ -1,42 +1,74 @@
 [
   {
+    "for": "Breaking News",
+    "filename": "Breaking-News-CC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Breaking-News-CC-500x328.png",
+    "height": 328,
+    "attachmentId": 76165,
+    "designer": "Master DS"
+  },
+  {
     "for": "News Report",
-    "filename": "News-report.png",
-    "src": "https://cparmies.org/wp-content/uploads/2024/11/News-report.png",
-    "height": 280,
-    "attachmentId": 50096,
+    "filename": "News-Report-CC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/News-Report-CC-500x328.png",
+    "height": 328,
+    "attachmentId": 76170,
     "designer": "Dino"
   },
   {
-    "for": "Breaking News",
-    "filename": "holidays_breakingnews.png",
-    "src": "https://cparmies.org/wp-content/uploads/2023/12/holidays_breakingnews.png",
-    "height": 280,
-    "attachmentId": 34018,
-    "designer": "Koloway and Master DS"
+    "for": "Top Five Moments",
+    "filename": "Top-Five-Moments-CC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Top-Five-Moments-CC-500x328.png",
+    "height": 328,
+    "attachmentId": 76174,
+    "designer": "Koloway"
   },
   {
-    "for": "Behind the Scenes",
-    "filename": "behind_the_scenesCCpalette-1.png",
-    "src": "https://cparmies.org/wp-content/uploads/2023/11/behind_the_scenesCCpalette-1.png",
-    "height": 280,
-    "attachmentId": 33323,
+    "for": "Behind The Scenes",
+    "filename": "Behind-The-Scenes-CC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Behind-The-Scenes-CC-500x281.png",
+    "height": 281,
+    "attachmentId": 76226,
     "designer": "Gabgeirl"
   },
   {
     "for": "Picture Perfect",
-    "filename": "pictureperfectchristmas.png",
-    "src": "https://cparmies.org/wp-content/uploads/2024/11/pictureperfectchristmas.png",
-    "height": 280,
-    "attachmentId": 49961,
+    "filename": "Picture-Perfect-CC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Picture-Perfect-CC-500x281.png",
+    "height": 281,
+    "attachmentId": 76206,
     "designer": "Cassie"
   },
   {
-    "for": "Opinion",
-    "filename": "εικόνα_2025-12-12_193011947.png",
-    "src": "https://cparmies.org/wp-content/uploads/2025/12/%CE%B5%CE%B9%CE%BA%CF%8C%CE%BD%CE%B1_2025-12-12_193011947.png",
-    "height": 280,
-    "attachmentId": 67258,
+    "for": "This Day In History",
+    "filename": "This-Day-In-History-CC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/This-Day-In-History-CC-500x278.png",
+    "height": 278,
+    "attachmentId": 76215,
+    "designer": "Master DS and Edu14463"
+  },
+  {
+    "for": "My Controversial Opinion",
+    "filename": "Breaking-News-CC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Breaking-News-CC-500x328.png",
+    "height": 328,
+    "attachmentId": 76165,
     "designer": "Master DS"
+  },
+  {
+    "for": "Philosophy",
+    "filename": "Philosophy-CC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Philosophy-CC-500x328.png",
+    "height": 328,
+    "attachmentId": 76188,
+    "designer": "Edu14463"
+  },
+  {
+    "for": "Comic",
+    "filename": "Comic-CC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Comic-CC-500x329.png",
+    "height": 329,
+    "attachmentId": 76222,
+    "designer": "Edu14463"
   }
 ]

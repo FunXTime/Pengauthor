@@ -1,42 +1,114 @@
 [
   {
-    "for": "News Report",
-    "filename": "news.png",
-    "src": "https://cparmies.org/wp-content/uploads/2025/03/news.png",
-    "height": 280,
-    "attachmentId": 55052,
+    "for": "New Columns",
+    "filename": "New-Columns-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/New-Columns-MM-500x281.png",
+    "height": 281,
+    "attachmentId": 76219,
+    "designer": "Subster and Edu14463"
+  },
+  {
+    "for": "Breaking News",
+    "filename": "Breaking-News-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Breaking-News-MM-500x328.png",
+    "height": 328,
+    "attachmentId": 76163,
     "designer": "Dino"
   },
   {
-    "for": "Behind the Scenes",
-    "filename": "bts_mm.png",
-    "src": "https://cparmies.org/wp-content/uploads/2024/03/bts_mm.png",
-    "height": 280,
-    "attachmentId": 37139,
+    "for": "News Report",
+    "filename": "News-Report-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/News-Report-MM-500x328.png",
+    "height": 328,
+    "attachmentId": 76168,
+    "designer": "Dino"
+  },
+  {
+    "for": "Top Five Moments",
+    "filename": "Top-Five-Moments-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Top-Five-Moments-MM-500x328.png",
+    "height": 328,
+    "attachmentId": 76172,
+    "designer": "Master DS"
+  },
+  {
+    "for": "Behind The Scenes",
+    "filename": "Behind-The-Scenes-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Behind-The-Scenes-MM-500x281.png",
+    "height": 281,
+    "attachmentId": 76225,
     "designer": "Gabgeirl"
   },
   {
     "for": "Picture Perfect",
-    "filename": "cassie-1.png",
-    "src": "https://cparmies.org/wp-content/uploads/2025/03/cassie-1.png",
-    "height": 280,
-    "attachmentId": 54993,
+    "filename": "Picture-Perfect-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Picture-Perfect-MM-500x281.png",
+    "height": 281,
+    "attachmentId": 76205,
     "designer": "Cassie"
   },
   {
-    "for": "Opinion",
-    "filename": "opinionMM.png",
-    "src": "https://cparmies.org/wp-content/uploads/2025/03/opinionMM.png",
-    "height": 280,
-    "attachmentId": 55901,
+    "for": "HCOM Life Stories",
+    "filename": "HCOM-Life-Stories-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/HCOM-Life-Stories-MM-500x281.png",
+    "height": 281,
+    "attachmentId": 76199,
+    "designer": "Legoman and Wynn"
+  },
+  {
+    "for": "Leaving A Legacy",
+    "filename": "Leaving-A-Legacy-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Leaving-A-Legacy-MM-500x281.png",
+    "height": 281,
+    "attachmentId": 76201,
     "designer": "Master DS"
   },
   {
+    "for": "This Day In History",
+    "filename": "This-Day-In-History-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/This-Day-In-History-MM-500x281.png",
+    "height": 281,
+    "attachmentId": 76213,
+    "designer": "Master DS and Edu14463"
+  },
+  {
+    "for": "Opinion",
+    "filename": "Opinion-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Opinion-MM-500x328.png",
+    "height": 328,
+    "attachmentId": 76184,
+    "designer": "???"
+  },
+  {
+    "for": "Editorial",
+    "filename": "Editorial-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Editorial-MM-500x328.png",
+    "height": 328,
+    "attachmentId": 76223,
+    "designer": "???"
+  },
+  {
     "for": "My Controversial Opinion",
-    "filename": "mco.png",
-    "src": "https://cparmies.org/wp-content/uploads/2023/04/mco.png",
-    "height": 280,
-    "attachmentId": 25645,
+    "filename": "Breaking-News-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Breaking-News-MM-500x328.png",
+    "height": 328,
+    "attachmentId": 76163,
+    "designer": "Dino"
+  },
+  {
+    "for": "Philosophy",
+    "filename": "Philosophy-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Philosophy-MM-500x328.png",
+    "height": 328,
+    "attachmentId": 76187,
+    "designer": "Edu14463"
+  },
+  {
+    "for": "Community Reacts",
+    "filename": "Community-Reacts-MM.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Community-Reacts-MM-500x281.png",
+    "height": 281,
+    "attachmentId": 76221,
     "designer": "Wynn"
   }
 ]

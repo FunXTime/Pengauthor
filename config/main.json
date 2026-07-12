@@ -19,7 +19,6 @@
       "Resignation": "News Report",
       "War": "News Report",
       "Alliance": "News Report",
-      "Special Report": "Special Report",
       "Battle Report": "Battle Report",
       "War Battle Review": "War Battle Review",
       "Monthly Map Updates": "Monthly Map Updates",
@@ -27,7 +26,7 @@
     },
     "Column": {
       "A Leader In Action": "A Leader In Action",
-      "Behind the Scenes": "Behind the Scenes",
+      "Behind The Scenes": "Behind The Scenes",
       "Satire": "Satire",
       "Picture Perfect": "Picture Perfect",
       "HCOM Life Stories": "HCOM Life Stories",

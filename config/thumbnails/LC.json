@@ -1,26 +1,106 @@
 [
   {
-    "for": "News Report",
-    "filename": "newsreportlc.png",
-    "src": "https://cparmies.org/wp-content/uploads/2024/07/newsreportlc.png",
-    "height": 280,
-    "attachmentId": 42478,
-    "designer": "Dino"
-  },
-  {
-    "for": "Monthly Map Updates",
-    "filename": "Monthly-Map-Updates.png",
-    "src": "https://cparmies.org/wp-content/uploads/2026/06/Monthly-Map-Updates.png",
-    "height": 281,
-    "attachmentId": 75674,
+    "for": "Breaking News",
+    "filename": "Breaking-News-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Breaking-News-LC-500x328.png",
+    "height": 328,
+    "attachmentId": 76164,
     "designer": "Master DS"
   },
   {
-    "for": "Behind the Scenes",
-    "filename": "LC-BTS.png",
-    "src": "https://cparmies.org/wp-content/uploads/2024/07/LC-BTS-1024x576.png",
-    "height": 576,
-    "attachmentId": 42679,
-    "designer": "Gabgeirl and Edu14463"
+    "for": "News Report",
+    "filename": "News-Report-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/News-Report-LC-500x328.png",
+    "height": 328,
+    "attachmentId": 76169,
+    "designer": "Master DS"
+  },
+  {
+    "for": "Battle Report",
+    "filename": "Battle-Report-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Battle-Report-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76159,
+    "designer": "Master DS"
+  },
+  {
+    "for": "Monthly Map Updates",
+    "filename": "Map-Updates-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Map-Updates-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76166,
+    "designer": "Master DS"
+  },
+  {
+    "for": "Top Five Moments",
+    "filename": "Top-Five-Moments-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Top-Five-Moments-LC-500x328.png",
+    "height": 328,
+    "attachmentId": 76173,
+    "designer": "Master DS"
+  },
+  {
+    "for": "A Leader In Action",
+    "filename": "A-Leader-In-Action-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/A-Leader-In-Action-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76192,
+    "designer": "Master DS"
+  },
+  {
+    "for": "Satire",
+    "filename": "Satire-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Satire-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76208,
+    "designer": "PingoBoiii"
+  },
+  {
+    "for": "HCOM Life Stories",
+    "filename": "HCOM-Life-Stories-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/HCOM-Life-Stories-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76198,
+    "designer": "Legoman"
+  },
+  {
+    "for": "Leaving A Legacy",
+    "filename": "Leaving-A-Legacy-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Leaving-A-Legacy-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76202,
+    "designer": "Master DS"
+  },
+  {
+    "for": "What If",
+    "filename": "What-If-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/What-If-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76217,
+    "designer": "Kedi Wain and Master DS"
+  },
+  {
+    "for": "This Day In History",
+    "filename": "This-Day-In-History-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/This-Day-In-History-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76214,
+    "designer": "Master DS"
+  },
+  {
+    "for": "Editorial",
+    "filename": "Editorial-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Editorial-LC-500x328.png",
+    "height": 328,
+    "attachmentId": 76179,
+    "designer": "Master DS"
+  },
+  {
+    "for": "Comic",
+    "filename": "Comic-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Comic-LC-500x328.png",
+    "height": 328,
+    "attachmentId": 76177,
+    "designer": "Master DS"
   }
 ]

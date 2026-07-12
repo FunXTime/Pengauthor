@@ -64,10 +64,6 @@
     { "name": "[Army Leader…]", "tip": "Use the leader name(s) from armies involved" }
   ],
 
-  "Special Report": [
-    { "name": "Special Report" }
-  ],
-
   "Battle Report": [
     { "name": "Battle Report" },
     { "name": "Practice Battle", "tip": "Use if this battle was a practice battle" },
@@ -92,8 +88,8 @@
     { "name": "[Person]", "tip": "Use the person name, who is also the interviewee", "isInterviewee": true }
   ],
 
-  "Behind the Scenes": [
-    { "name": "Behind the Scenes" },
+  "Behind The Scenes": [
+    { "name": "Behind The Scenes" },
     { "name": "[Person]", "tip": "Use the person name, who is also the interviewee", "isInterviewee": true }
   ],
 
