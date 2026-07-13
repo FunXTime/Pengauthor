@@ -159,7 +159,7 @@ export default function RootLayout({ children }) {
             <div className="border-t border-edge px-5 py-4">
               <b className="text-xs text-faint">Dashboard curated by</b>
               <p className="text-xs text-faint">Editor-in-Chief Fun X Time</p>
-              <p className="text-xs text-faint"><a href="https://github.com/FunXTime/Pengauthor/commits/main/">Version {version}</a></p>
+              <p className="text-xs text-faint"><a href="https://github.com/FunXTime/Pengauthor/commits/main/" target="_blank">Version {version}</a></p>
             </div>
 
           </aside>

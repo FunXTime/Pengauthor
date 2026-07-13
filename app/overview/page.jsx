@@ -34,7 +34,7 @@ export default function OverviewPage() {
             <p className="mt-3 text-faint">
               Initiate a research using the <strong>Research</strong> tool for your post. Get relevant posts from credible organizations, including those from the past. Just pick the right keyword and set some filters, and we'll do the rest!
             </p>
-            <Link href="/generate" className="text-sm">Use this tool now</Link>
+            <Link href="/research" className="text-sm">Use this tool now</Link>
           </section>
           <img
             className="w-1/3 rounded-xl"
@@ -47,7 +47,7 @@ export default function OverviewPage() {
             <p className="mt-3 text-faint">
               Why lose valuable score on a hard-worked post simply because you missed some simple things? Perform this super-quick checkup before finishing your post as a self-test. Get a list of improvements and an out-of-12 score after the checkup.
             </p>
-            <Link href="/generate" className="text-sm">Use this tool now</Link>
+            <Link href="/checkup" className="text-sm">Use this tool now</Link>
           </section>
           <img
             className="w-1/3 rounded-xl"

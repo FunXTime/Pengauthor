@@ -11,6 +11,7 @@ import {
 import Tooltip from "@/components/Tooltip";
 import Dropdown from "@/components/Dropdown";
 import Icon from "@/components/Icon";
+import Infobox from "@/components/Infobox";
 
 export default function ResearchPage() {
   const [query, setQuery] = useState("");
@@ -98,6 +99,10 @@ export default function ResearchPage() {
 
   return (
     <div className="space-y-6 p-8">
+      <Infobox
+        type="INFO"
+        text="The research utility will crawl websites and fetch good references for you, but not all of the results may be relevant. In other words, it is likely that it will show relevant results, but not all of these results are relevant. You should still try manual research if you need more information regarding a certain topic."
+      />
       <section>
         <div className="flex gap-3">
           <Tooltip
