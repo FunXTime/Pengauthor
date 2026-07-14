@@ -4,8 +4,7 @@ import Icon from "@/components/Icon";
 import ShareButton from "@/components/ShareButton";
 import GlobalShortcuts from "@/components/GlobalShortcuts";
 import packageData from "../package.json";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import Telemetry from "@/components/Telemetry";
 import "./globals.css";
 
 const syne = localFont({
@@ -170,8 +169,7 @@ export default function RootLayout({ children }) {
         </div>
 
         <GlobalShortcuts />
-        <Analytics />
-        <SpeedInsights />
+        <Telemetry />
       </body>
     </html>
   );

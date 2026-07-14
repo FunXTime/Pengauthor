@@ -133,13 +133,7 @@ export default function Form({
             type="button"
             className="flex-1 rounded-xl border border-edge bg-panel px-4 py-2 text-sm font-medium text-ink transition hover:bg-panel-raised cursor-pointer"
             onClick={async () => {
-              const expiresAt = new Date(
-                Date.now() + 1000 * 60 * 60 * 24 * 30
-              ).toISOString();
-              const code = await notes.createShortLink(
-                encodeNote(note),
-                expiresAt
-              );
+              const code = await notes.createShortLink(encodeNote(note));
               setShortCode(code);
               window.history.replaceState(null, "", `/note/${code}`);
             }}

@@ -48,6 +48,14 @@
     "designer": "Master DS"
   },
   {
+    "for": "Behind The Scenes",
+    "filename": "Behind-The-Scenes-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Behind-The-Scenes-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76375,
+    "designer": "Beasto"
+  },
+  {
     "for": "Satire",
     "filename": "Satire-LC.png",
     "src": "https://cparmies.org/wp-content/uploads/2026/07/Satire-LC-500x281.png",
@@ -101,6 +109,14 @@
     "src": "https://cparmies.org/wp-content/uploads/2026/07/Comic-LC-500x328.png",
     "height": 328,
     "attachmentId": 76177,
+    "designer": "Master DS"
+  },
+  {
+    "for": "Community Reacts",
+    "filename": "Community-Reacts-LC.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Community-Reacts-LC-500x281.png",
+    "height": 281,
+    "attachmentId": 76220,
     "designer": "Master DS"
   }
 ]
