@@ -34,27 +34,23 @@ export default function GenerateForm({
   }, [formData]);
 
   useEffect(() => {
-    function loadThumbnail() {
-      const thumbnails = THUMBNAILS[palette];
-      const thumbnailName = formData.isBreakingNews
-        ? "Breaking News"
-        : THUMBNAIL_MAPPINGS[formData.postType];
-      const selectedThumbnail = thumbnails
-        .find((thumbnail) => thumbnail.for === thumbnailName) ?? {
-          filename: "fallback.png",
-          src: `/thumbnails/fallback/${palette}.png`,
-          height: 280,
-          designer: "Unknown",
-          fallback: true
-        };
-      setThumbnail(selectedThumbnail);
-    }
-    loadThumbnail();
+    if (!formData.postType) return;
+    const thumbnails = THUMBNAILS[palette];
+    const thumbnailName = formData.isBreakingNews
+      ? "Breaking News"
+      : THUMBNAIL_MAPPINGS[formData.postType];
+    const selectedThumbnail =
+      thumbnails.find((thumbnail) => thumbnail.for === thumbnailName) ?? {
+        filename: "fallback.png",
+        src: `/thumbnails/fallback/${palette}.png`,
+        height: 280,
+        designer: "Unknown",
+        fallback: true
+      };
+    setThumbnail(selectedThumbnail);
   }, [
-    palette,
-    formData.postCategory,
-    formData.postType,
-    formData.isBreakingNews
+    formData,
+    palette
   ]);
 
   function handleInput(event) {
@@ -256,9 +252,12 @@ export default function GenerateForm({
                 }`}
               >
                 <img
-                  src={thumbnail.src}
+                  src={`/thumbnails/preview/${formData.postCategory}/${formData.postType}/${formData.postType}${palette === "DEFAULT" ? "" : ` ${palette}`}.png`}
                   alt={thumbnail.filename}
                   className="rounded-xl transition duration-200 group-hover:brightness-[25%]"
+                  onError={(event) => {
+                    event.currentTarget.src = thumbnail.src;
+                  }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 transition duration-100 group-hover:opacity-100">
                   <span className="max-w-xs text-center text-sm font-bold tracking-wide text-white">

@@ -6,7 +6,7 @@ export default function OverviewPage() {
     <div className="space-y-6 p-8">
       <h1>Overview</h1>
       <p className="text-faint">
-        <strong>Pengauthor is the premier reporting utility at Club Penguin Armies, designed for making the work of Media Department members easier!</strong> Pengauthor is a utilitarian suite of various tools that simplifies journalism and add uniformity. Developed in the summer of 2026, Pengauthor is actively curated by <strong>Editor-in-Chief Fun X Time</strong>. Through this powerful utility, CPA aims to make posts more structured and well-formatted.
+        <strong>Pengauthor is the premier reporting utility at Club Penguin Armies, designed for making the work of Media Department members easier!</strong> Pengauthor is a utilitarian suite of various tools that simplifies journalism and adds uniformity. Developed in the summer of 2026, Pengauthor is actively curated by <strong>Editor-in-Chief Fun X Time</strong>. Through this powerful utility, CPA aims to make posts more structured and well-formatted.
       </p>
 
       <Infobox

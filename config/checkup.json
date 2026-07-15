@@ -74,7 +74,7 @@
   },
   {
     "question": "Have you added hyperlinks that link to credible sources?",
-    "note": "Hyperlinks boost SEO, make your post factually accurate, and builds trust.",
+    "note": "Hyperlinks boost SEO, make your post factually accurate, and build trust.",
     "answers": [
       { "label": "Yep, I have", "score": 1 },
       { "label": "Nope, I'll add some", "score": 0 }

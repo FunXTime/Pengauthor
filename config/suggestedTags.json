@@ -129,12 +129,6 @@
     { "name": "[Writer…]", "tip": "Use the name of the writer(s)" }
   ],
 
-  "My Controversial Opinion": [
-    { "name": "Opinion" },
-    { "name": "My Controversial Opinion" },
-    { "name": "[Writer…]", "tip": "Use the name of the writer(s)" }
-  ],
-
   "Philosophy": [
     { "name": "Philosophy" },
     { "name": "[Writer…]", "tip": "Use the name of the writer(s)" }
