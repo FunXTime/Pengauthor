@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { QUESTIONS } from "@/config";
+import { CHECKUP_QUESTIONS } from "@/config";
 
 export default function Question({
   question,
@@ -45,7 +45,7 @@ export default function Question({
     }
     const nextQuestionNumber = questionNumber + 1;
     router.push(
-      nextQuestionNumber <= QUESTIONS.length
+      nextQuestionNumber <= CHECKUP_QUESTIONS.length
         ? `/checkup/question-${nextQuestionNumber}`
         : "/checkup/finish"
     );

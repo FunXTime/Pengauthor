@@ -17,7 +17,7 @@ export const DEFAULT_GENERATOR_DATA = structuredClone(main.defaultGeneratorData)
 export const GLOBAL_TAGS = main.globalTags;
 
 import checkup from "./checkup.json";
-export const QUESTIONS = checkup;
+export const CHECKUP_QUESTIONS = checkup;
 
 import sites from "./organizations.json";
 export const SITEDATA = sites;

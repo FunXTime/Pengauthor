@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { QUESTIONS } from "@/config";
+import { CHECKUP_QUESTIONS } from "@/config";
 import Question from "./Question";
 import { PALETTES, CURRENT_PALETTE } from "@/config";
 
@@ -11,7 +11,7 @@ export default async function CheckupQuestionPage({
   if (!match) notFound();
 
   const questionNumber = Number(match[1]);
-  let data = QUESTIONS[questionNumber - 1];
+  let data = CHECKUP_QUESTIONS[questionNumber - 1];
   if (!data) notFound();
 
   const currentPaletteName = PALETTES.find((palette) =>
