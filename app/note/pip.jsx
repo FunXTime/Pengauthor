@@ -12,7 +12,7 @@ export default function PiP({
           {note.title || "Untitled note"}
         </h4>
 
-        <p className="text-sm text-faint">
+        <p className="text-sm">
           by {note.author || "Unknown author"}
         </p>
       </div>

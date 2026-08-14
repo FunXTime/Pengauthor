@@ -1,85 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { REPORTERS, THUMBNAILS } from "@/config";
+import { useState, useRef, useEffect } from "react";
 import { getQuestion, getNextQuestion } from "@/lib/questionnaire";
 import getSuggestedTags from "@/lib/suggestedTags";
 import {
+  REPORTERS,
   REPORTER_POSITIONS,
   POST_TYPES,
   POST_CATEGORIES,
-  PALETTES,
-  CURRENT_PALETTE,
-  THUMBNAIL_MAPPINGS
+  PALETTES
 } from "@/config";
 import Dropdown from "@/components/Dropdown";
 import Tooltip from "@/components/Tooltip";
 import Icon from "@/components/Icon";
+import ColorPicker from "@/components/ColorPicker";
 
 export default function GenerateForm({
   formData,
   setFormData,
-  thumbnail,
-  setThumbnail
+  palette,
+  setPalette,
+  thumbnail
 }) {
-  const [palette, setPalette] = useState(CURRENT_PALETTE);
   const [thumbnailButtonText, setThumbnailButtonText] = useState("CLICK TO COPY FILENAME…");
   const [completedTags, setCompletedTags] = useState([]);
   const availablePostTypes = POST_TYPES[formData.postCategory];
+  const copyTimeout = useRef(null);
   const suggestedTags = getSuggestedTags(formData.postType, formData.hasInterview);
-
-  useEffect(() => {
-    const { interviewQuestions, ...persistedData } = formData;
-    localStorage.setItem("generatorData", JSON.stringify(persistedData));
-  }, [formData]);
-
-  useEffect(() => {
-    if (!formData.postType) return;
-    const thumbnails = THUMBNAILS[palette];
-    const thumbnailName = formData.isBreakingNews
-      ? "Breaking News"
-      : THUMBNAIL_MAPPINGS[formData.postType];
-    const selectedThumbnail =
-      thumbnails.find((thumbnail) => thumbnail.for === thumbnailName) ?? {
-        filename: "fallback.png",
-        src: `/thumbnails/fallback/${palette}.png`,
-        height: 280,
-        designer: "Unknown",
-        fallback: true
-      };
-    setThumbnail(selectedThumbnail);
-  }, [
-    formData,
-    palette
-  ]);
-
-  function handleInput(event) {
-    const { name, value } = event.target;
-    setFormData((current) => {
-      const updated = { ...current, [name]: value };
-      if (
-        name === "postCategory" &&
-        !POST_TYPES[value].includes(updated.postType)
-      ) updated.postType = POST_TYPES[value][0];
-      return updated;
-    });
-  }
-
-  function handleCheckbox(event) {
-    const { name, checked } = event.target;
-    setFormData((current) => ({ ...current, [name]: checked }));
-  }
-
-  useEffect(() => {
-    if (
-      formData.postCategory !== "News" &&
-      formData.isBreakingNews
-    ) setFormData((current) => ({ ...current, isBreakingNews: false }));
-  }, [
-    formData.postCategory,
-    formData.isBreakingNews,
-    setFormData
-  ]);
 
   useEffect(() => {
     setFormData((current) => {
@@ -91,11 +38,7 @@ export default function GenerateForm({
       const generatedQuestions = [];
       const usedQuestions = [];
       for (let i = 0; i < 3; i++) {
-        const question = getQuestion(
-          current.postType,
-          usedQuestions,
-          false
-        );
+        const question = getQuestion(current.postType, usedQuestions, false);
         if (!question) break;
         generatedQuestions.push(question);
         usedQuestions.push(question);
@@ -107,29 +50,61 @@ export default function GenerateForm({
     });
   }, []);
 
+  useEffect(() => {
+    return () => {
+      if (copyTimeout.current) clearTimeout(copyTimeout.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    setThumbnailButtonText("CLICK TO COPY FILENAME…");
+  }, [ thumbnail.filename, thumbnail.src, thumbnail.fallback ]);
+
+  function handleInput(event) {
+    const { name, value } = event.target;
+    setFormData((current) => {
+      const updated = { ...current, [name]: value};
+      if (name === "postCategory") {
+        if (
+          !POST_TYPES[value].includes(updated.postType)
+        ) updated.postType = POST_TYPES[value][0];
+        if (value !== "News") updated.isBreakingNews = false;
+      }
+      return updated;
+    });
+  }
+
+  function handleCheckbox(event) {
+    const { name, checked } = event.target;
+    setFormData((current) => ({ ...current, [name]: checked }));
+  }
+
   return (
     <form>
-      <div className="mt-6 space-y-5">
+      <div className="mt-6 space-y-2">
+        <span className="block font-bold text-sm text-ink text-[1rem]">
+          <Icon name="options" inline={true} /> GENERAL OPTIONS
+        </span>
         <div className="grid gap-5 md:grid-cols-2">
           <div>
-            <label className="block text-sm text-faint">
+            <span className="font-bold block text-sm">
               About the reporter
-            </label>
+            </span>
             <div className="mt-2 flex">
               <Dropdown
                 name="reporterPosition"
+                className="w-40 shrink-0 rounded-l-xl overflow-hidden"
                 value={formData.reporterPosition}
                 options={REPORTER_POSITIONS}
                 onChange={handleInput}
-                className="w-40 shrink-0 rounded-l-xl overflow-hidden"
               />
               <input
-                list="reporters"
                 name="reporterName"
-                value={formData.reporterName}
-                onChange={handleInput}
-                placeholder="Your name"
                 className="-ml-px w-40 shrink-0 rounded-r-xl border border-edge bg-panel-raised px-4 py-3 text-[0.75rem] outline-none"
+                value={formData.reporterName}
+                list="reporters"
+                placeholder="Your name"
+                onChange={handleInput}
               />
               <datalist id="reporters">
                 {REPORTERS.map((reporter) => (
@@ -139,22 +114,39 @@ export default function GenerateForm({
             </div>
             <div className="mt-4 flex">
               <div className="w-40 shrink-0">
-                <label className="flex h-full items-center justify-center text-sm text-faint">
+                <label className="flex h-full items-center justify-center text-sm">
                   Sign-off color
                 </label>
               </div>
               <div className="-ml-px flex w-40 shrink-0 items-center gap-3 rounded-r-xl border border-edge bg-panel-raised px-4 py-1">
-                <input
-                  type="color"
-                  name="signOffColor"
+                <ColorPicker
                   value={formData.signOffColor}
-                  onChange={(event) => setFormData((current) => (
-                    { ...current, signOffColor: event.target.value }
-                  ))}
-                  className="h-8 w-8 shrink-0 cursor-pointer rounded border border-edge"
+                  onChange={(color) => setFormData((current) => ({
+                    ...current,
+                    signOffColor: color
+                  }))}
                 />
-                <span className="text-xs uppercase tracking-wide text-faint">
-                  {formData.signOffColor}
+                <span className="text-xs uppercase tracking-wide">
+                  <input
+                    type="text"
+                    value={formData.signOffColor}
+                    maxLength={7}
+                    onInput={(event) => {
+                      const input = event.currentTarget;
+                      const hex = input.value
+                        .replace(/^#/, "")
+                        .replace(/[^0-9a-fA-F]/g, "")
+                        .toLowerCase()
+                        .slice(0, 6);
+                      setFormData((current) => ({
+                        ...current,
+                        signOffColor: `#${hex}`
+                      }));
+                    }}
+                    className="w-20 bg-transparent text-xs uppercase tracking-wide outline-none"
+                    aria-label="Sign-off color hex value"
+                    spellCheck={false}
+                  />
                 </span>
               </div>
             </div>
@@ -162,23 +154,23 @@ export default function GenerateForm({
         </div>
 
         <div>
-          <label className="block text-sm text-faint">
+          <span className="font-bold block text-sm">
             About the post
-          </label>
+          </span>
           <div className="mt-2 flex">
             <Dropdown
               name="postCategory"
+              className="w-40 shrink-0 rounded-l-xl overflow-hidden"
               value={formData.postCategory}
               options={POST_CATEGORIES}
               onChange={handleInput}
-              className="w-40 shrink-0 rounded-l-xl overflow-hidden"
             />
             <Dropdown
               name="postType"
+              className="-ml-px w-40 shrink-0 rounded-r-xl overflow-hidden"
               value={formData.postType}
               options={availablePostTypes}
               onChange={handleInput}
-              className="-ml-px w-40 shrink-0 rounded-r-xl overflow-hidden"
             />
           </div>
           <div className="mt-4">
@@ -186,25 +178,24 @@ export default function GenerateForm({
               text="Only News posts can be Breaking News posts!"
               disabled={formData.postCategory === "News"}
             >
-              <label
-                className={`flex items-center gap-3 text-faint ${
-                  formData.postCategory !== "News"
-                    ? "cursor-not-allowed opacity-50"
-                    : "cursor-pointer"
+              <span
+                className={`flex items-center gap-3 ${
+                  formData.postCategory !== "News" ? "opacity-50" : ""
                 }`}
               >
                 <input
                   type="checkbox"
+                  id="isBreakingNews"
                   name="isBreakingNews"
                   checked={formData.isBreakingNews}
                   disabled={formData.postCategory !== "News"}
                   onChange={handleCheckbox}
-                  className="h-4 w-4 accent-accent cursor-pointer"
+                  className="h-4 w-4 accent-accent"
                 />
-                <span className="text-sm text-faint">
-                  Mark post as breaking news
-                </span>
-              </label>
+                <label htmlFor="isBreakingNews" className="text-sm">
+                  Mark post as Breaking News
+                </label>
+              </span>
             </Tooltip>
           </div>
         </div>
@@ -212,11 +203,11 @@ export default function GenerateForm({
         <br />
 
         <div>
-          <label className="block text-sm text-faint text-[1rem]">
-            THUMBNAIL
-          </label>
+          <span className="block font-bold text-sm text-ink text-[1rem]">
+            <Icon name="thumbnail" inline={true} /> THUMBNAIL
+          </span>
           <div className="mt-2 flex gap-3">
-            <span className="text-xs font-medium tracking-wide text-faint select-none">
+            <span className="text-xs font-medium tracking-wide select-none">
               PALETTE
             </span>
             {PALETTES.map((item) => (
@@ -227,12 +218,10 @@ export default function GenerateForm({
                 <button
                   type="button"
                   onClick={() => { setPalette(item.name) }}
-                  className={`h-3 w-3 cursor-pointer rounded-full transition-colors ${
+                  className={`h-3.5 w-3.5 rounded-full transition-colors ${
                     palette === item.name ? "outline outline-2 outline-white outline-offset-2" : ""
                   }`}
-                  style={{
-                    backgroundColor: palette === item.name ? item.activeColor : item.inactiveColor
-                  }}
+                  style={{ backgroundColor: palette === item.name ? item.activeColor : item.inactiveColor }}
                 />
               </Tooltip>
             ))}
@@ -244,33 +233,36 @@ export default function GenerateForm({
                 onClick={() => {
                   if (thumbnail.fallback) return;
                   navigator.clipboard.writeText(thumbnail.filename);
+                  if (copyTimeout.current) clearTimeout(copyTimeout.current);
                   setThumbnailButtonText("COPIED!");
-                  setTimeout(() => setThumbnailButtonText("CLICK TO COPY FILENAME…"), 1000);
+                  copyTimeout.current = setTimeout(() => {
+                    setThumbnailButtonText("CLICK TO COPY FILENAME…");
+                    copyTimeout.current = null;
+                  }, 1000);
                 }}
                 className={`group relative mt-3 block overflow-hidden rounded-xl ${
                   thumbnail.fallback ? "" : "cursor-copy"
                 }`}
               >
                 <img
-                  src={`/thumbnails/preview/${formData.postCategory}/${formData.postType}/${formData.postType}${palette === "DEFAULT" ? "" : ` ${palette}`}.png`}
+                  src={thumbnail.previewSrc}
                   alt={thumbnail.filename}
                   className="rounded-xl transition duration-200 group-hover:brightness-[25%]"
-                  onError={(event) => {
-                    event.currentTarget.src = thumbnail.src;
-                  }}
+                  onError={(event) => event.currentTarget.src = thumbnail.src}
                 />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition duration-100 group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition duration-200 group-hover:opacity-100">
                   <span className="max-w-xs text-center text-sm font-bold tracking-wide text-white">
                     {thumbnail.fallback
                       ? "A thumbnail on this topic and for this palette was not found!"
-                      : thumbnailButtonText}
+                      : thumbnailButtonText
+                    }
                   </span>
                 </div>
               </button>
-              <p className="mt-2 text-center text-sm text-faint">
+              <p className="mt-2 text-center text-sm font-burbank">
                 {thumbnail.designer === "Unknown"
-                  ? "Contact editors for the thumbnail"
-                  : <>Designed by <strong>{thumbnail.designer}</strong></>
+                  ? "Contact Reporting Heads for the thumbnail"
+                  : <>Designed by <strong className="text-ink">{thumbnail.designer}</strong></>
                 }
               </p>
             </>
@@ -279,60 +271,57 @@ export default function GenerateForm({
           <br />
 
           <div>
-            <label className="block text-sm text-faint text-[1rem]">
-              INTERVIEW
-            </label>
-            <label className="mt-2 flex cursor-pointer items-center gap-3">
+            <span className="block font-bold text-sm text-ink text-[1rem]">
+              <Icon name="interview" inline={true} /> INTERVIEW
+            </span>
+            <label className="mt-2 flex items-center gap-3">
               <input
                 type="checkbox"
                 name="hasInterview"
+                className="h-4 w-4 accent-accent"
                 checked={formData.hasInterview}
                 onChange={handleCheckbox}
-                className="h-4 w-4 accent-accent cursor-pointer"
               />
-              <span className="text-sm text-ink">
+              <span className="text-sm">
                 Add interview section
               </span>
             </label>
             <fieldset
-              disabled={!formData.hasInterview}
               className={`mt-3 transition-opacity ${
                 formData.hasInterview ? "opacity-100" : "opacity-25"
               }`}
+              disabled={!formData.hasInterview}
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-faint">
-                    Questions for the interview
+                  <label className="text-sm">
+                    List of questions
                   </label>
                   <Tooltip
-                    text={
-                      (formData.interviewQuestions ?? []).length >= 10
-                        ? "You can add up to only 10 questions"
-                        : "Add a question"
+                    text={(formData.interviewQuestions ?? []).length >= 10
+                      ? "You can add up to only 10 questions"
+                      : "Add a question"
                     }
                   >
                     <button
                       type="button"
+                      className={`text-lg transition ${
+                        (formData.interviewQuestions ?? []).length >= 10
+                          ? "opacity-50 cursor-not-allowed"
+                          : "hover:text-white"
+                      }`}
+                      disabled={(formData.interviewQuestions ?? []).length >= 10}
                       onClick={() => setFormData((current) => {
                         const questions = current.interviewQuestions ?? [];
                         if (questions.length >= 10) return current;
                         const generatedQuestion = getQuestion(
-                          current.postType,
-                          questions,
-                          false
+                          current.postType, questions, false
                         );
                         return {
                           ...current,
                           interviewQuestions: [ ...questions, generatedQuestion || "" ]
                         };
                       })}
-                      disabled={(formData.interviewQuestions ?? []).length >= 10}
-                      className={`text-lg transition cursor-pointer ${
-                        (formData.interviewQuestions ?? []).length >= 10
-                          ? "text-faint opacity-50 cursor-not-allowed"
-                          : "text-faint hover:text-white"
-                      }`}
                     >
                       <Icon
                         name="plus"
@@ -352,13 +341,13 @@ export default function GenerateForm({
                           type="text"
                           placeholder={`Question ${index + 1}`}
                           value={question}
+                          className="w-full rounded-xl border border-edge bg-panel-raised px-4 py-2 text-[0.75rem] outline-none"
                           onChange={(event) => setFormData((current) => ({
                             ...current,
                             interviewQuestions: current.interviewQuestions.map(
                               (item, i) => i === index ? event.target.value : item
                             )
                           }))}
-                          className="w-full rounded-xl border border-edge bg-panel-raised px-4 py-2 text-[0.75rem] outline-none"
                         />
                         {question && (
                           <div className="pointer-events-none absolute bottom-full left-0 z-[9999] mb-2 hidden max-w-md rounded-lg border border-edge bg-panel px-3 py-2 text-xs text-white shadow-xl group-hover:block group-focus-within:hidden">
@@ -369,23 +358,22 @@ export default function GenerateForm({
                       <Tooltip text="Generate a question">
                         <button
                           type="button"
+                          className="shrink-0 transition hover:text-sky-400"
                           onClick={() => { setFormData((current) => {
                             const questions = current.interviewQuestions;
                             const currentQuestion = questions[index];
                             const usedQuestions = questions.filter((_, i) => i !== index);
                             const generatedQuestion = getNextQuestion(
-                              current.postType,
-                              currentQuestion,
-                              usedQuestions
+                              current.postType, currentQuestion, usedQuestions
                             );
                             return {
                               ...current,
                               interviewQuestions: questions.map((item, i) => i === index
                                 ? generatedQuestion
-                                : item)
+                                : item
+                              )
                             }
                           })}}
-                          className="shrink-0 text-faint transition hover:text-sky-400 cursor-pointer"
                         >
                           <Icon
                             name="magicWand"
@@ -396,9 +384,12 @@ export default function GenerateForm({
                       <Tooltip text="Remove this question">
                         <button
                           type="button"
+                          className="shrink-0 transition hover:text-red-400"
                           onClick={() =>
                             setFormData((current) => {
-                              const updatedQuestions = current.interviewQuestions.filter((_, i) => i !== index);
+                              const updatedQuestions = current.interviewQuestions.filter(
+                                (_, i) => i !== index
+                              );
                               return {
                                 ...current,
                                 interviewQuestions: updatedQuestions.length > 0
@@ -406,7 +397,6 @@ export default function GenerateForm({
                               };
                             })
                           }
-                          className="shrink-0 text-faint transition hover:text-red-400 cursor-pointer"
                         >
                           <Icon
                             name="x"
@@ -424,35 +414,31 @@ export default function GenerateForm({
           <br />
 
           <div className="space-y-2">
-            <label className="text-sm font-medium">
-              Suggested Tags
-            </label>
-
+            <span className="block font-bold text-sm text-ink text-[1rem]">
+              <Icon name="tag" inline={true} /> SUGGESTED TAGS
+            </span>
+            <small>You should use these tags for your post.</small>
             <div className="mt-2 flex flex-wrap gap-2">
               {suggestedTags.map((tag) => {
                 const isCompleted = completedTags.includes(tag.name);
                 return (
                   <Tooltip
                     key={tag.name}
-                    text={tag.tip ?? "This is a universal tag"}
+                    text={tag.tip ?? "This is an evergreen tag"}
                     disabled={!tag.tip && !tag.isGlobal}
                   >
                     <button
                       type="button"
-                      onClick={() =>
-                        setCompletedTags(
-                          (current) => current.includes(tag.name)
-                            ? current.filter((item) => item !== tag.name)
-                            : [...current, tag.name]
-                        )
-                      }
-                      className={`rounded-full border bg-panel-raised px-3 py-1 text-xs text-faint select-none transition-transform duration-150 cursor-pointer ${
+                      className={`rounded-full border bg-panel-raised px-3 py-1 text-xs select-none transition-transform duration-150 ${
                         tag.isItalic ? "italic" : ""
                       } ${
-                        isCompleted
-                          ? "border-[#8080A0] scale-95"
-                          : "border-edge hover:scale-105"
+                        isCompleted ? "border-[#8080A0] scale-95" : "border-edge hover:scale-105"
                       }`}
+                      onClick={() => setCompletedTags(
+                        (current) => current.includes(tag.name)
+                          ? current.filter((item) => item !== tag.name)
+                          : [...current, tag.name]
+                      )}
                     >
                       {tag.name}
                     </button>

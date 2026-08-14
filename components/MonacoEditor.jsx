@@ -14,10 +14,10 @@ export default function MonacoEditor({
       inherit: true,
       rules: [],
       colors: {
-        "editor.background": "#0f0f10",
-        "editor.lineHighlightBackground": "#17181a",
-        "editorCursor.foreground": "#e6edf3",
-        "editor.selectionBackground": "#264f78"
+        "editor.background": "#0a0603",
+        "editor.lineHighlightBackground": "#140c06",
+        "editorCursor.foreground": "#e2e2e2",
+        "editor.selectionBackground": "#784426"
       }
     });
     monaco.editor.setTheme("pengauthor");

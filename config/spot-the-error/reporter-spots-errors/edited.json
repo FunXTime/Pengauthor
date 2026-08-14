@@ -1,0 +1,74 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<strong>A reporter has identified multiple anomalies in an engaging challenge.</strong> In this post, we will explore what this challenge was and understand why the reporter was completing it.",
+    "settings": { "type": "PLAIN" },
+    "feedback": "Missing a period (.) at the end of the introduction paragraph"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "On August 1, 2026, Reporter <strong>Toto Jeri</strong> accessed <span style=\"color: #ff9900;\"><strong>Pengauthor</strong></span>'s <strong>Spot The Error</strong> game, which is a practical challenge designed to upgrade their error-spotting skills. At <span style=\"color: #87d1ff;\"><strong>Club Penguin Armies</strong></span>, the Reporting Team claims to greatly invest in improving the quality of articles after each post successively. Therefore, a reporter utilizing Pengauthor's first-ever challenge is a great deal and could impact the work the Media Department publishes.",
+    "settings": { "type": "PLAIN" },
+    "feedback": "Bold the person name \"Toto Jeri\" on its first mention"
+  },
+
+  {
+    "type": "image",
+    "attachmentId": 76999,
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Pengauthors-Spot-The-Error.png",
+    "height": 383
+  },
+
+  {
+    "type": "paragraph",
+    "content": "In Spot The Error, a reporter is expected to search for as many errors as possible in a sample post, which is randomly tailored. Initially, the reporter flagged a few errors, with unwavering faith in their observations. They carefully examined every word and checked each paragraph for consistency and order to ensure everything feels in place. Moreover, the reporter does not forget to check whether formatting rules have been followed.",
+    "settings": { "type": "PLAIN" },
+    "feedback": "One or more typos were not fixed in the last main body paragraph"
+  },
+
+  { "type": "image", "helperText": "Another relevant picture" },
+
+  {
+    "type": "paragraph",
+    "content": "Lastly, <span style=\"color: #87d1ff;\"><strong>Club Penguin Armies</strong></span> reached out to Toto Jeri to learn more about their experience during the challenge.",
+    "settings": { "type": "PLAIN", "align": "left" },
+    "feedback": "The pre-interview text should be left-aligned"
+  },
+
+  {
+    "type": "interview",
+    "questions": [
+      {
+        "question": "From Spot The Error, what did you learn?",
+        "answer": "From Spot The Error, I realized how Club Penguin Armies encourages a care for detail. This challenge not only helped me improve my spotting abilities, but also enlightened me with writing style."
+      },
+      {
+        "question": "What was your score?",
+        "answer": "I achieved a perfect 10 out of 10 in the challenge! One may ask, how did I do it? I'm quite surprised myself. Perhaps, it's daily practice?"
+      },
+      {
+        "question": "What score were you expecting before you received your score?",
+        "answer": "I was not very confident for getting a perfect score. However, I was sure that I would get a decent score of around 7 or 8."
+      }
+    ]
+  },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "In summary, it appears that another reporter has put up a good score to deliver quality writing for the army community. Without leaving a room for error, Toto Jeri strived for perfection, leaving a lasting impression on his career. <em>Have you played Spot The Error? What are your thoughts on this short game?</em>",
+    "settings": { "type": "PLAIN" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "<span style=\"color: #003366;\"><strong>Fun X Time</strong></span><br>Editor-in-Chief",
+    "settings": { "type": "PLAIN", "align": "center" }
+  }
+]

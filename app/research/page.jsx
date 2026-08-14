@@ -99,10 +99,10 @@ export default function ResearchPage() {
 
   return (
     <div className="space-y-6 p-8">
-      <Infobox
-        type="INFO"
-        text="The research utility will crawl websites and fetch good references for you, but not all of the results may be relevant. In other words, it is likely that it will show relevant results, but not all of these results are relevant. You should still try manual research if you need more information regarding a certain topic."
-      />
+      <h1>Research</h1>
+      <Infobox type="INFO">
+        The research utility will crawl websites and fetch good references for you, but not all of the results may be relevant. In other words, it is likely that it will show relevant results, but not all of these results are relevant. You should still try manual research if you need more information regarding a certain topic.
+      </Infobox>
       <section>
         <div className="flex gap-3">
           <Tooltip
@@ -133,8 +133,7 @@ export default function ResearchPage() {
               value={organizations}
               onChange={(event) =>
                 setOrganizations(
-                  Array.from(event.target.selectedOptions)
-                    .map((option) => option.value)
+                  Array.from(event.target.selectedOptions).map((option) => option.value)
                 )
               }
               options={RESEARCH_ORGANIZATIONS}
@@ -157,33 +156,30 @@ export default function ResearchPage() {
             </button>
           </Tooltip>
         </div>
-        <label className="mt-3 flex items-center gap-2 text-sm text-faint cursor-pointer">
+        <span className="mt-3 flex items-center gap-2 text-sm">
           <input
+            id="filterTopTen"
             type="checkbox"
             checked={!filterTopTen}
             onChange={(event) => setFilterTopTen(!event.target.checked)}
-            className="h-4 w-4 accent-accent cursor-pointer"
+            className="h-4 w-4 accent-accent"
           />
-          <span className="text-sm text-faint">
+          <label htmlFor="filterTopTen" className="text-sm">
             Search among Top Ten posts
-          </span>
-        </label>
+          </label>
+        </span>
       </section>
 
       <section
-        className={
-          status === "done"
-            ? ""
-            : "flex min-h-[calc(100vh-16rem)] flex-col items-center justify-center text-center unboxed"
-        }
+        className={status != "done" ? "flex min-h-[calc(100vh-32rem)] flex-col items-center justify-center text-center unboxed" : ""}
       >
         {status === "idle" && (
           <>
             <Icon
               name="researchHero"
-              className="h-24 w-24 text-faint opacity-40"
+              className="h-24 w-24 opacity-40"
             />
-            <p className="mt-6 text-faint">
+            <p className="mt-6">
               To begin your research, search for something above!
             </p>
           </>
@@ -192,9 +188,9 @@ export default function ResearchPage() {
           <>
             <Icon
               name="researchLoading"
-              className="h-24 w-24 text-faint opacity-40 animate-pulse [animation-duration:500ms]"
+              className="h-24 w-24 opacity-40 animate-pulse [animation-duration:500ms]"
             />
-            <p className="mt-6 text-faint">
+            <p className="mt-6">
               Going through {organizations.length} website{organizations.length !== 1 ? "s" : ""} to find relevant posts…
             </p>
           </>

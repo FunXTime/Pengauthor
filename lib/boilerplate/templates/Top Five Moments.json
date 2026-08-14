@@ -1,7 +1,7 @@
 [
   {
     "type": "paragraph",
-    "content": "<b>[Hook with a very short gist of the month and this post]</b> [In this post, …]"
+    "content": "<strong>[Hook with a very short gist of the month and this post]</strong> [In this post, …]"
   },
 
   { "type": "image", "src": "thumbnail" },

@@ -1,7 +1,7 @@
 [
   {
     "type": "paragraph",
-    "content": "<b>[Introduce and describe the column]</b> [In this edition, …]"
+    "content": "<strong>[Introduce and describe the column]</strong> [In this edition, …]"
   },
 
   { "type": "image", "src": "thumbnail" },

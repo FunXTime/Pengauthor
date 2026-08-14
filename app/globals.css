@@ -8,7 +8,7 @@
   --color-panel: #121212;
   --color-panel-raised: #181818;
   --color-edge: #242424;
-  --color-edge-strong: #343434;
+  --color-edge-strong: #292929;
 
   --color-ink: #f5f5f5;
   --color-faint: #9a9a9a;
@@ -21,23 +21,18 @@
   font-family: var(--font-akira-expanded);
 }
 
+.font-burbank {
+  font-family: var(--font-burbank);
+}
+
+.font-dashicons {
+  font-family: var(--font-dashicons);
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-edge-strong) transparent;
-}
-
-html,
-body {
-  background-color: var(--color-base);
-  color: var(--color-ink);
-  font-size: 1rem;
-}
-
-body {
-  color: var(--color-faint);
-  font-family: var(--font-inter);
-  font-size: 15px;
-  font-weight: 400;
+  text-overflow: ellipsis
 }
 
 ::-webkit-scrollbar {
@@ -52,6 +47,34 @@ body {
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+::selection {
+  background-color: #4e2c00;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #4e2c00;
+  color: #ffffff;
+}
+
+::placeholder {
+  user-select: none;
+}
+
+html,
+body {
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-size: 1rem;
+}
+
+body {
+  color: var(--color-faint);
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-weight: 400;
 }
 
 h1 {
@@ -121,13 +144,22 @@ input {
   color: var(--color-ink);
 }
 
-main a {
+main a:not(.button) {
   color: var(--color-accent);
   transition: opacity 100ms;
 }
 
 main a:hover {
   opacity: 0.8;
+}
+
+button,
+a,
+input[type="color"],
+input[type="checkbox"],
+select,
+label[for] {
+  cursor: pointer;
 }
 
 .tooltipText {

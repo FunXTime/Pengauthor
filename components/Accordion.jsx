@@ -15,12 +15,11 @@ export default function Accordion({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex w-full items-center justify-between px-4 py-3 text-left cursor-pointer transition hover:bg-panel-raised"
+        className="flex w-full items-center justify-between px-4 py-3 text-left transition hover:bg-panel-raised"
       >
-        <span className="font-semibold text-faint select-none">
+        <span className="font-semibold select-none">
           {title}
         </span>
-
         <Icon
           name="chevronDown"
           className={`transition-transform ${open ? "rotate-180" : ""}`}
@@ -28,7 +27,7 @@ export default function Accordion({
       </button>
 
       {open && (
-        <div className="border-t border-edge px-4 py-3 text-sm leading-6 text-faint">
+        <div className="border-t border-edge px-4 py-3 text-sm leading-6">
           {children}
         </div>
       )}

@@ -29,7 +29,7 @@ export default function SearchResults() {
 
   return (
     <div className="space-y-4">
-      <div className="text-sm text-faint">
+      <div className="text-sm">
         <span>
           <strong>{results.length.toLocaleString()}</strong> result{results.length !== 1 ? "s" : ""}
         </span>

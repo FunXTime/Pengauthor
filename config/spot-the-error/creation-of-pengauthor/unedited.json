@@ -1,0 +1,110 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<strong>Welcome to Picture Perfect, a column that analyzes important events in army history</strong>. In this edition, we will describe Pengauthor and talk about its humble origins.",
+    "settings": { "type": "PLAIN" }
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "<span style=\"color: #ff6600;\"><strong>Pengauthor</strong></span> was founded by Editor-in-Chief <strong>Fun X Time</strong> on July 12th, 2026. A Sunday was selected for the website's release, so that its team of Reporting Heads could hype it well enough for the occasion. Since its inception, Pengauthor has been a useful suite of tools that empowers members of the Reporting Team to use skeletal posts and simplify reporting rules. In Fun X Time's own words…",
+    "settings": { "type": "PLAIN" }
+  },
+
+  {
+    "type": "blockquote",
+    "content": "Pengauthor is not just a website. It is an ideology, too. An ideology that sticks. It sets an example that any institution has the ability to run a free-of-cost utilitarian tool space. Real innovation is something that most institutions crave for but they never get to it."
+  },
+
+  {
+    "type": "image",
+    "attachmentId": 77696,
+    "src": "https://cparmies.org/wp-content/uploads/2026/08/Pengauthor-on-Visual-Studio-Code-500x399.png",
+    "height": 399
+  },
+
+  {
+    "type": "paragraph",
+    "content": "On July 5, 2026, Fun x Time surprised the Reporting Heads by revealing everything about Pengauthor in an editors-only meeting. The Administration was already informed of the creation a few days prior. Apart from the other topics of discussion chosen for the meeting, an unknown topic had been added to the agenda. Different editors voiced different levels of excitement and provided relevant feedback.",
+    "settings": { "type": "PLAIN" }
+  },
+
+  {
+    "type": "image",
+    "attachmentId": 77174,
+    "src": "https://cparmies.org/wp-content/uploads/2026/08/Twilights-promotion-to-FV-Leader-500x89.png",
+    "height": 89
+  },
+
+  {
+    "type": "paragraph",
+    "content": "To commemorate the publishing of this \"game-changing\" work, an event was scheduled in the <strong>CPA Staff</strong> Discord server a week before the announcement. It is worth noting that the event did not reveal what it was about; hence, nobody knew about Pengauthor at that time. In those days, hints were reportedly circulated among the server's channels. When the hour of the app's release arrived, the reporter chat gained hype. On July 12, 2026, at 12 pm EST sharp, the announcement finally dropped.",
+    "settings": { "type": "PLAIN" }
+  },
+
+  {
+    "type": "image",
+    "attachmentId": 77710,
+    "src": "https://cparmies.org/wp-content/uploads/2026/08/Pengauthors-Release-2-500x446.png",
+    "height": 446
+  },
+
+  {
+    "type": "paragraph",
+    "content": "In the following 24 hours, the site reportedly gained dozens of visitors. Simultaneously, some feedback was received by the Reporting Heads regarding Pengauthor. When it was released, the boilerplate generator, the research utility, and the post checkup were already ready for use. Fun X Time says that he rushed to make the guide page hours before the release, after receiving the page idea from Managing Editor <strong>Vesta</strong> When asked about why he was doing so much for the Reporting Team, Fun X Time answered…",
+    "settings": { "type": "PLAIN" }
+  },
+
+  {
+    "type": "blockquote",
+    "content": "Nobody asked me to do this. This was entirely my idea because I wanted to be an Editor-in-Chief like never before. One who will be remembered because of the drastic changes I'm introducing in the Media Department. Reporting will change permanently. For good."
+  },
+
+  {
+    "type": "paragraph",
+    "content": "Later, Pengauthor gained the abbrevation PA. Over the following month, the website was concistently accessed by many reporters as they gained familarity with the creation. Reporters-in-Training were encouraged to prefer the traditional way of writing posts. Hence, a requirement was added for them to write at least 2 posts in that fashion. A part from the day of release, August 2 saw a stark hike in the number of times the website was accessed in the first 30 days.",
+    "settings": { "type": "PLAIN" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "Lastly, <strong>Club Penguin Armies</strong> reached out to Fun X Time to learn more about his experience creating Pengauthor.",
+    "settings": { "type": "PLAIN", "align": "left" }
+  },
+
+  {
+    "type": "interview",
+    "questions": [
+      {
+        "question": "Did you realize this moment would become so memorable?",
+        "answer": "Certainly! I knew without doubt that Pengauthor's creation meant creating a permanent, living entity that benefited the Reporting Team in its following generations to come. No matter how dead or alive the army community gets, Pengauthor will be remembered by fellow reporters even after they quit reporting."
+      },
+      {
+        "question": "Who else was involved in this moment that deserves recognition?",
+        "answer": "My fellow Reporting Heads. The Heads contributed a lot to providing valuable input and providing constructive feedback that helped Pengauthor become more interesting."
+      },
+      {
+        "question": "What do you hope newer generations of the Reporting Team take away from this picture?",
+        "answer": "If you wish to be an innovative person you need to identify a problem and discover a solution. If you are able to do such problem solving, you can become a memorable individual of the team you work with."
+      }
+    ]
+  },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "In summary, it appears that Pengauthor is a creation that Fun X Time is most proud of. It goes without saying that Pengauthor changes the course of reporting permanently. What are your thoughts on this picture? <em>Is Pengauthor the best option for the media organization?</em>",
+    "settings": { "type": "PLAIN" }
+  },
+
+  {
+    "type": "paragraph",
+    "content": "<span style=\"color: #008000;\"><strong>GreenVege</strong></span><br><strong>Reporter-in-Training</strong>",
+    "settings": { "type": "PLAIN", "align": "center" }
+  }
+]

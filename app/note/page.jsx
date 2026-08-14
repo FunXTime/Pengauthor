@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
+import { DEFAULT_NOTE_HASH } from "@/config";
 
 export default function NotePage() {
-  redirect("/note/H4sIANIwSmoCAw3FwQmAMAwF0FW-1yLu4cGz50oDCUIiaaR0DhfoWm6jp_eM8a4p7S5ByFD7YXKaEUyKytkJEmgSjKz9sNKnlLBlP4s1hVTU-7rMg8ryAfNjCnxOAAAA");
+  redirect(`/note/${DEFAULT_NOTE_HASH}`);
 }

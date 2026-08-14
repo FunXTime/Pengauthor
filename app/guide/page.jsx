@@ -52,25 +52,21 @@ export default function OverviewPage() {
         </p>
       </section>
 
-      <Infobox
-        type="WARNING"
-        text="Although the boilerplate generator has the ability to create questions for you, it is usually recommended to think of some questions yourself. These unique questions should be personalized or tailored for a certain topic."
-      />
+      <Infobox type="WARNING">
+        Although the boilerplate generator has the ability to create questions for you, it is usually recommended to think of some questions yourself. These unique questions should be personalized or tailored for a certain topic.
+      </Infobox>
 
-      <Infobox
-        type="WARNING"
-        text="While the boilerplate generator is able to suggest tags, it will not be able to suggest all of them. Please remember to add any other tags that are appropriate for your post apart from the suggested tags."
-      />
+      <Infobox type="WARNING">
+        While the boilerplate generator is able to suggest tags, it will not be able to suggest all of them. Please remember to add any other tags that are appropriate for your post apart from the suggested tags.
+      </Infobox>
 
-      <Infobox
-        type="SUCCESS"
-        text="The boilerplate generator makes your post structure error-free. The traditional way of manually organizing the post and formatting it would have the chance of causing error."
-      />
+      <Infobox type="SUCCESS">
+        The boilerplate generator makes your post structure error-free. The traditional way of manually organizing the post and formatting it would have the chance of causing error.
+      </Infobox>
 
-      <Infobox
-        type="SUCCESS"
-        text="Some of the data you pass to the generator is saved locally on your browser."
-      />
+      <Infobox type="SUCCESS">
+        Some of the data you pass to the generator is saved locally on your browser.
+      </Infobox>
 
       <hr className="my-6 border-edge" />
 
@@ -107,15 +103,13 @@ export default function OverviewPage() {
         The research utility uses the same search technology as the search boxes present on army organization sites. The research utility connects with a WordPress API based on the organization it is searching in. One by one, requests are sent to WordPress to fetch posts based on the given query. However, the searches you make are not sorted by relevance but by date on Pengauthor. Sorting by relevance is not currently possible with this tool.
       </Accordion>
 
-      <Infobox
-        type="WARNING"
-        text="The research utility is incomplete and is not very accurate. While it is better than traditionally searching through websites, it currently has many flaws. You can use this tool to get information, but you won't get all the information that is available in the public domain."
-      />
+      <Infobox type="WARNING">
+        The research utility is incomplete and is not very accurate. While it is better than traditionally searching through websites, it currently has many flaws. You can use this tool to get information, but you won't get all the information that is available in the public domain.
+      </Infobox>
 
-      <Infobox
-        type="SUCCESS"
-        text="The search results are saved in your browser until you start a new search, or close the browser entirely."
-      />
+      <Infobox type="SUCCESS">
+        The search results are saved in your browser until you start a new search, or close the browser entirely.
+      </Infobox>
 
       <hr className="my-6 border-edge" />
 

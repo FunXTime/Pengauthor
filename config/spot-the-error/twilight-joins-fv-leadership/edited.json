@@ -1,0 +1,85 @@
+[
+  {
+    "type": "paragraph",
+    "content": "<strong>The Fire Vikings have officially welcomed Twilight as their newest leader, marking the beginning of an exciting new chapter for the army.</strong> Through his dedication, consistency, and hard work, Twilight has earned the opportunity to lead one of the community's rising armies.",
+    "settings": { "type": "PLAIN" },
+    "feedback": "One typo was not fixed in the first, introduction paragraph"
+  },
+
+  { "type": "image", "src": "thumbnail" },
+
+  { "type": "readMore" },
+
+  {
+    "type": "paragraph",
+    "content": "<strong>Twilight</strong>'s journey in the army community began in 2022 under the name <strong>Haki Cat</strong>, when she joined the <span style=\"color: #ff0000;\"><strong>Magma Clan</strong></span>. Although the army shut down in early 2023, the experience left a lasting impression and sparked her interest in the community. Following a period of inactivity, she returned to CPA on March 29, when <strong>Cyber </strong>recruited her into the <span style=\"color: #993300;\"><strong>Fire Vikings</strong></span>. From there, she eventually reached Fourth-in-Command, a role that presented a significant step up in responsibility. At first, it took time to adjust to the expectations of leadership. However, she gradually found her footing and became an increasingly reliable member of the command team.",
+    "settings": { "type": "PLAIN" },
+    "feedback": "Bold the person name \"Twilight\" on its first mention"
+  },
+
+  {
+    "type": "image",
+    "attachmentId": 77172,
+    "src": "https://cparmies.org/wp-content/uploads/2026/08/Twilight-enters-FV-as-4ic-500x192.png",
+    "height": 192
+  },
+
+  {
+    "type": "paragraph",
+    "content": "Throughout her time in the Vikings, she remained committed to supporting the army despite balancing real-life responsibilities. By making the most of the time she had available and consistently contributing to the army's growth, she steadily climbed the ranks. Ultimately, her dedication and perseverance were recognized on July 22, 2026, when she was officially promoted to the Fire Vikings' leadership, marking the latest milestone in her CPA career.",
+    "settings": { "type": "PLAIN" },
+    "feedback": "Missing a period (.) at the end of a main body paragraph"
+  },
+
+  {
+    "type": "image",
+    "attachmentId": 77174,
+    "src": "https://cparmies.org/wp-content/uploads/2026/08/Twilights-promotion-to-FV-Leader-500x89.png",
+    "height": 89
+  },
+
+  {
+    "type": "paragraph",
+    "content": "To learn more about her army journey, <span style=\"color: #87d1ff;\"><strong>Club Penguin Armies</strong></span> reached out to Twilight for an exclusive interview.",
+    "settings": { "type": "PLAIN", "align": "left" },
+    "feedback": "Color the organization name \"Club Penguin Armies\" on its first mention"
+  },
+
+  {
+    "type": "interview",
+    "questions": [
+      {
+        "question": "How do you feel about your promotion to leader?",
+        "answer": "I am pretty surprised I had been chosen, but that doesn't change the fact that I am happy and proud, I would like to thank Fire Viking's council and leaders for choosing me as the next leader and I will make sure to serve FV as much as I can"
+      },
+      {
+        "question": "What are your plans and goals for your army?",
+        "answer": "I do not have goals, I believe that putting a goal is the end of motivation, I believe that the only goal that FV needs is one that is right in front of them but they can never reach, to be better, I believe that We as individuals and armies should stride towards a blurry never-ending goal of being better every day"
+      },
+      {
+        "question": "What are you willing to do for your army's current inactivity?",
+        "answer": "My plan is one that is still under construction, but I am willing to spend the half of my day that am supposed to rest in to work on this plan and make it work no matter what"
+      },
+      {
+        "question": "Anything else you would like to say to the community?",
+        "answer": "I would like to Thank the CPA community for these amazing memories<br />\"I am fire<br />Burn those who dare to care for me<br />And my fuel are memories, fuel are memories of you<br />They perish with the heat, perish with the heat<br />So I can move on\""
+      }
+    ]
+  },
+
+  { "type": "horizontalRule" },
+
+  {
+    "type": "paragraph",
+    "content": "As with any new leader, the true measure of success will not be the promotion itself, but the ability to maintain activity, inspire members, and guide the army through challenges ahead. With a new chapter now underway, the community will be watching closely to see how Twilight's leadership shapes the future of the Fire Vikings. <em>Do you believe Twilight can keep up with her new position in the months ahead? What qualities do you believe are the most important for a newly promoted leader to succeed?</em>",
+    "settings": { "type": "PLAIN" },
+    "feedback": "Italicize the ending questions"
+  },
+
+  {
+    "type": "paragraph",
+    "content": "<span style=\"color: #008000;\">GreenVege</span><br>Reporter-in-Training",
+    "settings": { "type": "PLAIN", "align": "center" },
+    "feedback": "Bold the reporter name in the sign-off"
+  }
+]

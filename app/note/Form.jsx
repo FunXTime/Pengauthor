@@ -7,6 +7,8 @@ import { encodeNote } from "@/lib/notes";
 import PiP from "./pip";
 import { openPiP, updatePiP, isPiPOpen } from "@/lib/pip";
 import MonacoEditor from "@/components/MonacoEditor";
+import Button from "@/components/Button";
+import Icon from "@/components/Icon";
 
 export default function Form({
   initialNote,
@@ -23,7 +25,7 @@ export default function Form({
   const [hash, setHash] = useState(() => encodeNote(initialNote));
   const displayedUrl = shortCode
     ? `https://cpa-pengauthor.vercel.app/note/${shortCode}`
-    : `cpa-pengauthor…/note/${hash}`;
+    : `https://cpa-pengauthor.vercel.app/note/${hash}`;
 
   function updateNote(changes) {
     const updated = {
@@ -45,7 +47,7 @@ export default function Form({
     <main className="mx-auto max-w-5xl space-y-4 p-8">
       <div className="flex gap-6">
         <div className="flex-1 space-y-2">
-          <label className="block text-sm font-medium text-faint">
+          <label className="block text-sm font-medium">
             Title
           </label>
           <input
@@ -57,13 +59,13 @@ export default function Form({
           />
         </div>
         <div className="flex-1 space-y-2">
-          <label className="block text-sm font-medium text-faint">
+          <label className="block text-sm font-medium">
             Author
           </label>
           <input
             list="reporterName"
             type="text"
-            placeholder="Author"
+            placeholder="Note author"
             value={note.author}
             onChange={(event) => updateNote({ author: event.target.value })}
             className="w-full rounded-xl border border-edge bg-panel px-4 py-2 text-ink outline-none"
@@ -76,7 +78,8 @@ export default function Form({
         </div>
       </div>
 
-      <p className="text-sm text-faint">
+      <p className="text-sm">
+        <Icon name="clock" className="mr-2" />
         Last updated: <strong>{new Date(note.date).toLocaleString(undefined, {
           weekday: "long",
           year: "numeric",
@@ -100,62 +103,51 @@ export default function Form({
 
       <div className="flex w-full items-center gap-4 pt-4">
         <code
-          className={`truncate rounded-lg border border-edge bg-panel px-3 py-2 text-sm text-faint ${
+          className={`truncate rounded-xl border border-edge bg-panel px-3 py-2 text-sm  ${
             shortCode ? "flex-[2]" : "flex-[4]"
           }`}
         >
           {displayedUrl}
         </code>
 
-        <button
-          type="button"
-          className={`rounded-xl border border-edge bg-panel px-4 py-2 text-sm font-medium text-ink transition hover:bg-panel-raised cursor-pointer ${
-            shortCode ? "flex-1" : "flex-[2]"
-          }`}
+        <Button
+          icon="copy"
           onClick={async () => {
             await navigator.clipboard.writeText(
-              displayedUrl.replace(
-                "cpa-pengauthor…",
-                "https://cpa-pengauthor.vercel.app"
-              )
+              displayedUrl.replace("cpa-pengauthor…", "https://cpa-pengauthor.vercel.app")
             );
             setCopied(true);
-            setTimeout(() => {
-              setCopied(false);
-            }, 1000);
+            setTimeout(() => { setCopied(false); }, 1000);
           }}
         >
-          {copied ? "Copied!" : "Copy note link"}
-        </button>
+          {copied ? "Copied!" : "Copy link"}
+        </Button>
 
         {!shortCode && (
-          <button
-            type="button"
-            className="flex-1 rounded-xl border border-edge bg-panel px-4 py-2 text-sm font-medium text-ink transition hover:bg-panel-raised cursor-pointer"
+          <Button
+            icon="publish"
             onClick={async () => {
               const code = await notes.createShortLink(encodeNote(note));
               setShortCode(code);
               window.history.replaceState(null, "", `/note/${code}`);
             }}
           >
-            Shorten URL
-          </button>
+            Shorten link
+          </Button>
         )}
       </div>
 
-      <button
-        type="button"
-        className="w-full rounded-xl border border-edge bg-panel px-4 py-2 text-sm font-medium text-ink transition hover:bg-panel-raised cursor-pointer"
-        onClick={() =>
-          openPiP(PiP, {
-            width: 300,
-            height: 200,
-            props: { note }
-          })
-        }
+      <Button
+        className="w-full"
+        icon="pictureInPicture"
+        onClick={() => openPiP(PiP, {
+          width: 300,
+          height: 200,
+          props: { note }
+        })}
       >
         Overlay this note
-      </button>
+      </Button>
     </main>
   );
 }

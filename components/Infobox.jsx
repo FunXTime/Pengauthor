@@ -29,7 +29,7 @@ const TYPES = {
   }
 };
 
-export default function Infobox({ type = "INFO", text }) {
+export default function Infobox({ type = "INFO", children }) {
   const style = TYPES[type] ?? TYPES.INFO;
 
   return (
@@ -46,9 +46,9 @@ export default function Infobox({ type = "INFO", text }) {
         className="mt-0.5 h-5 w-5 shrink-0"
       />
 
-      <p className="text-sm leading-6">
-        {text}
-      </p>
+      <div className="text-sm leading-6">
+        {children}
+      </div>
     </div>
   );
 }

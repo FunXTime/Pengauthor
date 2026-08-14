@@ -1,25 +1,48 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DEFAULT_GENERATOR_DATA as DEFAULT_FORM_DATA } from "@/config";
+import {
+  DEFAULT_GENERATOR_DATA as DEFAULT_FORM_DATA,
+  CURRENT_PALETTE,
+  POST_TYPES,
+  POST_CATEGORIES
+} from "@/config";
+import { getThumbnail } from "@/lib/thumbnails";
 import getTemplate from "@/lib/boilerplate/getTemplate";
 import compile from "@/lib/boilerplate/compile";
 import GenerateForm from "./Form";
 import GenerateEditor from "./Editor";
 
+function getStoredGeneratorData() {
+  if (typeof window === "undefined") return DEFAULT_FORM_DATA;
+  const saved = localStorage.getItem("generatorData");
+  if (!saved) return DEFAULT_FORM_DATA;
+  try {
+    const data = JSON.parse(saved);
+    const postCategory = POST_CATEGORIES.includes(data.postCategory)
+      ? data.postCategory
+      : DEFAULT_FORM_DATA.postCategory;
+    const postTypes = POST_TYPES[postCategory] ?? [];
+    const postType = postTypes.includes(data.postType)
+      ? data.postType
+      : postTypes[0];
+    return {
+      ...DEFAULT_FORM_DATA,
+      ...data,
+      postCategory,
+      postType,
+      isBreakingNews: postCategory === "News" && data.isBreakingNews === true
+    };
+  } catch {
+    return DEFAULT_FORM_DATA;
+  }
+}
+
 export default function GeneratePage() {
-  const [formData, setFormData] = useState(() => {
-    if (typeof window === "undefined") return DEFAULT_FORM_DATA;
-    const saved = localStorage.getItem("generatorData");
-    if (!saved) return DEFAULT_FORM_DATA;
-    try {
-      return { ...DEFAULT_FORM_DATA, ...JSON.parse(saved) };
-    } catch {
-      return DEFAULT_FORM_DATA;
-    }
-  });
-  const [thumbnail, setThumbnail] = useState(null);
+  const [formData, setFormData] = useState(getStoredGeneratorData);
+  const [palette, setPalette] = useState(CURRENT_PALETTE);
   const [boilerplate, setBoilerplate] = useState("");
+  const thumbnail = getThumbnail(formData, palette);
 
   useEffect(() => {
     async function generateBoilerplate() {
@@ -30,22 +53,28 @@ export default function GeneratePage() {
     generateBoilerplate();
   }, [formData, thumbnail]);
 
+  useEffect(() => {
+    const { interviewQuestions, ...persistedData } = formData;
+    localStorage.setItem("generatorData", JSON.stringify(persistedData));
+  }, [formData]);
+
   return (
-    <div className="space-y-6 p-8">
+    <div className="space-y-3 p-8">
       <h1>Generate a boilerplate</h1>
 
-      <p className="text-faint">
+      <p>
         Generate a basic structure for your post so you can easily get to writing. Tailor the boilerplate as per the details you provide.
       </p>
 
-      <div className="grid min-h-screen gap-4 md:grid-cols-[1fr_auto_2fr]">
+      <div className="grid min-h-screen mt-8 gap-4 md:grid-cols-[1fr_auto_2fr]">
         <div>
-          <h2>1. Give us some details</h2>
+          <h2>1. Enter some details</h2>
           <GenerateForm
             formData={formData}
             setFormData={setFormData}
+            palette={palette}
+            setPalette={setPalette}
             thumbnail={thumbnail}
-            setThumbnail={setThumbnail}
           />
         </div>
 

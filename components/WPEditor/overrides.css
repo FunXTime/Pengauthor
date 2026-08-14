@@ -1,0 +1,106 @@
+.dashicons {
+  font-family: 'dashicons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  speak: none;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dashicons-admin-media::before {
+  content: "\f104";
+}
+
+.mce-btn {
+  font-family: var(--font-burbank-medium) !important;
+}
+
+.mce-btn:not(.mce-active) {
+  background: transparent !important;
+}
+
+.mce-txt,
+.mce-title,
+.mce-container,
+.mce-widget,
+.mce-menubtn,
+.mce-menu,
+.mce-panel,
+.mce-window,
+.mce-statusbar,
+.mce-path,
+.mce-label,
+.mce-edit-area iframe {
+  font-family: var(--font-burbank) !important;
+}
+
+#mce-modal-block {
+  background: #000000 !important;
+}
+
+.mce-toolbar-grp {
+  background: #f6f8f7 !important;
+  padding: 5px !important;
+}
+
+span.mce-preview {
+  margin-left: -9px !important;
+}
+
+.mce-statusbar {
+  background: #f6f8f7 !important;
+}
+
+.mce-ico {
+  font-family: var(--font-dashicons) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  speak: none !important;
+  display: inline-block !important;
+  text-decoration: inherit !important;
+  width: 1em !important;
+  height: 1em !important;
+  font-size: 20px !important;
+  text-align: center !important;
+}
+
+.mce-i-bold::before           { content: "\f200" !important; font-size: 20px !important; }
+.mce-i-italic::before         { content: "\f201" !important; font-size: 20px !important; }
+.mce-i-bullist::before        { content: "\f203" !important; font-size: 20px !important; }
+.mce-i-numlist::before        { content: "\f204" !important; font-size: 20px !important; }
+.mce-i-blockquote::before     { content: "\f205" !important; font-size: 20px !important; }
+.mce-i-alignleft::before      { content: "\f206" !important; font-size: 20px !important; }
+.mce-i-aligncenter::before    { content: "\f207" !important; font-size: 20px !important; }
+.mce-i-alignright::before     { content: "\f208" !important; font-size: 20px !important; }
+.mce-i-link::before           { content: "\f103" !important; font-size: 20px !important; }
+.mce-i-unlink::before         { content: "\f225" !important; font-size: 20px !important; }
+.mce-i-wp_more::before        { content: "\f209" !important; font-size: 20px !important; }
+.mce-i-wp_adv::before { content: "\f212" !important; font-size: 20px !important; }
+.mce-i-strikethrough::before  { content: "\f224" !important; font-size: 20px !important; }
+.mce-i-hr::before             { content: "\f460" !important; font-size: 20px !important; }
+.mce-i-forecolor::before      { content: "\f215" !important; font-size: 20px !important; }
+.mce-i-pastetext::before      { content: "\f217" !important; font-size: 20px !important; }
+.mce-i-removeformat::before   { content: "\f218" !important; font-size: 20px !important; }
+.mce-i-charmap::before        { content: "\f220" !important; font-size: 20px !important; }
+.mce-i-outdent::before        { content: "\f221" !important; font-size: 20px !important; }
+.mce-i-indent::before         { content: "\f222" !important; font-size: 20px !important; }
+.mce-i-undo::before           { content: "\f171" !important; font-size: 20px !important; }
+.mce-i-redo::before           { content: "\f172" !important; font-size: 20px !important; }
+.mce-i-help::before           { content: "\f223" !important; font-size: 20px !important; }
+
+.mce-btn button .mce-preview {
+  position: absolute !important;
+  bottom: 2px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 16px !important;
+  height: 3px !important;
+  background: #000000 !important;
+}

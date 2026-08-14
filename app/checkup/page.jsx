@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { CHECKUP_QUESTIONS } from "@/config";
 import { preloadMany } from "@/lib/preloader";
 import Icon from "@/components/Icon";
+import Button from "@/components/Button";
 
 export default function CheckupPage() {
   const router = useRouter();
@@ -20,21 +21,20 @@ export default function CheckupPage() {
       <section className="flex w-full max-w-3xl flex-col items-center text-center unboxed">
         <Icon
           name="checkupHero"
-          className="mb-6 h-24 w-24 text-faint"
+          className="mb-6 h-24 w-24"
         />
         <h1 className="font-akira text-3xl">
           Post Checkup
         </h1>
-        <p className="mt-4 max-w-2xl text-faint">
+        <p className="my-6 max-w-2xl">
           Before finishing your article, run through an interactive checkup to ensure that your post includes all the important details and avoids common mistakes that could lead to silly score loss!
         </p>
-        <button
-          type="button"
+        <Button
+          size="lg"
           onClick={handleStart}
-          className="mt-8 rounded-xl border border-edge bg-panel-raised px-6 py-3 font-semibold text-ink transition-all hover:scale-105 hover:bg-panel cursor-pointer"
         >
-          Start
-        </button>
+          Start the checkup
+        </Button>
       </section>
     </div>
   );

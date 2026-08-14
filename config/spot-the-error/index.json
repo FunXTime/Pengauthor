@@ -1,0 +1,41 @@
+[
+  {
+    "id": "reporter-spots-errors",
+    "title": "BREAKING: Reporter Spots Errors",
+    "description": "Find simple mistakes in a simple news report. This is breaking news, though, so you got to be quick.",
+    "difficulty": "easy",
+    "thumbnail": {
+      "filename": "News-Report.png",
+      "src": "https://cparmies.org/wp-content/uploads/2026/07/News-Report-500x328.png",
+      "height": 328,
+      "attachmentId": 76167,
+      "designer": "Dino"
+    }
+  },
+  {
+    "id": "twilight-joins-fv-leadership",
+    "title": "Fire Vikings Welcome Twilight as Their Newest Leader",
+    "description": "Let's talk about Twilight from the Fire Vikings.",
+    "difficulty": "easy",
+    "thumbnail": {
+      "filename": "News-Report-LC.png",
+      "src": "https://cparmies.org/wp-content/uploads/2026/07/News-Report-LC-500x328.png",
+      "height": 328,
+      "attachmentId": 76169,
+      "designer": "Designed by Master DS"
+    }
+  },
+  {
+    "id": "creation-of-pengauthor",
+    "title": "Picture Perfect: Creation of Pengauthor",
+    "description": "Unspot errors from a seemingly simple column article that needs your help.",
+    "difficulty": "medium",
+    "thumbnail": {
+      "filename": "Picture-Perfect.png",
+      "src": "https://cparmies.org/wp-content/uploads/2026/07/Picture-Perfect-500x281.png",
+      "height": 281,
+      "attachmentId": 76204,
+      "designer": "Cassie"
+    }
+  }
+]

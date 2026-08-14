@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Icon from "@/components/Icon";
 import { CHECKUP_QUESTIONS } from "@/config";
+import Button from "@/components/Button";
 
 export default function FinishPage() {
   const [score, setScore] = useState(0);
@@ -44,25 +44,24 @@ export default function FinishPage() {
           <h1 className="text-3xl font-bold text-ink">
             Checkup complete!
           </h1>
-          <p className="mt-4 text-faint">
-            You've reached the end of the manual post checkup.
+          <p className="mt-4">
+            You answered {questionsAnswered} questions and reached the end of the manual post checkup.
           </p>
-          <p className="mt-8 text-sm text-faint">
-            Your checkup score
+          <p className="mt-8 text-sm">
+            <strong>Your checkup score was…</strong>
           </p>
-          <p className="mt-1 text-6xl font-bold text-ink">
+          <p className="mt-1 text-6xl font-bold font-burbank text-ink">
             {score} / {CHECKUP_QUESTIONS.length}
           </p>
-          <p className="mt-4 max-w-xl text-faint">
+          <p className="my-6 max-w-xl">
             A higher score generally means that your post is less likely to contain common mistakes. Give your work one final review before finishing.
           </p>
-          <Link
+          <Button
             href="/checkup/question-1"
             onClick={() => sessionStorage.removeItem("checkup")}
-            className="mt-10 rounded-xl border border-edge bg-panel-raised px-6 py-3 font-semibold text-ink transition-all hover:scale-105 hover:bg-panel"
           >
             Run again
-          </Link>
+          </Button>
         </section>
 
         <section className="flex flex-col items-center text-center">
@@ -78,8 +77,8 @@ export default function FinishPage() {
                     key={index}
                     type="button"
                     onClick={() => toggleImprovement(index)}
-                    className={`flex items-start gap-4 rounded-xl border border-edge bg-panel-raised p-4 text-left transition-all cursor-pointer ${
-                      completed ? "scale-95" : "hover:scale-[1.02]"
+                    className={`flex items-start gap-4 rounded-xl border border-edge bg-panel-raised p-4 text-left transition-all ${
+                      completed ? "scale-95 opacity-50" : "hover:scale-[1.02]"
                     }`}
                   >
                     <Icon
@@ -87,7 +86,7 @@ export default function FinishPage() {
                       variable={index + 1}
                       className="h-6 w-6 shrink-0"
                     />
-                    <p className="text-faint">
+                    <p>
                       {improvement}
                     </p>
                   </button>
@@ -95,7 +94,7 @@ export default function FinishPage() {
               })}
             </div>
           ) : (
-            <p className="mt-4 max-w-2xl text-faint">
+            <p className="mt-4 max-w-2xl">
               Excellent work! No improvements were identified during this checkup.
             </p>
           )}

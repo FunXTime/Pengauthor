@@ -34,7 +34,6 @@ export default function ResultCard({
         {thumbnail && (
           <img
             src={thumbnail}
-            alt=""
             className="h-full w-full object-cover"
             loading="lazy"
             onError={(event) => {
@@ -49,10 +48,10 @@ export default function ResultCard({
         <h3 className="truncate font-semibold text-ink">
           {title}
         </h3>
-        <p className="mt-1 line-clamp-2 text-sm text-faint">
+        <p className="mt-1 line-clamp-2 text-sm">
           {description}
         </p>
-        <p className="mt-2 text-xs text-faint">
+        <p className="mt-2 text-xs">
           {[organization, author, timestamp]
             .filter(Boolean)
             .join(" • ")}

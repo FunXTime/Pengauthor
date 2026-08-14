@@ -32,16 +32,16 @@ export default async function NotePage({
           <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <Icon
               name="invalidNote"
-              className="mb-6 h-24 w-24 text-faint"
+              className="mb-6 h-24 w-24"
             />
             <h1 className="text-3xl font-akira text-ink">
               Oh no!
             </h1>
-            <p className="mt-4 text-faint">
+            <p className="mt-4">
               You've been linked to an invalid note! The note hash or code in the
               URL does not map to a valid note. <Link href="/note" className="blue">Create a new note</Link>, or contact the person who shared this faulty note.
             </p>
-            <p className="mt-4 text-faint">
+            <p className="mt-4">
               By the way, shortened note links automatically expire 30 days after
               they're created.
             </p>

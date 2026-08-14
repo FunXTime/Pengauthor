@@ -31,7 +31,7 @@
     "note": "We'll skip the next question if it wasn't needed.",
     "answers": [
       { "label": "Yep, I have", "score": 1 },
-      { "label": "Nope, it was not needed", "score": 1, "shortcut": 6 },
+      { "label": "Nope, it wasn't needed", "score": 1, "shortcut": 6 },
       { "label": "Nope, I'll add it", "score": 0 }
     ],
     "feedback": "Add the interview after interviewing somebody"
@@ -103,9 +103,9 @@
     "question": "Lastly, what's your readability score?",
     "note": "Your readability score speaks a lot about your writing!",
     "answers": [
-      { "label": "It's green!", "score": 1 },
-      { "label": "It's yellow!", "score": 0 },
-      { "label": "It's red!", "score": 0 }
+      { "label": "It's green", "score": 1 },
+      { "label": "It's yellow", "score": 0 },
+      { "label": "It's red", "score": 0 }
     ],
     "feedback": "Try to raise your readability score to green by following the auto-generated readability feedback in your post's editor"
   }

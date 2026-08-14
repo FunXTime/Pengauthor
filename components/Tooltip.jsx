@@ -10,10 +10,7 @@ export default function Tooltip({
   className = ""
 }) {
   const triggerRef = useRef(null);
-  const [position, setPosition] = useState({
-    top: 0,
-    left: 0
-  });
+  const [position, setPosition] = useState({ top: 0, left: 0 });
   const [isVisible, setIsVisible] = useState(false);
 
   if (disabled) return children;
@@ -34,16 +31,16 @@ export default function Tooltip({
 
   return (
     <>
-      <span
+      <div
         ref={triggerRef}
         onMouseEnter={showTooltip}
         onMouseLeave={hideTooltip}
         onFocus={showTooltip}
         onBlur={hideTooltip}
-        className={className || "inline-flex"}
+        className={className}
       >
         {children}
-      </span>
+      </div>
 
       {isVisible &&
         createPortal(
@@ -54,7 +51,8 @@ export default function Tooltip({
               top: position.top,
               left: position.left,
               transform: "translate(-50%, calc(-100% - 8px))",
-              zIndex: 99999
+              zIndex: 99999,
+              userSelect: "none"
             }}
           >
             {text}

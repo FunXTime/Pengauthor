@@ -14,7 +14,8 @@ export const THUMBNAIL_MAPPINGS = Object.fromEntries(
 export const PALETTES = main.palettes;
 export const CURRENT_PALETTE = main.currentPalette;
 export const DEFAULT_GENERATOR_DATA = structuredClone(main.defaultGeneratorData);
-export const GLOBAL_TAGS = main.globalTags;
+export const GLOBAL_TAGS = main.evergreenTags;
+export const DEFAULT_NOTE_HASH = main.defaultNote;
 
 import checkup from "./checkup.json";
 export const CHECKUP_QUESTIONS = checkup;
@@ -41,3 +42,6 @@ export const THUMBNAILS = {
   LC: LC,
   CC: CC
 }
+
+import spotTheError from "./spot-the-error/index.json";
+export const SPOT_THE_ERROR_POSTS = spotTheError;

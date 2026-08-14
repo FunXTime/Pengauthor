@@ -23,7 +23,7 @@ export default function Dropdown({
         style={style}
       >
         {!multiple && placeholder && (
-          <option value="">
+          <option>
             {placeholder}
           </option>
         )}
@@ -32,11 +32,9 @@ export default function Dropdown({
           const value = typeof option === "string"
             ? option
             : option.value;
-
           const label = typeof option === "string"
             ? option
             : option.label;
-
           return (
             <option
               key={value}
@@ -52,7 +50,7 @@ export default function Dropdown({
       {!multiple && (
         <Icon
           name="chevronDown"
-          className="pointer-events-none absolute right-2 top-1/2 h-4 w-3 -translate-y-1/2 text-faint"
+          className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2"
         />
       )}
     </div>

@@ -1,32 +1,50 @@
 import localFont from "next/font/local";
-import Link from "next/link";
-import Icon from "@/components/Icon";
-import ShareButton from "@/components/ShareButton";
+import Sidebar from "@/components/Sidebar";
 import GlobalShortcuts from "@/components/GlobalShortcuts";
-import packageData from "../package.json";
 import Telemetry from "@/components/Telemetry";
 import "./globals.css";
 
 const syne = localFont({
-  src: "../fonts/Syne.ttf",
+  src: "../public/fonts/Syne.ttf",
   variable: "--font-syne",
   display: "swap"
 });
 
 const inter = localFont({
-  src: "../fonts/Inter.ttf",
+  src: "../public/fonts/Inter.ttf",
   variable: "--font-inter",
   display: "swap"
 });
 
 const akira = localFont({
-  src: "../fonts/AkiraExpanded-SuperBold.ttf",
+  src: "../public/fonts/AkiraExpanded-SuperBold.ttf",
   variable: "--font-akira-expanded",
   display: "swap"
 });
 
+const burbank = localFont({
+  src: [
+    {
+      path: "../public/fonts/BurbankSmall-Medium.otf",
+      weight: "500",
+      style: "medium",
+    },
+    {
+      path: "../public/fonts/BurbankSmall-Bold.otf",
+      weight: "700",
+      style: "bold",
+    },
+  ],
+  variable: "--font-burbank",
+});
+
+const dashicons = localFont({
+  src: "../public/fonts/dashicons.woff2",
+  variable: "--font-dashicons",
+  display: "swap"
+});
+
 const siteURL = "https://cpa-pengauthor.vercel.app";
-const version = packageData.version;
 
 export const viewport = {
   themeColor: "#ff6900"
@@ -77,6 +95,7 @@ const LISTED_PAGES = [
   { label: "Refine", href: "/refine", icon: "refine" },
   { label: "Colorize", href: "/colorize", icon: "colorize" },
   { label: "Post Checkup", href: "/checkup", icon: "checkup" },
+  { label: "Spot The Error", href: "/spot-the-error", icon: "spotTheError" },
   { label: "Score Calculator", href: "/calculate-score", icon: "calculateScore" }
 ];
 
@@ -91,78 +110,9 @@ const EXTERNAL_PAGES = [
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${syne.variable} ${inter.variable} ${akira.variable} antialiased`}>
+      <body className={`${syne.variable} ${inter.variable} ${akira.variable} ${burbank.variable} ${dashicons.variable} antialiased`}>
         <div className="flex h-screen overflow-hidden bg-base">
-          <aside className="flex h-screen w-56 shrink-0 flex-col overflow-y-auto border-r border-edge bg-[#0d0d0d] select-none">
-
-            <div className="border-b border-edge px-5 py-5">
-              <p className="font-akira text-lg tracking-wide text-ink">
-                Pengauthor
-              </p>
-              <p className="mt-1 text-xs text-faint">Built for CPA's Reporting Team</p>
-            </div>
-
-            <nav className="flex-1 overflow-y-auto px-3 py-4">
-              <ul className="space-y-1">
-                {LISTED_PAGES.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="flex items-center gap-3 rounded-xl px-3 py-1.5 text-sm text-faint transition-all hover:bg-panel-raised hover:text-ink"
-                    >
-                      <Icon name={item.icon} />
-                      <span>{item.label}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              <hr className="my-3 border-edge" />
-
-              <ul className="space-y-1">
-                {EXTERNAL_PAGES.map((item) => (
-                  <li key={item.href + item.label}>
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 rounded-xl px-3 py-1.5 text-sm text-faint transition-all hover:bg-panel-raised hover:text-ink"
-                    >
-                      <Icon name="arrowUpRight" />
-                      <span>{item.label}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-
-              <hr className="my-3 border-edge" />
-
-              <ul className="space-y-1">
-                <li>
-                  <Link
-                    type="button"
-                    href="/note/H4sIANIwSmoCAw3FwQmAMAwF0FW-1yLu4cGz50oDCUIiaaR0DhfoWm6jp_eM8a4p7S5ByFD7YXKaEUyKytkJEmgSjKz9sNKnlLBlP4s1hVTU-7rMg8ryAfNjCnxOAAAA"
-                    className="flex w-full items-center gap-3 rounded-xl px-3 py-1.5 text-sm text-faint transition-all hover:bg-panel-raised hover:text-ink cursor-pointer"
-                  >
-                    <Icon name="share" />
-                    <span>Share a note</span>
-                  </Link>
-                </li>
-                <li>
-                  <ShareButton />
-                </li>
-              </ul>
-
-            </nav>
-
-            <div className="border-t border-edge px-5 py-4">
-              <b className="text-xs text-faint">Dashboard curated by</b>
-              <p className="text-xs text-faint">Editor-in-Chief Fun X Time</p>
-              <p className="text-xs text-faint"><a href="https://github.com/FunXTime/Pengauthor/commits/main/" target="_blank">Version {version}</a></p>
-            </div>
-
-          </aside>
-
+          <Sidebar pages={{ LISTED_PAGES, EXTERNAL_PAGES }} />
           <main className="flex-1 overflow-y-auto">
             {children}
           </main>
