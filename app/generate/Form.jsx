@@ -14,6 +14,7 @@ import Dropdown from "@/components/Dropdown";
 import Tooltip from "@/components/Tooltip";
 import Icon from "@/components/Icon";
 import ColorPicker from "@/components/ColorPicker";
+import Image from "next/image";
 
 export default function GenerateForm({
   formData,
@@ -244,12 +245,17 @@ export default function GenerateForm({
                   thumbnail.fallback ? "" : "cursor-copy"
                 }`}
               >
-                <img
-                  src={thumbnail.previewSrc}
-                  alt={thumbnail.filename}
-                  className="rounded-xl transition duration-200 group-hover:brightness-[25%]"
-                  onError={(event) => event.currentTarget.src = thumbnail.src}
-                />
+                <div className="overflow-hidden rounded-xl bg-panel-raised">
+                  <Image
+                    src={thumbnail.previewSrc}
+                    alt={thumbnail.filename}
+                    width={thumbnail.width ?? 500}
+                    height={thumbnail.height}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="h-auto w-full rounded-xl transition duration-200 group-hover:brightness-[25%]"
+                    onError={(event) => event.currentTarget.src = thumbnail.src}
+                  />
+                </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 transition duration-200 group-hover:opacity-100">
                   <span className="max-w-xs text-center text-sm font-bold tracking-wide text-white">
                     {thumbnail.fallback

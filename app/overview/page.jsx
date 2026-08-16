@@ -1,5 +1,7 @@
-import Icon from "@/components/Icon";
-import Infobox from "@/components/Infobox";
+"use client";
+
+import Button from "@/components/Button";
+import { showToast } from "@/components/Toast";
 import Link from "next/link";
 
 export default function OverviewPage() {

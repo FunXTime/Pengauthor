@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import Sidebar from "@/components/Sidebar";
-import GlobalShortcuts from "@/components/GlobalShortcuts";
-import Telemetry from "@/components/Telemetry";
+import { GlobalShortcuts, Telemetry, Ping, GlobalToast } from "@/components/global";
 import "./globals.css";
 
 const syne = localFont({
@@ -120,6 +119,8 @@ export default function RootLayout({ children }) {
 
         <GlobalShortcuts />
         <Telemetry />
+        <Ping />
+        <GlobalToast />
       </body>
     </html>
   );
