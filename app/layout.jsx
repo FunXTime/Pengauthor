@@ -112,7 +112,7 @@ export default function RootLayout({ children }) {
       <body className={`${syne.variable} ${inter.variable} ${akira.variable} ${burbank.variable} ${dashicons.variable} antialiased`}>
         <div className="flex h-screen overflow-hidden bg-base">
           <Sidebar pages={{ LISTED_PAGES, EXTERNAL_PAGES }} />
-          <main className="flex-1 overflow-y-auto">
+          <main className="flex-1 overflow-y-auto pt-14 lg:pt-0">
             {children}
           </main>
         </div>

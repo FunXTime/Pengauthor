@@ -16,11 +16,13 @@ const DEFAULT_CODE = `<!--
 -->`;
 
 export default function GenerateEditor({
+  className,
   value,
   onChange
 }) {
   return (
     <MonacoEditor
+      className={className}
       value={value || DEFAULT_CODE}
       onChange={(value) => onChange(value ?? "")}
       language="html"

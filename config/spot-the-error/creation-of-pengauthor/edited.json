@@ -111,7 +111,7 @@
 
   {
     "type": "paragraph",
-    "content": "<span style=\"color: #008000;\"><strong>GreenVege</strong></span><br>Reporter-in-Training",
+    "content": "<span style=\"color: #ff6600;\"><strong>Fun X Time</strong></span><br>Editor-in-Chief",
     "settings": { "type": "PLAIN", "align": "center" },
     "feedback": "Unbold the reporter position in the sign-off"
   }

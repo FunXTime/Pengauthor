@@ -98,16 +98,18 @@ export default function ResearchPage() {
   }
 
   return (
-    <div className="space-y-6 p-8">
+    <div className="space-y-6 overflow-x-hidden p-4 sm:p-6 lg:p-8">
       <h1>Research</h1>
+
       <Infobox type="INFO">
         The research utility will crawl websites and fetch good references for you, but not all of the results may be relevant. In other words, it is likely that it will show relevant results, but not all of these results are relevant. You should still try manual research if you need more information regarding a certain topic.
       </Infobox>
+
       <section>
-        <div className="flex gap-3">
+        <div className="flex flex-col gap-3 md:flex-row">
           <Tooltip
             text="Search for potential words appearing in post titles and content"
-            className="flex-1"
+            className="min-w-0 flex-1"
           >
             <input
               type="text"
@@ -125,7 +127,7 @@ export default function ResearchPage() {
               max={new Date().getFullYear()}
               placeholder="Lookback"
               onChange={(event) => setYear(event.target.value)}
-              className="w-40 rounded-xl border border-edge bg-panel px-4 py-2 text-ink outline-none"
+              className="w-full rounded-xl border border-edge bg-panel px-4 py-2 text-ink outline-none md:w-40"
             />
           </Tooltip>
           <Tooltip text="Select organizations to search from">
@@ -139,7 +141,7 @@ export default function ResearchPage() {
               options={RESEARCH_ORGANIZATIONS}
               multiple
               size={1}
-              className="w-50 rounded-xl"
+              className="w-full rounded-xl md:w-50"
               style={{
                 borderRadius: "0.75rem",
                 backgroundColor: "var(--panel)"
@@ -149,20 +151,21 @@ export default function ResearchPage() {
           <Tooltip text="Run the search">
             <button
               type="button"
-              className="flex items-center justify-center rounded-xl border border-edge bg-panel-raised px-4 transition-all hover:bg-panel"
+              className="flex h-10 w-full shrink-0 items-center justify-center rounded-xl border border-edge bg-panel-raised px-4 transition-all hover:bg-panel md:h-auto md:w-auto"
               onClick={handleSearch}
             >
               <Icon name="search" />
             </button>
           </Tooltip>
         </div>
+
         <span className="mt-3 flex items-center gap-2 text-sm">
           <input
             id="filterTopTen"
             type="checkbox"
             checked={!filterTopTen}
             onChange={(event) => setFilterTopTen(!event.target.checked)}
-            className="h-4 w-4 accent-accent"
+            className="h-4 w-4 shrink-0 accent-accent"
           />
           <label htmlFor="filterTopTen" className="text-sm">
             Search among Top Ten posts
@@ -171,13 +174,17 @@ export default function ResearchPage() {
       </section>
 
       <section
-        className={status != "done" ? "flex min-h-[calc(100vh-32rem)] flex-col items-center justify-center text-center unboxed" : ""}
+        className={
+          status !== "done"
+            ? "flex min-h-[calc(100dvh-28rem)] flex-col items-center justify-center text-center unboxed sm:min-h-[calc(100vh-28rem)] lg:min-h-[calc(100vh-32rem)]"
+            : ""
+        }
       >
         {status === "idle" && (
           <>
             <Icon
               name="researchHero"
-              className="h-24 w-24 opacity-40"
+              className="h-20 w-20 opacity-40 sm:h-24 sm:w-24"
             />
             <p className="mt-6">
               To begin your research, search for something above!
@@ -188,7 +195,7 @@ export default function ResearchPage() {
           <>
             <Icon
               name="researchLoading"
-              className="h-24 w-24 opacity-40 animate-pulse [animation-duration:500ms]"
+              className="h-20 w-20 animate-pulse opacity-40 [animation-duration:500ms] sm:h-24 sm:w-24"
             />
             <p className="mt-6">
               Going through {organizations.length} website{organizations.length !== 1 ? "s" : ""} to find relevant posts…

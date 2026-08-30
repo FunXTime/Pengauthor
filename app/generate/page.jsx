@@ -59,15 +59,15 @@ export default function GeneratePage() {
   }, [formData]);
 
   return (
-    <div className="space-y-3 p-8">
+    <div className="space-y-3 overflow-x-hidden p-4 sm:p-6 lg:p-8">
       <h1>Generate a boilerplate</h1>
 
       <p>
         Generate a basic structure for your post so you can easily get to writing. Tailor the boilerplate as per the details you provide.
       </p>
 
-      <div className="grid min-h-screen mt-8 gap-4 md:grid-cols-[1fr_auto_2fr]">
-        <div>
+      <div className="mt-6 grid min-h-screen gap-8 xs:mt-8 xs:grid-cols-[1fr_auto_1fr] xs:gap-4 md:grid-cols-[1fr_auto_2fr]">
+        <div className="min-w-0">
           <h2>1. Enter some details</h2>
           <GenerateForm
             formData={formData}
@@ -78,12 +78,13 @@ export default function GeneratePage() {
           />
         </div>
 
-        <hr className="hidden h-full w-px border-0 bg-edge xl:block" />
+        <hr className="hidden h-full w-px border-0 bg-edge xs:block" />
 
-        <div className="flex min-h-0 flex-col">
+        <div className="flex min-w-0 flex-col xs:min-h-0">
           <h2>2. Use this boilerplate</h2>
-          <div className="mt-6 flex-1 min-h-0">
+          <div className="mt-4 h-[calc(100dvh-2.5rem)] min-h-0 xs:mt-6 xs:h-auto xs:flex-1">
             <GenerateEditor
+              className="w-1/2 md:w-full"
               value={boilerplate}
               onChange={setBoilerplate}
             />

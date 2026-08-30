@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { HexColorPicker } from "react-colorful";
 import Tooltip from "@/components/Tooltip";
+import Button from "./Button";
 
 const COLORS = [
   { name: "Black", hex: "#000000" },
@@ -68,11 +69,13 @@ export default function ColorPicker({
       ) setOpen(false);
     }
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   return (
-    <div ref={pickerRef} className="h-8 w-8 relative">
+    <div ref={pickerRef} className="relative h-8 w-8">
       <button
         type="button"
         className="h-full w-full shrink-0 cursor-pointer self-center rounded-lg border border-edge transition-transform duration-100 hover:scale-[1.02] focus:scale-[1.03] active:scale-[1.03]"
@@ -83,12 +86,25 @@ export default function ColorPicker({
       />
 
       {open && (
-        <div className="absolute left-0 top-full z-50 mt-2 w-64 rounded-xl border border-edge bg-panel p-4 shadow-xl">
+        <div className="fixed inset-0 z-50 w-full overflow-y-auto bg-panel p-4 sm:absolute sm:inset-auto sm:left-0 sm:top-full sm:mt-2 sm:w-64 sm:rounded-xl sm:border sm:border-edge sm:p-4 sm:shadow-xl">
+          <div className="mb-4 flex items-center justify-between sm:hidden">
+            <p className="text-sm font-bold uppercase tracking-wide text-ink">
+              Sign-off color
+            </p>
+            <Button
+              size="md"
+              onClick={() => setOpen(false)}
+            >
+              Save
+            </Button>
+          </div>
+
           <HexColorPicker
             color={value}
             onChange={onChange}
             className="!w-full"
           />
+
           <input
             type="text"
             className="mt-4 w-full rounded-lg border border-edge bg-panel-raised px-3 py-2 text-xs uppercase text-ink outline-none focus:border-edge-strong"
@@ -104,30 +120,34 @@ export default function ColorPicker({
                 .replace(/[^0-9a-fA-F]/g, "")
                 .toLowerCase()
                 .slice(0, 6);
+
               onChange(`#${hex}`);
             }}
           />
 
           {COLORS.length > 0 && (
             <div className="mt-4 border-t border-edge pt-4">
-              <p className="mb-3 text-xs font-bold uppercase tracking-wide text-faint select-none">
+              <p className="mb-3 select-none text-xs font-bold uppercase tracking-wide text-faint">
                 From WordPress
               </p>
+
               <div className="flex flex-wrap gap-2">
                 <div className="grid grid-cols-8 gap-2">
-                {COLORS.map((color) => (
-                  <Tooltip key={color.hex} text={color.name}>
-                    <button
-                      type="button"
-                      className={`h-6 w-6 cursor-pointer rounded-lg border transition-transform duration-100 hover:scale-[1.02] focus:scale-[1.03] active:scale-[1.03] ${
-                        value === color.hex ? "border-ink ring-1 ring-ink" : "border-edge"
-                      }`}
-                      style={{ backgroundColor: color.hex }}
-                      aria-label={`Select ${color.name}`}
-                      onClick={() => onChange(color.hex)}
-                    />
-                  </Tooltip>
-                ))}
+                  {COLORS.map((color) => (
+                    <Tooltip key={color.hex} text={color.name}>
+                      <button
+                        type="button"
+                        className={`h-6 w-6 cursor-pointer rounded-lg border transition-transform duration-100 hover:scale-[1.02] focus:scale-[1.03] active:scale-[1.03] ${
+                          value === color.hex
+                            ? "border-ink ring-1 ring-ink"
+                            : "border-edge"
+                        }`}
+                        style={{ backgroundColor: color.hex }}
+                        aria-label={`Select ${color.name}`}
+                        onClick={() => onChange(color.hex)}
+                      />
+                    </Tooltip>
+                  ))}
                 </div>
               </div>
             </div>

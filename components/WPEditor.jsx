@@ -31,7 +31,10 @@ export default function WPEditor({
   return (
     <div style={styles.editorWrap}>
       <div style={styles.header}>
-        <div style={{ display: "flex", gap: "5px", marginBottom: "15px" }}>
+        <div
+          className="flex flex-wrap gap-2 sm:gap-[5px]"
+          style={{ marginBottom: "15px" }}
+        >
           <button
             id="btn-addmedia"
             type="button"
@@ -40,6 +43,7 @@ export default function WPEditor({
           >
             <span className="dashicons dashicons-admin-media"></span> Add Media
           </button>
+
           <button
             id="btn-addfa"
             type="button"
@@ -50,7 +54,10 @@ export default function WPEditor({
           </button>
         </div>
 
-        <div style={styles.tabs}>
+        <div
+          style={styles.tabs}
+          className="w-full"
+        >
           {["visual", "code"].map((tab) => (
             <button
               key={tab}
@@ -60,6 +67,7 @@ export default function WPEditor({
                 ...styles.tab,
                 ...(activeTab === tab ? styles.activeTab : {})
               }}
+              className="min-w-0 flex-1"
             >
               {tab === "visual" ? "Visual" : "Code"}
             </button>

@@ -17,6 +17,10 @@
   --color-accent-soft: #132535;
 }
 
+@theme {
+  --breakpoint-xs: 512px;
+}
+
 .font-akira {
   font-family: var(--font-akira-expanded);
 }

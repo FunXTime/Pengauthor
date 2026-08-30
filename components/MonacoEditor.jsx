@@ -3,6 +3,7 @@
 import Editor from "@monaco-editor/react";
 
 export default function MonacoEditor({
+  className,
   value,
   onChange,
   language = "html",
@@ -65,6 +66,7 @@ export default function MonacoEditor({
   return (
     <div className="monacoEditorWrapper">
       <Editor
+        className={className}
         language={language}
         value={value}
         onChange={onChange}

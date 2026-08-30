@@ -44,23 +44,24 @@ export default function Form({
   }
 
   return (
-    <main className="mx-auto max-w-5xl space-y-4 p-8">
-      <div className="flex gap-6">
-        <div className="flex-1 space-y-2">
+    <main className="mx-auto max-w-5xl space-y-4 p-4 sm:p-6 lg:p-8">
+      <div className="flex flex-col gap-4 sm:gap-6 md:flex-row">
+        <div className="min-w-0 flex-1 space-y-2">
           <label className="block text-sm font-medium">
-            Title
+            Note title
           </label>
           <input
             type="text"
             placeholder="Note title"
             value={note.title}
             onChange={(event) => updateNote({ title: event.target.value })}
-            className="w-full rounded-xl border border-edge bg-panel px-4 py-2 text-ink outline-none"
+            className="w-full rounded-xl border border-edge bg-panel px-3 py-2 text-sm text-ink outline-none sm:px-4"
           />
         </div>
-        <div className="flex-1 space-y-2">
+
+        <div className="min-w-0 flex-1 space-y-2">
           <label className="block text-sm font-medium">
-            Author
+            Note author
           </label>
           <input
             list="reporterName"
@@ -68,7 +69,7 @@ export default function Form({
             placeholder="Note author"
             value={note.author}
             onChange={(event) => updateNote({ author: event.target.value })}
-            className="w-full rounded-xl border border-edge bg-panel px-4 py-2 text-ink outline-none"
+            className="w-full rounded-xl border border-edge bg-panel px-3 py-2 text-sm text-ink outline-none sm:px-4"
           />
           <datalist id="reporterName">
             {REPORTERS.map((reporter) => (
@@ -92,7 +93,7 @@ export default function Form({
 
       <div
         className="overflow-hidden rounded-xl border border-edge"
-        style={{ height: "32rem" }}
+        style={{ height: "clamp(24rem, 70vh, 32rem)" }}
       >
         <MonacoEditor
           language="markdown"
@@ -101,40 +102,49 @@ export default function Form({
         />
       </div>
 
-      <div className="flex w-full items-center gap-4 pt-4">
+      <div className="flex w-full flex-col gap-3 pt-4 sm:flex-row sm:items-center sm:gap-4">
         <code
-          className={`truncate rounded-xl border border-edge bg-panel px-3 py-2 text-sm  ${
-            shortCode ? "flex-[2]" : "flex-[4]"
+          className={`min-w-0 w-full truncate rounded-xl border border-edge bg-panel px-3 py-2 text-sm ${
+            shortCode ? "sm:flex-[2]" : "sm:flex-[4]"
           }`}
         >
           {displayedUrl}
         </code>
 
-        <Button
-          icon="copy"
-          onClick={async () => {
-            await navigator.clipboard.writeText(
-              displayedUrl.replace("cpa-pengauthor…", "https://cpa-pengauthor.vercel.app")
-            );
-            setCopied(true);
-            setTimeout(() => { setCopied(false); }, 1000);
-          }}
-        >
-          {copied ? "Copied!" : "Copy link"}
-        </Button>
-
-        {!shortCode && (
+        <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">
           <Button
-            icon="publish"
+            icon="copy"
+            className="w-full sm:w-auto"
             onClick={async () => {
-              const code = await notes.createShortLink(encodeNote(note));
-              setShortCode(code);
-              window.history.replaceState(null, "", `/note/${code}`);
+              await navigator.clipboard.writeText(
+                displayedUrl.replace(
+                  "cpa-pengauthor…",
+                  "https://cpa-pengauthor.vercel.app"
+                )
+              );
+              setCopied(true);
+              setTimeout(() => {
+                setCopied(false);
+              }, 1000);
             }}
           >
-            Shorten link
+            {copied ? "Copied!" : "Copy link"}
           </Button>
-        )}
+
+          {!shortCode && (
+            <Button
+              icon="publish"
+              className="w-full sm:w-auto"
+              onClick={async () => {
+                const code = await notes.createShortLink(encodeNote(note));
+                setShortCode(code);
+                window.history.replaceState(null, "", `/note/${code}`);
+              }}
+            >
+              Shorten link
+            </Button>
+          )}
+        </div>
       </div>
 
       <Button

@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Icon from "@/components/Icon";
 
 export default function Dropdown({
@@ -11,6 +14,19 @@ export default function Dropdown({
   size,
   placeholder
 }) {
+  const [showChevron, setShowChevron] = useState(false);
+
+  useEffect(() => {
+    if (multiple) return;
+    const media = window.matchMedia("(min-width: 769px)");
+    function updateChevron() {
+      setShowChevron(media.matches);
+    }
+    updateChevron();
+    media.addEventListener("change", updateChevron);
+    return () => media.removeEventListener("change", updateChevron);
+  }, [multiple]);
+
   return (
     <div className={`relative ${className}`}>
       <select
@@ -20,7 +36,13 @@ export default function Dropdown({
         multiple={multiple}
         size={size}
         className="w-full appearance-none border border-edge bg-panel-raised px-4 py-3 text-[0.75rem] text-ink outline-none"
-        style={style}
+        style={{
+          ...style,
+          appearance: "none",
+          WebkitAppearance: "none",
+          MozAppearance: "none",
+          backgroundImage: "none"
+        }}
       >
         {!multiple && placeholder && (
           <option>
@@ -35,6 +57,7 @@ export default function Dropdown({
           const label = typeof option === "string"
             ? option
             : option.label;
+
           return (
             <option
               key={value}
@@ -47,7 +70,7 @@ export default function Dropdown({
         })}
       </select>
 
-      {!multiple && (
+      {showChevron && (
         <Icon
           name="chevronDown"
           className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2"

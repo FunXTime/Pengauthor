@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CHECKUP_QUESTIONS } from "@/config";
+import Image from "next/image";
 import Button from "@/components/Button";
 
 export default function Question({
@@ -70,34 +71,49 @@ export default function Question({
   }
 
   return (
-    <div className="flex min-h-full items-center justify-center p-8">
+    <div className="flex min-h-full items-center justify-center p-4 sm:p-6 lg:p-8">
       <section
         className={`w-full max-w-3xl text-center transition-opacity duration-200 unboxed ${
           visible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="mb-8 flex min-h-[16rem] items-center justify-center">
+        <div className="mb-6 flex h-[clamp(12rem,45vh,24rem)] w-full items-center justify-center sm:mb-8">
           {showImage && (
-            <img
-              ref={imageRef}
-              src={screenshotSrc}
-              className={`max-h-96 max-w-[75%] object-contain rounded-xl border border-edge transition-opacity duration-200 ${
-                imageLoaded ? "opacity-100" : "opacity-0"
-              }`}
-              onLoad={() => setImageLoaded(true)}
-              onError={() => { setShowImage(false); setImageLoaded(true); }}
-            />
+            <div className="relative h-full w-full max-w-[90%] sm:max-w-[75%]">
+              {!imageLoaded && (
+                <div className="absolute inset-0 animate-pulse rounded-xl bg-panel-raised" />
+              )}
+              <Image
+                ref={imageRef}
+                src={screenshotSrc}
+                alt="Question screenshot"
+                fill
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 75vw, 48rem"
+                className={`rounded-xl object-contain transition-opacity duration-200 ${
+                  imageLoaded ? "opacity-100" : "opacity-0"
+                }`}
+                onLoad={() => setImageLoaded(true)}
+                onError={() => {
+                  setShowImage(false);
+                  setImageLoaded(true);
+                }}
+                priority
+              />
+            </div>
           )}
         </div>
-        <h1 className="text-3xl font-bold text-ink">
+
+        <h1 className="text-2xl font-bold text-ink sm:text-3xl">
           {question}
         </h1>
+
         {note && (
           <p className="mt-3">
             {note}
           </p>
         )}
-        <div className="mt-10 flex flex-col items-center gap-3">
+
+        <div className="mt-8 flex flex-col items-center gap-3 sm:mt-10">
           {answers.map(
             (answer, index) => (
               <Button

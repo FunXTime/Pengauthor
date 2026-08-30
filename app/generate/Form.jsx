@@ -86,48 +86,56 @@ export default function GenerateForm({
         <span className="block font-bold text-sm text-ink text-[1rem]">
           <Icon name="options" inline={true} /> GENERAL OPTIONS
         </span>
-        <div className="grid gap-5 md:grid-cols-2">
-          <div>
-            <span className="font-bold block text-sm">
+        <div className="flex flex-col gap-5">
+          <div className="min-w-0 w-full">
+            <span className="block text-sm font-bold">
               About the reporter
             </span>
-            <div className="mt-2 flex">
+
+            <div className="mt-2 flex w-full min-w-0">
               <Dropdown
                 name="reporterPosition"
-                className="w-40 shrink-0 rounded-l-xl overflow-hidden"
+                className="min-w-0 flex-1 overflow-hidden rounded-l-xl text-[0.6875rem] md:text-[0.75rem]"
                 value={formData.reporterPosition}
                 options={REPORTER_POSITIONS}
                 onChange={handleInput}
               />
+
               <input
                 name="reporterName"
-                className="-ml-px w-40 shrink-0 rounded-r-xl border border-edge bg-panel-raised px-4 py-3 text-[0.75rem] outline-none"
+                className="-ml-px min-w-0 flex-1 rounded-r-xl border border-edge bg-panel-raised px-3 py-3 text-[0.6875rem] outline-none md:px-4 md:text-[0.75rem]"
                 value={formData.reporterName}
                 list="reporters"
                 placeholder="Your name"
                 onChange={handleInput}
               />
+
               <datalist id="reporters">
                 {REPORTERS.map((reporter) => (
                   <option key={reporter} value={reporter} />
                 ))}
               </datalist>
             </div>
-            <div className="mt-4 flex">
-              <div className="w-40 shrink-0">
-                <label className="flex h-full items-center justify-center text-sm">
+
+            <div className="mt-4 flex w-full min-w-0">
+              <div className="min-w-0 flex-1">
+                <label className="flex h-full items-center justify-center text-xs md:text-sm">
                   Sign-off color
                 </label>
               </div>
-              <div className="-ml-px flex w-40 shrink-0 items-center gap-3 rounded-r-xl border border-edge bg-panel-raised px-4 py-1">
+
+              <div className="-ml-px flex min-w-0 flex-1 items-center gap-3 rounded-r-xl border border-edge bg-panel-raised px-3 py-1 md:px-4">
                 <ColorPicker
                   value={formData.signOffColor}
-                  onChange={(color) => setFormData((current) => ({
-                    ...current,
-                    signOffColor: color
-                  }))}
+                  onChange={(color) =>
+                    setFormData((current) => ({
+                      ...current,
+                      signOffColor: color,
+                    }))
+                  }
                 />
-                <span className="text-xs uppercase tracking-wide">
+
+                <span className="min-w-0 text-xs uppercase tracking-wide">
                   <input
                     type="text"
                     value={formData.signOffColor}
@@ -139,12 +147,13 @@ export default function GenerateForm({
                         .replace(/[^0-9a-fA-F]/g, "")
                         .toLowerCase()
                         .slice(0, 6);
+
                       setFormData((current) => ({
                         ...current,
-                        signOffColor: `#${hex}`
+                        signOffColor: `#${hex}`,
                       }));
                     }}
-                    className="w-20 bg-transparent text-xs uppercase tracking-wide outline-none"
+                    className="w-full max-w-20 bg-transparent text-xs uppercase tracking-wide outline-none"
                     aria-label="Sign-off color hex value"
                     spellCheck={false}
                   />
@@ -152,63 +161,67 @@ export default function GenerateForm({
               </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          <span className="font-bold block text-sm">
-            About the post
-          </span>
-          <div className="mt-2 flex">
-            <Dropdown
-              name="postCategory"
-              className="w-40 shrink-0 rounded-l-xl overflow-hidden"
-              value={formData.postCategory}
-              options={POST_CATEGORIES}
-              onChange={handleInput}
-            />
-            <Dropdown
-              name="postType"
-              className="-ml-px w-40 shrink-0 rounded-r-xl overflow-hidden"
-              value={formData.postType}
-              options={availablePostTypes}
-              onChange={handleInput}
-            />
-          </div>
-          <div className="mt-4">
-            <Tooltip
-              text="Only News posts can be Breaking News posts!"
-              disabled={formData.postCategory === "News"}
-            >
-              <span
-                className={`flex items-center gap-3 ${
-                  formData.postCategory !== "News" ? "opacity-50" : ""
-                }`}
+          <div className="min-w-0 w-full">
+            <span className="block text-sm font-bold">
+              About the post
+            </span>
+
+            <div className="mt-2 flex w-full min-w-0">
+              <Dropdown
+                name="postCategory"
+                className="min-w-0 flex-1 overflow-hidden rounded-l-xl text-[0.6875rem] md:text-[0.75rem]"
+                value={formData.postCategory}
+                options={POST_CATEGORIES}
+                onChange={handleInput}
+              />
+
+              <Dropdown
+                name="postType"
+                className="-ml-px min-w-0 flex-1 overflow-hidden rounded-r-xl text-[0.6875rem] md:text-[0.75rem]"
+                value={formData.postType}
+                options={availablePostTypes}
+                onChange={handleInput}
+              />
+            </div>
+
+            <div className="mt-4">
+              <Tooltip
+                text="Only News posts can be Breaking News posts!"
+                disabled={formData.postCategory === "News"}
               >
-                <input
-                  type="checkbox"
-                  id="isBreakingNews"
-                  name="isBreakingNews"
-                  checked={formData.isBreakingNews}
-                  disabled={formData.postCategory !== "News"}
-                  onChange={handleCheckbox}
-                  className="h-4 w-4 accent-accent"
-                />
-                <label htmlFor="isBreakingNews" className="text-sm">
-                  Mark post as Breaking News
-                </label>
-              </span>
-            </Tooltip>
+                <span
+                  className={`flex items-center gap-3 ${
+                    formData.postCategory !== "News" ? "opacity-50" : ""
+                  }`}
+                >
+                  <input
+                    type="checkbox"
+                    id="isBreakingNews"
+                    name="isBreakingNews"
+                    checked={formData.isBreakingNews}
+                    disabled={formData.postCategory !== "News"}
+                    onChange={handleCheckbox}
+                    className="h-4 w-4 shrink-0 accent-accent"
+                  />
+
+                  <label htmlFor="isBreakingNews" className="text-sm">
+                    Mark post as Breaking News
+                  </label>
+                </span>
+              </Tooltip>
+            </div>
           </div>
         </div>
 
         <br />
 
         <div>
-          <span className="block font-bold text-sm text-ink text-[1rem]">
+          <span className="block text-sm font-bold text-ink text-[1rem]">
             <Icon name="thumbnail" inline={true} /> THUMBNAIL
           </span>
-          <div className="mt-2 flex gap-3">
-            <span className="text-xs font-medium tracking-wide select-none">
+          <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span className="select-none text-xs font-medium tracking-wide">
               PALETTE
             </span>
             {PALETTES.map((item) => (
@@ -219,10 +232,14 @@ export default function GenerateForm({
                 <button
                   type="button"
                   onClick={() => { setPalette(item.name) }}
-                  className={`h-3.5 w-3.5 rounded-full transition-colors ${
-                    palette === item.name ? "outline outline-2 outline-white outline-offset-2" : ""
+                  className={`h-3.5 w-3.5 shrink-0 rounded-full transition-colors ${
+                    palette === item.name
+                      ? "outline outline-2 outline-white outline-offset-2"
+                      : ""
                   }`}
-                  style={{ backgroundColor: palette === item.name ? item.activeColor : item.inactiveColor }}
+                  style={{backgroundColor: palette === item.name
+                    ? item.activeColor
+                    : item.inactiveColor}}
                 />
               </Tooltip>
             ))}
@@ -241,23 +258,24 @@ export default function GenerateForm({
                     copyTimeout.current = null;
                   }, 1000);
                 }}
-                className={`group relative mt-3 block overflow-hidden rounded-xl ${
+                className={`group relative mt-3 block w-full overflow-hidden rounded-xl ${
                   thumbnail.fallback ? "" : "cursor-copy"
                 }`}
               >
-                <div className="overflow-hidden rounded-xl bg-panel-raised">
+                <div className="w-full overflow-hidden rounded-xl bg-panel-raised">
                   <Image
                     src={thumbnail.previewSrc}
                     alt={thumbnail.filename}
                     width={thumbnail.width ?? 500}
                     height={thumbnail.height}
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 500px"
                     className="h-auto w-full rounded-xl transition duration-200 group-hover:brightness-[25%]"
                     onError={(event) => event.currentTarget.src = thumbnail.src}
                   />
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition duration-200 group-hover:opacity-100">
-                  <span className="max-w-xs text-center text-sm font-bold tracking-wide text-white">
+
+                <div className="absolute inset-0 flex items-center justify-center px-4 opacity-0 transition duration-200 group-hover:opacity-100">
+                  <span className="max-w-xs text-center text-xs font-bold tracking-wide text-white sm:text-sm">
                     {thumbnail.fallback
                       ? "A thumbnail on this topic and for this palette was not found!"
                       : thumbnailButtonText
@@ -265,7 +283,7 @@ export default function GenerateForm({
                   </span>
                 </div>
               </button>
-              <p className="mt-2 text-center text-sm font-burbank">
+              <p className="mt-2 px-2 text-center text-xs font-burbank sm:text-sm">
                 {thumbnail.designer === "Unknown"
                   ? "Contact Reporting Heads for the thumbnail"
                   : <>Designed by <strong className="text-ink">{thumbnail.designer}</strong></>
