@@ -30,16 +30,19 @@ export default function WPEditor({
 
   return (
     <div style={styles.editorWrap}>
-      <div style={styles.header}>
+      <div
+        style={styles.header}
+        className="flex flex-col items-stretch sm:flex-row sm:items-end sm:justify-between"
+      >
         <div
-          className="flex flex-wrap gap-2 sm:gap-[5px]"
+          className="flex flex-row flex-wrap justify-start gap-2 sm:flex-nowrap sm:gap-[5px]"
           style={{ marginBottom: "15px" }}
         >
           <button
             id="btn-addmedia"
             type="button"
             style={styles.headerButton}
-            onClick={() => alert("You can't access a mock Media Library in Pengauthor!")}
+            onClick={() => alert("Media Library can't be accessed in Pengauthor! This button just exists here. It looks cool, doesn't it?")}
           >
             <span className="dashicons dashicons-admin-media"></span> Add Media
           </button>
@@ -48,7 +51,7 @@ export default function WPEditor({
             id="btn-addfa"
             type="button"
             style={styles.headerButton}
-            onClick={() => alert("You can't access a mock Font Awesome Modal in Pengauthor!")}
+            onClick={() => alert("Font Awesome icons can't be accessed in Pengauthor! This button just exists here. It looks cool, doesn't it?")}
           >
             <Icon name="fontawesome" /> Add Font Awesome
           </button>
@@ -56,7 +59,7 @@ export default function WPEditor({
 
         <div
           style={styles.tabs}
-          className="w-full"
+          className="flex w-full justify-center sm:w-auto sm:justify-end"
         >
           {["visual", "code"].map((tab) => (
             <button
@@ -65,9 +68,9 @@ export default function WPEditor({
               onClick={() => switchTab(tab)}
               style={{
                 ...styles.tab,
-                ...(activeTab === tab ? styles.activeTab : {})
+                ...(activeTab === tab ? styles.activeTab : {}),
               }}
-              className="min-w-0 flex-1"
+              className="min-w-0 flex-none"
             >
               {tab === "visual" ? "Visual" : "Code"}
             </button>
@@ -171,8 +174,6 @@ const styles = {
   },
 
   header: {
-    display: "flex",
-    justifyContent: "space-between",
     alignItems: "flex-end",
     padding: "14px 10px 0",
     background: "transparent",
