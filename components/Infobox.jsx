@@ -29,7 +29,11 @@ const TYPES = {
   }
 };
 
-export default function Infobox({ type = "INFO", children }) {
+export default function Infobox({
+  className,
+  type = "INFO",
+  children
+}) {
   const style = TYPES[type] ?? TYPES.INFO;
 
   return (
@@ -38,7 +42,8 @@ export default function Infobox({ type = "INFO", children }) {
         "flex w-full items-start gap-4 rounded-xl border px-4 py-3",
         style.border,
         style.background,
-        style.text
+        style.text,
+        className
       ].join(" ")}
     >
       <Icon

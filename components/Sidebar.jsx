@@ -50,7 +50,7 @@ export default function Sidebar({ pages }) {
       />
 
       <aside
-        className={`fixed inset-y-0 left-0 z-50 flex h-screen w-56 shrink-0 flex-col overflow-y-auto border-r border-edge bg-[#0d0d0d] select-none transition-transform duration-200 ease-out lg:static lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-50 flex w-56 max-w-[calc(100vw-1rem)] shrink-0 flex-col overflow-hidden border-r border-edge bg-[#0d0d0d] select-none transition-transform duration-200 ease-out lg:static lg:translate-x-0 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -60,12 +60,12 @@ export default function Sidebar({ pages }) {
             background: "radial-gradient(circle at top center, rgba(255, 140, 0, 0.15), transparent 70%)",
           }}
         >
-          <div className="flex items-start justify-between">
-            <div>
-              <p className="font-akira text-lg tracking-wide text-ink">
+          <div className="flex min-w-0 items-start justify-between gap-3">
+            <div className="min-w-0">
+              <p className="truncate font-akira text-lg tracking-wide text-ink">
                 Pengauthor
               </p>
-              <p className="mt-1 text-xs font-burbank">
+              <p className="mt-1 break-words text-xs font-burbank">
                 Built for CPA's Reporting Team
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function Sidebar({ pages }) {
           </div>
         </div>
 
-        <nav className="flex-1 overflow-y-auto px-3 py-4">
+        <nav className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto px-3 py-4">
           <ul className="space-y-1">
             {LISTED_PAGES.map((item) => {
               const isActive = item.href === "/"
@@ -91,12 +91,12 @@ export default function Sidebar({ pages }) {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`flex items-center gap-3 rounded-xl px-3 py-1.5 text-sm transition-all ${isActive
+                    className={`flex min-w-0 items-center gap-3 rounded-xl px-3 py-1.5 text-sm transition-all ${isActive
                       ? "bg-panel-raised text-ink"
                       : "hover:bg-panel-raised hover:text-ink"}`}
                   >
                     <Icon name={item.icon} />
-                    <span>{item.label}</span>
+                    <span className="min-w-0 break-words">{item.label}</span>
                   </Link>
                 </li>
               );
@@ -115,7 +115,7 @@ export default function Sidebar({ pages }) {
                   className="flex items-center gap-3 rounded-xl px-3 py-1.5 text-sm transition-all hover:bg-panel-raised hover:text-ink"
                 >
                   <Icon name="arrowUpRight" />
-                  <span>{item.label}</span>
+                  <span className="min-w-0 break-words">{item.label}</span>
                 </a>
               </li>
             ))}
@@ -137,7 +137,7 @@ export default function Sidebar({ pages }) {
                     }`}
                   >
                     <Icon name="share" />
-                    <span>Share a note</span>
+                    <span className="min-w-0 break-words">Share a note</span>
                   </Link>
                 );
               })()}
@@ -150,13 +150,13 @@ export default function Sidebar({ pages }) {
                 className="flex w-full items-center gap-3 rounded-xl px-3 py-1.5 text-sm transition-all hover:bg-panel-raised hover:text-ink"
               >
                 <Icon name="share" />
-                <span>Share this page</span>
+                <span className="min-w-0 break-words">Share this page</span>
               </button>
             </li>
           </ul>
         </nav>
 
-        <div className="border-t border-edge px-5 py-4 text-xs">
+        <div className="shrink-0 border-t border-edge px-5 py-4 text-xs">
           <p>
             <strong>Dashboard curated by</strong>
           </p>
@@ -166,6 +166,7 @@ export default function Sidebar({ pages }) {
               href="https://github.com/FunXTime/Pengauthor/commits/main/"
               target="_blank"
               rel="noopener noreferrer"
+              className="break-all"
             >
               Version {version}
             </a>
