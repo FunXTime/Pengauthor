@@ -24,7 +24,7 @@ export default function OverviewPage() {
       <h1>Guide</h1>
 
       <p>
-        <strong>I am Editor-in-Chief Fun X Time, and I'll guide you through how Pengauthor works!</strong>Personally, I'm quite fond of my own creation, and I bet its users will end up liking it as well. Let's dive into how you can make the most out of this powerful tool.
+        <strong>I am Editor-in-Chief Fun X Time, and I'll guide you through how Pengauthor works!</strong> Personally, I'm quite fond of my own creation, and I bet its users will end up liking it as well. Let's dive into how you can make the most out of this powerful tool.
       </p>
 
       <Accordion title="What is Pengauthor?">
