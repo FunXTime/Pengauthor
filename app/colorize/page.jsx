@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Button from "@/components/Button";
 import MonacoEditor from "@/components/MonacoEditor";
-import { colorizeArmies } from "@/lib/colorize";
+import { colorizeEntities } from "@/lib/colorize";
 import Infobox from "@/components/Infobox";
 
 export default function ColorizePage() {
@@ -22,7 +22,7 @@ export default function ColorizePage() {
   );
 
   function colorize() {
-    setHtml(colorizeArmies(html));
+    setHtml(colorizeEntities(html));
   }
 
   return (
@@ -68,7 +68,7 @@ export default function ColorizePage() {
         </Infobox>
 
         <Infobox type="WARNING">
-          Cross-check whether the coloring was done successfully after the process. If you made a spelling error in your original post or used a variant army name, the army may not be recognized by the tool.
+          Cross-check whether the coloring was done successfully after the process. If you made a spelling error in your original post or used a variant army name, the army may not be recognized by the tool. In addition, bear in mind that colors are only applied after the Read More tag; not before that. Therefore, the Read More tag must be present for the tool to work!
         </Infobox>
       </div>
     </div>
