@@ -10,14 +10,14 @@
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Talk about the leader; state the date of the promotion; add a very short description of the person's recent history; name the tournaments and special events the person has led through; list two or three character traits of the leader]"
+    "content": "[Paragraph — Talk about the leader: state the date of the promotion; add a very short description of the person's recent history; name the tournaments and special events the person has led through; list two or three character traits of the leader]"
   },
 
   { "type": "image", "helperText": "Featured picture from an event about the person if any; otherwise, a recent event picture, preferably one from an event that the person led" },
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Dive deeper about the person's position in the army over time; talk about their work routine within their army; highlight any other recent announcements in the Discord server made by this person; mention any key contributions by the individual; list the civic service roles of the person if any]"
+    "content": "[Paragraph — Dive deeper about the person's position in the army over time: talk about their work routine within their army; highlight any other recent announcements in the Discord server made by this person; mention any key contributions by the individual; list the civic service roles of the person if any]"
   },
 
   { "type": "image", "helperText": "A screenshot showing the leader in action; an internal screenshot can be requested from the leader" },
@@ -30,7 +30,7 @@
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Add this section to provide details of key achievements and army work routine; this can include special events and activities that the leader has held in the server]"
+    "content": "[Paragraph — Add this section to provide details of key achievements and army work routine, this can include special events and activities that the leader has held in the server]"
   },
 
   {
@@ -41,7 +41,7 @@
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Focus on the person's history in the army and the army community; talk less about the army's history]"
+    "content": "[Paragraph — Focus on the person's history in the army and the army community, talk less about the army's history]"
   },
 
   { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
@@ -52,7 +52,7 @@
 
   {
     "type": "paragraph",
-    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+    "content": "[Add concluding statements, can refer to the interview responses] <em>[Ending Question 1]? [Ending Question 2]?</em>"
   },
 
   { "type": "paragraph", "settings": { "type": "SIGNOFF" } }

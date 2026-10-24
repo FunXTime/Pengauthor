@@ -93,21 +93,12 @@
     { "name": "[Person]", "tip": "Use the person name, who is also the interviewee", "isInterviewee": true }
   ],
 
-  "Satire": [
-    { "name": "Satire" }
-  ],
-
   "Picture Perfect": [
     { "name": "Picture Perfect" }
   ],
 
   "HCOM Life Stories": [
     { "name": "HCOM Life Stories" },
-    { "name": "[Person]", "tip": "Use the person name, who is also the interviewee", "isInterviewee": true }
-  ],
-
-  "Leaving A Legacy": [
-    { "name": "Leaving A Legacy" },
     { "name": "[Person]", "tip": "Use the person name, who is also the interviewee", "isInterviewee": true }
   ],
 
@@ -129,6 +120,11 @@
     { "name": "[Writer…]", "tip": "Use the name of the writer(s)" }
   ],
 
+  "Satire": [
+    { "name": "Satire" },
+    { "name": "[Writer…]", "tip": "Use the name of the writer(s)" }
+  ],
+
   "Philosophy": [
     { "name": "Philosophy" },
     { "name": "[Writer…]", "tip": "Use the name of the writer(s)" }
@@ -136,7 +132,16 @@
 
   "Comic": [
     { "name": "Comic" },
-    { "name": "[Creator…]", "tip": "Use the name of the cartoonist(s)" }
+    { "name": "[Creator…]", "tip": "Use the name of the cartoonist(s)" },
+    { "name": "[Topic…]", "tip": "Use the topics or central themes of the post" }
+  ],
+
+  "Characterize That": [
+    { "name": "Characterize That" },
+    { "name": "[Writer]", "tip": "Use the name of the writer(s)" },
+    { "name": "[Army Names…]", "tip": "Use the names of the armies characterized" },
+    { "name": "[Army Short Names…]", "tip": "Use the short names of the armies characterized" },
+    { "name": "[Topic]", "tip": "Use the topics or central themes of the post" }
   ],
 
   "Flag Frenzy": [
@@ -147,8 +152,16 @@
     { "name": "[Designer…]", "tip": "Use the flag designer name(s) who designed the flag" }
   ],
 
-  "Community Reacts": [
-    { "name": "Community Reacts" }
+  "Community Predictions": [
+    { "name": "Community Predicts" },
+    { "name": "[Tournament Name]", "tip": "Use the name of the tournament" },
+    { "name": "[Tournament Abbreviation]", "tip": "Use the abbreviation of the tournament" }
+  ],
+
+  "Battle Results": [
+    { "name": "Battle Results" },
+    { "name": "[Tournament Name]", "tip": "Use the name of the tournament" },
+    { "name": "[Tournament Abbreviation]", "tip": "Use the abbreviation of the tournament" }
   ],
 
   "default": [],

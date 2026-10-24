@@ -82,13 +82,13 @@
     "feedback": "Transform some words in your text to hyperlinks"
   },
   {
-    "question": "Did you correctly add tags and categories?",
+    "question": "Almost there! Did you correctly add tags and categories?",
     "note": "Did you know that your tagging and categorization can be better with the boilerplate generator?",
     "answers": [
       { "label": "Yep, I have", "score": 1 },
       { "label": "Nope, I'll fix them", "score": 0 }
     ],
-    "feedback": "Add tags and set categories in accordance to the post's theme and interview"
+    "feedback": "Add tags and set categories in accordance to the post's theme and interview; don't forget the evergreen \"Club Penguin Armies\" and \"CP Armies\" tags!"
   },
   {
     "question": "Does your post have at least 2 main body paragraphs and some imagery?",

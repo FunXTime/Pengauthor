@@ -10,21 +10,21 @@
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Dive straight into the topic of this post; try to focus more on the present context in this paragraph]"
+    "content": "[Paragraph — Dive straight into the topic of this post: try to focus more on the present context in this paragraph]"
   },
 
   { "type": "image", "helperText": "A relevant picture" },
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Add more details to this topic; you may focus on the lesser important details of the present in this paragraph]"
+    "content": "[Paragraph — Add more details to this topic: you may focus on the lesser important details in this paragraph]"
   },
 
   { "type": "image", "helperText": "Another relevant picture" },
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Another paragraph adding some extra details to the topic; you may focus on history in this paragraph]"
+    "content": "[Paragraph — Another paragraph adding some extra details to the topic; you may focus on things like history or controversy in this paragraph]"
   },
 
   { "type": "paragraph", "settings": { "type": "PRE-INTERVIEW" } },
@@ -35,7 +35,7 @@
 
   {
     "type": "paragraph",
-    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+    "content": "[Add concluding statements, can refer to the interview responses] <em>[Ending Question 1]? [Ending Question 2]?</em>"
   },
 
   { "type": "paragraph", "settings": { "type": "SIGNOFF" } }

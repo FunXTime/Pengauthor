@@ -10,14 +10,14 @@
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Talk about the person; state their affiliation and civic service roles across all organizations; list two or three character traits of the leader; add a very short description of the person's recent history if any]"
+    "content": "[Paragraph — Talk about the person: state their affiliation and civic service roles across all organizations in the present and the past; list one or two work-based character traits of the individual; add a very short description of the person's recent history]"
   },
 
   { "type": "image", "helperText": "A screenshot of the person working for a department" },
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Talk about their work routine within their department(s); highlight any internal feats of this individual if any; mention any key contributions by the individual]"
+    "content": "[Paragraph — Talk about their work routine within their department(s): highlight any internal feats of this individual; mention any key contributions by the individual]"
   },
 
   { "type": "image", "helperText": "A screenshot showing the person in action; an internal screenshot can be requested from the person themself or from the respective Department Heads" },
@@ -30,7 +30,7 @@
 
   {
     "type": "paragraph",
-    "content": "[Paragraph — Add this section to provide details of key posts written (if a reporter), complex calculations done (if a Top Ten Committee member), activities completed (if a Community Committee member), graphics designed (if a Graphics Designer), and media edited (if a Social Media Department member).]"
+    "content": "[Paragraph — Add this section to provide details of key posts written (if a reporter), complex calculations done (if a Top Ten Committee member), activities completed (if a Community Committee member), graphics designed (if a Graphics Designer), and media edited (if a Social Media Department member); reach out to a Department Head to get their thoughts and blockquote them after this paragraph]"
   },
 
   {
@@ -52,7 +52,7 @@
 
   {
     "type": "paragraph",
-    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+    "content": "[Add concluding statements, can refer to the interview responses] <em>[Ending Question 1]? [Ending Question 2]?</em>"
   },
 
   { "type": "paragraph", "settings": { "type": "SIGNOFF" } }

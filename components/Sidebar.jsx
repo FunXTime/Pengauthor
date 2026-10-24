@@ -95,7 +95,7 @@ export default function Sidebar({ pages }) {
                       ? "bg-panel-raised text-ink"
                       : "hover:bg-panel-raised hover:text-ink"}`}
                   >
-                    <Icon name={item.icon} />
+                    <Icon name={item.icon} className="text-[#ffb580]" />
                     <span className="min-w-0 break-words">{item.label}</span>
                   </Link>
                 </li>
@@ -114,7 +114,7 @@ export default function Sidebar({ pages }) {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 rounded-xl px-3 py-1.5 text-sm transition-all hover:bg-panel-raised hover:text-ink"
                 >
-                  <Icon name="arrowUpRight" />
+                  <Icon name="arrowUpRight" className="text-[#ffb580]" />
                   <span className="min-w-0 break-words">{item.label}</span>
                 </a>
               </li>
@@ -136,7 +136,7 @@ export default function Sidebar({ pages }) {
                         : "hover:bg-panel-raised hover:text-ink"
                     }`}
                   >
-                    <Icon name="share" />
+                    <Icon name="share" className="text-[#ffb580]" />
                     <span className="min-w-0 break-words">Share a note</span>
                   </Link>
                 );
@@ -149,7 +149,7 @@ export default function Sidebar({ pages }) {
                 onClick={handleShare}
                 className="flex w-full items-center gap-3 rounded-xl px-3 py-1.5 text-sm transition-all hover:bg-panel-raised hover:text-ink"
               >
-                <Icon name="share" />
+                <Icon name="share" className="text-[#ffb580]" />
                 <span className="min-w-0 break-words">Share this page</span>
               </button>
             </li>

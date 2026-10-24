@@ -3,9 +3,10 @@
     "What motivated you to open your army?",
     "Why did you leave your previous army to open your own army?",
     "Where do you see your army a [month/year] from now?",
-    "Are you expecting any diplomatic changes concerning your army soon?",
+    "Are you expecting any diplomatic changes revolving around your army soon?",
     "If your army were at war soon after its opening, how would you react?",
     "Can the community expect your army to be participating in a tournament in the near future?",
+    "The [tournament name] tournament is approaching. Can we expect your army to participate in it?",
     "What efforts have you put into your army so far?",
     "Is there anything else that you would like to add?"
   ],
@@ -32,6 +33,7 @@
   "Resignation": [
     "How do you justify your resignation from the apex position of [army name]?",
     "Do you foresee yourself in another army in a few weeks from now? If yes, what kind of army could it be?",
+    "Are you planning to stay around in the army community?",
     "What message would you want to pass on to your followers when it comes to leadership skills in the army community?",
     "Will you continue your civic service roles in [Club Penguin Armies/Club Penguin Army Judges/CPA Battleground/(another organization)]?",
     "Is there anything else that you would like to add?"
@@ -40,7 +42,9 @@
   "War": [
     "Why do you feel that declaring war against [army name] was the right move?",
     "How do you see your army benefiting from a new conflict?",
+    "What sentiments do you hold for or against [army name]?",
     "How does being at war against [army name] make you feel?",
+    "Were you expecting this war?",
     "What was your initial reaction to the war declaration?",
     "Is there anything else that you would like to add?"
   ],
@@ -160,6 +164,9 @@
     "What motivated you to design a flag in the place?",
     "Are there any symbolic meanings included in this flag?",
     "How do you justify the importance of an army's flag?",
+    "Why was the flag changed?",
+    "Do you believe that maintaining a flag is important for armies?",
+    "What significance does [a part of the flag] have in your flag?",
     "Did you enjoy making the flag?",
     "Is there anything else you would like to add?"
   ],

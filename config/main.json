@@ -7,7 +7,8 @@
     "Associate Editor",
     "Senior Reporter",
     "Reporter",
-    "Reporter-in-Training"
+    "Reporter-in-Training",
+    "Opinion-Editorial Writer"
   ],
   "postTypes": {
     "Announcements": {
@@ -30,22 +31,23 @@
     "Column": {
       "A Leader In Action": "A Leader In Action",
       "Behind The Scenes": "Behind The Scenes",
-      "Satire": "Satire",
       "Picture Perfect": "Picture Perfect",
       "HCOM Life Stories": "HCOM Life Stories",
-      "Leaving A Legacy": "Leaving A Legacy",
       "What If": "What If",
       "This Day In History": "This Day In History"
     },
-    "Opinion": {
+    "Op-Ed": {
       "Opinion": "Opinion",
       "Editorial": "Editorial",
+      "Satire": "Satire",
       "Philosophy": "Philosophy",
       "Comic": "Comic",
+      "Characterize That": "Characterize That",
       "Flag Frenzy": "Flag Frenzy"
     },
     "Tournament": {
-      "Community Reacts": "Community Reacts"
+      "Community Predicts": "Community Predicts",
+      "Battle Results": null
     }
   },
   "palettes": [
@@ -68,13 +70,19 @@
       "inactiveColor": "#8c6726"
     },
     {
+      "name": "HW",
+      "label": "October Horrors",
+      "activeColor": "#8e3201",
+      "inactiveColor": "#5b2000"
+    },
+    {
       "name": "CC",
       "label": "Christmas Chaos",
       "activeColor": "#d33943",
       "inactiveColor": "#8c262d"
     }
   ],
-  "currentPalette": "LC",
+  "currentPalette": "HW",
   "defaultGeneratorData": {
     "reporterName": "",
     "reporterPosition": "Reporter",

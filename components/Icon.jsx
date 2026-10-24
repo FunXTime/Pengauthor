@@ -88,11 +88,7 @@ function IconSVG({ name, className = "", variable }) {
 
     case "spotTheError":
       return (
-        <svg
-          className={className || "h-4 w-4"}
-          viewBox="0 0 24 24"
-          {...svgProps}
-        >
+        <svg className={svgClassName} viewBox="0 0 24 24" {...svgProps}>
           <path d="M17 3h4v4" />
           <path d="M18.575 11.082a13 13 0 0 1 1.048 9.027 1.17 1.17 0 0 1-1.914.597L14 17" />
           <path d="M7 10 3.29 6.29a1.17 1.17 0 0 1 .6-1.91 13 13 0 0 1 9.03 1.05" />

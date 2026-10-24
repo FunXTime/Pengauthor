@@ -35,7 +35,7 @@
 
   {
     "type": "paragraph",
-    "content": "[In conclusion, …] <em>[Ending Question 1?] [Ending Question 2?]</em>"
+    "content": "[Add concluding statements, can refer to the interview responses] <em>[Ending Question 1]? [Ending Question 2]?</em>"
   },
 
   { "type": "paragraph", "settings": { "type": "SIGNOFF" } }

@@ -20,7 +20,7 @@ export const DEFAULT_NOTE_HASH = main.defaultNote;
 import checkup from "./checkup.json";
 export const CHECKUP_QUESTIONS = checkup;
 
-import sites from "./organizations.json";
+import sites from "./research-sources.json";
 export const SITEDATA = sites;
 
 import questionnaire from "./questionnaire.json";
@@ -33,13 +33,15 @@ import suggestedTags from "./suggestedTags.json";
 export const SUGGESTED_TAGS = suggestedTags;
 
 import DEFAULT from "./thumbnails/DEFAULT.json";
-import CC from "./thumbnails/CC.json";
-import LC from "./thumbnails/LC.json";
 import MM from "./thumbnails/MM.json";
+import LC from "./thumbnails/LC.json";
+import HW from "./thumbnails/HW.json";
+import CC from "./thumbnails/CC.json";
 export const THUMBNAILS = {
   DEFAULT: DEFAULT,
   MM: MM,
   LC: LC,
+  HW: HW,
   CC: CC
 }
 
