@@ -55,8 +55,7 @@ const COLORS = [
 ];
 
 export default function ColorPicker({
-  value,
-  onChange
+  value, onChange
 }) {
   const [open, setOpen] = useState(false);
   const pickerRef = useRef(null);

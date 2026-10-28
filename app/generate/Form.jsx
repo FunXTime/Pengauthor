@@ -15,13 +15,10 @@ import Tooltip from "@/components/Tooltip";
 import Icon from "@/components/Icon";
 import ColorPicker from "@/components/ColorPicker";
 import Image from "next/image";
+import Button from "@/components/Button";
 
 export default function GenerateForm({
-  formData,
-  setFormData,
-  palette,
-  setPalette,
-  thumbnail
+  formData, setFormData, palette, setPalette, thumbnail, boilerplate
 }) {
   const [thumbnailButtonText, setThumbnailButtonText] = useState("CLICK TO COPY FILENAME…");
   const [completedTags, setCompletedTags] = useState([]);
@@ -471,6 +468,15 @@ export default function GenerateForm({
               })}
             </div>
           </div>
+
+          <Button
+            onClick={() => navigator.clipboard.writeText(boilerplate)}
+            fullWidth
+            className="mt-4 rounded-xl"
+            icon="copy"
+          >
+            Copy boilerplate!
+          </Button>
         </div>
       </div>
     </form>

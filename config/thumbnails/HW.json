@@ -16,6 +16,14 @@
     "designer": "Master DS"
   },
   {
+    "for": "Breaking News",
+    "filename": "Breaking-News-HW.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/07/Breaking-News-500x328.png",
+    "height": 328,
+    "attachmentId": 80748,
+    "designer": "Master DS"
+  },
+  {
     "for": "Top Five Moments",
     "filename": "Top-Five-Moments-HW.png",
     "src": "https://cparmies.org/wp-content/uploads/2026/10/Top-Five-Moments-HW-500x328.png",
@@ -29,6 +37,22 @@
     "src": "https://cparmies.org/wp-content/uploads/2026/10/A-Leader-In-Action-HW-500x281.png",
     "height": 281,
     "attachmentId": 80510,
+    "designer": "Master DS"
+  },
+  {
+    "for": "What If",
+    "filename": "What-If-HW.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/10/What-If-HW-500x281.png",
+    "height": 281,
+    "attachmentId": 80747,
+    "designer": "Master DS"
+  },
+  {
+    "for": "This Day In History",
+    "filename": "This-Day-In-History-HW.png",
+    "src": "https://cparmies.org/wp-content/uploads/2026/10/This-Day-In-History-HW-500x281.png",
+    "height": 281,
+    "attachmentId": 80746,
     "designer": "Master DS"
   },
   {

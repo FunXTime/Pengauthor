@@ -30,9 +30,7 @@ const TYPES = {
 };
 
 export default function Infobox({
-  className,
-  type = "INFO",
-  children
+  className, type = "INFO", children
 }) {
   const style = TYPES[type] ?? TYPES.INFO;
 

@@ -3,11 +3,7 @@
 import Editor from "@monaco-editor/react";
 
 export default function MonacoEditor({
-  className,
-  value,
-  onChange,
-  language = "html",
-  readOnly = false
+  className, value, onChange, language = "html", readOnly = false
 }) {
   function handleMount(editor, monaco) {
     monaco.editor.defineTheme("pengauthor", {

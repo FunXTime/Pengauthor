@@ -51,6 +51,15 @@ export default function ColorizePage() {
           >
             Colorize this post
           </Button>
+
+          <Button
+            onClick={() => navigator.clipboard.writeText(html)}
+            fullWidth
+            className="mt-4 rounded-xl"
+            icon="copy"
+          >
+            Copy this
+          </Button>
         </div>
       </div>
 

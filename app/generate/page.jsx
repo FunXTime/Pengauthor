@@ -75,6 +75,7 @@ export default function GeneratePage() {
             palette={palette}
             setPalette={setPalette}
             thumbnail={thumbnail}
+            boilerplate={boilerplate}
           />
         </div>
 

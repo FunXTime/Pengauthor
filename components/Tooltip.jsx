@@ -4,10 +4,7 @@ import { useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 export default function Tooltip({
-  text,
-  children,
-  disabled = false,
-  className = ""
+  text, children, disabled = false, className = ""
 }) {
   const triggerRef = useRef(null);
   const [position, setPosition] = useState({ top: 0, left: 0 });

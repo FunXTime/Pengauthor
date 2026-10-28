@@ -33,10 +33,7 @@ const TYPES = {
 let toastHandler = null;
 
 export function showToast(
-  message,
-  type = "INFO",
-  icon,
-  timeout
+  message, type = "INFO", icon, timeout
 ) {
   toastHandler?.({
     message,

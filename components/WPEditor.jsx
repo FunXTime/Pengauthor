@@ -7,9 +7,7 @@ import "./WPEditor/overrides.css";
 import '../public/fonts/dashicons.woff2';
 
 export default function WPEditor({
-  initialValue = "",
-  onChange,
-  height = 380
+  initialValue = "", onChange, height = 380
 }) {
   const editorRef = useRef(null);
   const [activeTab, setActiveTab] = useState("visual");
