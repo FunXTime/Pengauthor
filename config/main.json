@@ -43,6 +43,7 @@
       "Philosophy": "Philosophy",
       "Comic": "Comic",
       "Characterize That": "Characterize That",
+      "Waddle You Think?": "Waddle You Think",
       "Flag Frenzy": "Flag Frenzy"
     },
     "Tournament": {
@@ -71,7 +72,7 @@
     },
     {
       "name": "HW",
-      "label": "October Horrors",
+      "label": "Halloween",
       "activeColor": "#8e3201",
       "inactiveColor": "#5b2000"
     },
@@ -82,7 +83,7 @@
       "inactiveColor": "#8c262d"
     }
   ],
-  "currentPalette": "HW",
+  "currentPalette": "DEFAULT",
   "defaultGeneratorData": {
     "reporterName": "",
     "reporterPosition": "Reporter",
